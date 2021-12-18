@@ -1,0 +1,10 @@
+.texto-informativo {
+    color: #666;
+    font-size: 12px;
+    /* nombres de las famials de letras(tipos de letras) */
+    font-family: Arial, Helvetica, sans-serif;
+    /* alinea mi texto al centro */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
