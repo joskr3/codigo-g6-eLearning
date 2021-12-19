@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fotos bootcamp</title>
+    </head>
+    <body>
+        <head>
+            <h1>Fotos bootcamp</h1>
+        </head>
+        <main>
+            <div> <!--Usar width no es recomendable, deberia hacerlo en css-->
+                <!-- scr es source que indica la direccion, alt indica el texto alternativo que identifica o reemplaza a la imagen en caso no se pueda encontrar, tambien ayuda a personas ciegas que usan talbak -->
+                <img src="./assets/images/leon.jpg" alt="León albino"
+                width="400"
+                title="Leon"
+                >
+            </div>
+            <hr>
+            <picture>
+                <!-- media se basa en el ancho del navegador -->
+                <source
+                    media="(min-width:800px)"
+                    srcset="./assets/images/lobo.jpg"
+                >
+                <img src="assets/images/lobo.jpg" alt="lobo">
+            </picture>
+        </main>
+    </body>
+</html>

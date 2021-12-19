@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="=description" content="Pruebas de Modulo Semana 2">
+        <meta name="keywords" content="Tecsup, Lima, Desarrollo">
+        <title>Pagina de Pruebas</title>
+    </head>
+    <body>
+        <header>
+            <h1>Etiquetas de formulario y validación</h1>
+        </header>
+        <form action=""> <!--Etiqueta formulario-->
+            <fieldset> <!--Crea marcos para conetenido-->
+                <legend>Nombre</legend> <!--Nombre del marco-->
+                <input type="text" placeholder="Ingrese su nombre"> <!--Input para ingresar informacion y placeholder para poner una plantilla o informacion de que debe ir en ese contenido-->
+            </fieldset>
+            <fieldset>
+                <legend>Apellidos</legend>
+                <input type="text" placeholder="Ingrese su apellido">
+            </fieldset>
+            <!-- <input type="text"> Etiqueta para ingresar una informacion simple -->
+            <fieldset>
+                <legend>Seleccion de País</legend>
+                <select name="" id=""> <!--Etiqueta para hacer una lista de seleccion-->
+                    <option value="">Elige tu país</option> <!--Indica el valor de la celda actual-->
+                    <option value="1">Perú</option> <!--Indica los valores de la lista-->
+                    <option value="2">Chile</option>
+                    <option value="3">Uruguay</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Comentarios</legend>
+                <textarea name="" id="" cols="30" rows="10"></textarea> <!--Etiqueta para ingresar informacion en multiliea o extensa-->
+            </fieldset>
+            <progress value=".5"></progress> <!--Barra de progreso, value indica el porcentaje o ubicacion-->
+            <button>Enviar</button> <!--Boton para enviar contenido al backend-->
+        </form>
+    </body>
+</html>
