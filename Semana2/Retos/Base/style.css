@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;   
+}
+
+header,main{
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    height: 20vh;
+    width: 100vw;     
+}
+.input-text{
+   height: 44px;
+   width: 80px;
+   margin-top: 0;  
+   margin-bottom: 0;
+   padding: 8px 12px;
+}
