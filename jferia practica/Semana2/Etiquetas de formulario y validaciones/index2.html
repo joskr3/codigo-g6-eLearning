@@ -5,11 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularios</title>
+    <style>
+        input:focus{
+            outline: none;
+        }
+        input:valid:focus
+        {
+            border: 1px solid green;
+        }
+        input:invalid:focus
+        {
+            border: 1px solid red;
+        }
+    </style>
 </head>
 <body>
     <form action="">
-        <input type="text">
-        <select name="" id="">
+        <input type="text" required>
+        <select name="" id="" required>
             <option value="">Elige tu pais</option>
             <option value="1">Perú</option>
             <option value="2">Chile</option>
@@ -18,11 +31,62 @@
         </select>
         <fieldset>
             <legend>Nombre<legend>
-            <input type="text" placeholder="Ingrese Nombre">
+            <input type="text" placeholder="Ingrese Nombre" required>
         </fieldset>
-        <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Ingrese Comentarios"></textarea>
+        <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Ingrese Comentarios" required></textarea>
         <progress value=".5"></progress>
         <button>Enviar</button>
+        <table border="3px">
+            <thead>
+                <tr>
+                    <th>Celda de header 1</th>
+                    <th>Celda de header 2</th>
+                    <th>Celda de header 3</th>
+                    <th>Celda de header 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>    
+                    <td>Celda de Body 1</td>
+                    <td>Celda de Body 2</td>
+                    <td>Celda de Body 3</td>
+                    <td>Celda de Body 4</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Celda del footer 1</td>
+                    <td>Celda del footer 2</td>
+                    <td>Celda del footer 3</td>
+                    <td>Celda del footer 4</td>
+                </tr>
+            </tfoot>
+            <br>
+            <table border="2" style="width: 100%;">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td colspan="2">3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td rowspan="2">3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </table>
     </form>
 </body>
 </html>
