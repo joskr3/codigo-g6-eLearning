@@ -1,0 +1,53 @@
+body {
+ margin: 0;
+height: 100vh;
+width: 100vw;
+padding: 0;
+
+}
+
+header,
+main {
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+main {
+    height: 70vh;
+    width: 100vw;
+}
+footer {
+    background-color: rgb(255, 255, 255);
+    height: 30vh;
+    width: 97vw;
+}
+
+
+.link1 {
+
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 50;
+    font-style: bold;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    margin-right: -20;
+}
+
+#titulo1 {
+
+    font-family: arial;
+    font-size: 50x;
+    font-weight: 50;
+    font-style: bold;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    margin-right: 20;
+}

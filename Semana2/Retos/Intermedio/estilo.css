@@ -1,0 +1,64 @@
+
+  html, body { 
+ padding:0;
+ margin: 0;
+ font-family:  arial;
+ background-color: whitesmoke;
+ height: 100%;
+  }
+
+img {
+    margin: 0;
+    padding: 2em;
+}
+
+  header {
+    height: 10vh;
+    width: 100vw;
+    background-color: #202124;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  main {
+    height: 70vh;
+    width: 100vw;
+    background-color: #202124;
+  }
+
+  .nav-b {
+    margin-right: 8px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .container {
+      background-color: greenyellow
+     padding: 0.5em
+      overflow: hidden;
+  }
+
+  .item {
+margin: 1em;
+padding: 1em;
+float: left;
+  }
+
+  #item1 {
+      background-color: green;
+
+  }
+
+  #item2 {
+      background: cornflowerblue
+  }
+
+
+
+.footer-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+
