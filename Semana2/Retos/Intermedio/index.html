@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Formulario 2</title>
+</head>
+<body>
+    <div>
+        <h2>Sign up</h2>
+        <form action="">
+            <label class="form" for="">First name</label>
+            <input class="form form-input" type="text" name="first-name" id="first-name" minlength="7" required>
+
+            <label class="form" for="">Age</label>
+            <input class="form form-input" type="number" name="age" id="age" max="120" required>
+
+            <label class="form" for="">Income</label>
+            <input class="form form-input" type="number" name="income" id="income" required>
+
+            <label class="form" for="">More Info</label>
+            <textarea class="form form-text-area" name="more-info" id="more-info" cols="30" rows="5" minlength="7" required></textarea>
+
+            <label class="form" for="">Gender</label>
+            <input class="form-gender" type="radio" name="genero" id="male" checked>
+            <label class="form-gender" for="">Male</label>
+            <input class="form-gender" type="radio" name="genero" id="female">
+            <label class="form-gender" for="">Female</label>
+            <input class="form-gender" type="radio" name="genero" id="trans">
+            <label class="form-gender" for="">Trans</label>
+
+            <label class="form" for="">Plan</label>
+            <select class="form" name="plan" id="plan" required>
+                <option value="">Select Plan</option>
+                <option value="1">Plan 1</option>
+                <option value="2">Plan 2</option>
+                <option value="3">Plan 3</option>
+                <option value="4">Plan 4</option>
+                <option value="5">Plan 5</option>
+                <option value="6">Plan 6</option>
+                <option value="7">Plan 7</option>
+            </select>
+
+            <input class="form-suscribe" type="checkbox" name="subscribe" id="subscribe">
+            <label class="form-suscribe" for="">Subscribe to Newsletter</label>
+
+            <button class="form form-button" type="submit">Update</button>
+        </form>
+    </div>
+    
+</body>
+</html>
