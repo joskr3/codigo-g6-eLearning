@@ -1,0 +1,70 @@
+/*https://fonts.google.com/specimen/Roboto*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-form {
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-form main {
+    margin: 20px 25px;
+}
+
+.container-form form {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form > div h1,
+form > div small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    
+}
+form > div h1 {
+    letter-spacing: 0.1rem;
+}
+
+form div {
+    padding: 4px 0;
+    width: 100%;
+}
+
+form div input {
+    width: 100%;
+    height: 40px;
+}
+form div input::placeholder {
+    padding-left: 15px;
+}
+
+form button {
+    width: 90px;
+    height: 40px;
+    background-color: #0aaf26;
+    color: white;
+    border: 0;
+    margin-top: 10px;
+}

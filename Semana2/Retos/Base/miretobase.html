@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Este es mi reto a presentar al profe
-    asdasdasd
-    test
-    setest
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Reto base - Danny Pandal</title>
+    </head>
+    <body>
+        <div class="container-form">
+            <main>
+                <form action="#">
+                    <div>
+                        <h1>CREATE YOUR ACCOUNT</h1>
+                        <small>This is Step 1</small>
+                    </div>
+                    <div>
+                        <label for="correo"> </label>
+                        <input type="email" name="correo" id="correo" placeholder="Email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" />
+                        <!-- RegEx email según w3.org -->
+                    </div>
+                    <div>
+                        <label for="pass"> </label>
+                        <input type="password" name="pass" id="pass" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+                        <!-- RegEx email según w3.org -->
+                    </div>
+                    <div>
+                        <label for="pass"> </label>
+                        <input type="password" name="pass" id="pass" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+                        <!-- RegEx email según w3.org -->
+                    </div>
+
+                    <button type="submit" title="Siguiente Paso">Next</button>
+                </form>
+            </main>
+        </div>
+    </body>
 </html>
