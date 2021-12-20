@@ -11,6 +11,7 @@ body{
     font-size: 0.8em;
     padding: 30px;
     width: 300px;
+    height: 400px;
     margin: 0 auto;
 }
 .form-group{
@@ -29,7 +30,7 @@ body{
     font-weight: bold;
     font-size: 1.2rem;
 }
-.btn{
+button{
     background-color: #65B5F4;
     color: white;
     border: 0;
@@ -37,17 +38,16 @@ body{
     padding-right: 15px;
     padding-bottom: 10px;
     padding-left: 15px;
-    margin: 0 auto;
 }
+.form-btn{
+    position: absolute;
+    padding-top: 10px;
+    left: 50%;
+}
+
 .form-input{
     outline: none;
     border: 1px solid #e1e1e1;
     padding: 10px;
     width: 280px;
-}
-.mensajes{
-    border: 1px solid #e1e1e1;
-    padding: 10px;
-    width: 280px;
-    outline: none;
 }
