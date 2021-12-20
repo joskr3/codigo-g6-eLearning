@@ -39,22 +39,11 @@ img {
       overflow: hidden;
   }
 
-  .item {
-margin: 1em;
-padding: 1em;
-float: left;
-  }
+img [pic] {
 
-  #item1 {
-      background-color: green;
+background-color: black;
 
-  }
-
-  #item2 {
-      background: cornflowerblue
-  }
-
-
+}
 
 .footer-1 {
     display: flex;
