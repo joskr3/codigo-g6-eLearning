@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Formulario Basico</title>
 </head>
 <body>
-    <h2>CREATE YOUR ACCOUNT</h2>
-    <p>This is step 1</p>
     
-    <form action="POST">
-        <input type="mail" name="correo" id="correo" placeholder="Email"/>
-        <br>
-        <input type="password" name="password" id="password" placeholder="Password"/>
-        <br>
-        <input type="password" name="password2" id="password2" placeholder="Confirm Password"/>
-        <br>
-        <button type="submit" title="submit">NEXT</button>
+    
+    
 
+    <form action="POST">
+        <h4 id="tit_form">CREATE YOUR ACCOUNT</h4>
+        <p id="sub_form">This is step 1</p>
+        <input type="mail" name="correo" class="caja" placeholder="Email"/>
+        <br><br>
+        <input type="password" name="password" class="caja" placeholder="Password"/>
+        <br><br>
+        <input type="password" name="password2" class="caja" placeholder="Confirm Password"/>
+        <br><br>
+        <p class="center-buton">
+        <button type="submit" title="submit" class="boton">NEXT</button>
+        </p>
 
     </form>
 </body>
