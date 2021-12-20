@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+        <title>Reto Avanzado - Danny Pandal</title>
 </head>
 <body>
-    este es mi reto avanzado para presentar al profe
+    <div class="container-form">
+        <main>
+            <form action="#">
+                <div>
+                    <h1>Contact Form</h1>
+                </div>
+                <div>
+                    <label for="first-name">First name</label>
+                    <input type="text" name="first-name" id="first-name" placeholder="John" 
+                    minlength="7" />
+                </div>
+                <div>
+                    <label for="last-name">Last name</label>
+                    <input type="text" name="last-name" id="last-name" placeholder="Doe" 
+                    minlength="7"/>
+                </div>
+                <div>
+                    <label for="correo">Email</label>
+                    <input type="email" name="correo" id="correo" placeholder="you@domain.com" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" />
+                    <!-- RegEx email según w3.org -->
+                </div>
+                <div>
+                    <label for="mensaje">Message</label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="8"  
+                    pattern = "^[\s\S]{20,140}$"
+                    placeholder="Enter your message here..." 
+                    minlength="20" maxlength="140"></textarea>
+                </div>
+                <button type="submit" title="Siguiente Paso">Submit</button>
+            </form>
+        </main>
+    </div>
 </body>
 </html>

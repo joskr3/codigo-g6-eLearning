@@ -1,0 +1,96 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-form {
+    position: absolute;
+    width: 380px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c0e2f791;
+}
+
+.container-form main {
+    margin: 20px;
+}
+
+.container-form form {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.container-form form div {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-form form div label{
+    margin-left: 12px;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.container-form form div input{
+    height: 30px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: 0.5px solid #c2c0c0c0;
+}
+
+
+.container-form form div textarea{
+    font-size: 0.9rem;
+    border-radius: 5px;
+    border: 0.5px solid #c2c0c0c0;
+}
+
+
+.container-form form div input::placeholder {
+    padding-left: 10px;
+}
+
+.container-form form div textarea::placeholder {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.container-form form button {
+    width: 80px;
+    height: 30px;
+    background-color: #3fa4f7;
+    color: white;
+    border: 0;
+    margin-top: 10px;
+    font-weight: 300;
+    border-radius: 5px;
+}
