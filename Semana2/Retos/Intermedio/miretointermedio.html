@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    mi reto intermedio para presentar al profe
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Reto intermedio - Danny Pandal</title>
+    </head>
+    <body>
+        <div class="container-form">
+            <main>
+                <form action="#">
+                    <div>
+                        <h1>Sign Up</h1>
+                    </div>
+                    <div>
+                        <label for="first-name">First name</label>
+                        <input type="text" name="first-name" id="first-name" minlength="7"/>
+                    </div>
+                    <div>
+                        <label for="age">Age</label>
+                        <input type="number" name="age" id="age" min="10" max="120" />
+                    </div>
+                    <div>
+                        <label for="income">Income</label>
+                        <input type="text" name="income" id="income" minlength="7" />
+                    </div>
+                    <div>
+                        <label for="more">More info</label>
+                        <textarea name="more" id="more" cols="30" rows="3" minlength="7"></textarea>
+                    </div>
+                    <div>
+                        <label for="gender">Gender</label>
+                        <div class="gender-radio">
+                            <input type="radio" name="gender" value="Male" id="gender-male" /> Male <input type="radio" name="gender" value="Female" id="gender-female" /> Female
+                            <input type="radio" name="gender" value="Trans" id="gender-trans" /> Trans
+                        </div>
+                    </div>
+                    <div>
+                        <label for="plan">Plan</label>
+                        <select name="plan" id="plan">
+                            <option value="0">Select Plan</option>
+                            <option value="1">10$</option>
+                            <option value="2">20$</option>
+                            <option value="3">30$</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="suscribe" id="suscribe" />
+                        <label for="suscribe">Suscribe to Newsletter</label>
+                    </div>
+                    <div>
+                        <button type="submit" title="Actualizar">Update</button>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </body>
 </html>

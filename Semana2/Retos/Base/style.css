@@ -45,6 +45,7 @@ form > div small {
 }
 form > div h1 {
     letter-spacing: 0.1rem;
+    font-weight: 500;
 }
 
 form div {
@@ -67,4 +68,5 @@ form button {
     color: white;
     border: 0;
     margin-top: 10px;
+    font-weight: 800;
 }

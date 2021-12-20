@@ -1,0 +1,97 @@
+/*https://fonts.google.com/specimen/Roboto*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-form {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e9e3e3;
+}
+
+.container-form main {
+    margin: 10px 25px;
+}
+
+.container-form form {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-form form div {
+    padding: 6px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.container-form form div input{
+    height: 24px;
+}
+
+.container-form form > div h1{
+    font-size: 1.8rem;
+    margin-bottom: 5px ;
+}
+
+.container-form form div label{
+    font-weight: 600;
+}
+
+.container-form form div .gender-radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: -10px;
+    align-items: center;
+    padding: 0;
+}
+
+.container-form form div .gender-radio input{
+    margin: 0 2px 0 10px;
+}
+
+
+.container-form form div #plan{
+    height: 30px;
+    border-radius: 5px;
+}
+
+.container-form form div #suscribe{
+    position: absolute;
+}
+.container-form form div #suscribe + label{
+    margin-left: 20px;
+}
+
+
+.container-form form button {
+    width: 80px;
+    height: 30px;
+    background-color: #226fff;
+    color: white;
+    border: 0;
+    margin-top: 10px;
+    font-weight: 800;
+    
+}
