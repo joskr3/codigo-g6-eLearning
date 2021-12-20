@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen">
+    <title>SEMANA 2</title>
+</head>
+<body>
+    <form>
+        <h1>Contact Form</h1>
+        <div>
+            <p>First name</p>
+                <input type="text" class="name" pattern=".{6,}"  placeholder="John" required><br>
+            <p>Last name </p>
+                <input type="text" class="name" pattern=".{6,}"  placeholder="Doe" required>
+            <p>Email</p>
+                <input type="email" class="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" placeholder="You@domain.com" required>
+            <p>Message</p>
+                <input type="text" class="message" pattern=".{20,140}" placeholder="Enter your message here ..." required>
+        </div>
+        <div>
+            <input type="submit" class="button" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

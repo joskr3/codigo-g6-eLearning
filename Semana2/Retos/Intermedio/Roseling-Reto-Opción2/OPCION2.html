@@ -14,11 +14,11 @@
             <p>First name
             <input type="text" class="name" required><br></p>
             <p>Age<br>
-            <input type="number" class="age" max="120" required></p>
+            <input type="number" class="age" pattern=".{1,120}" required></p>
             <p>Income
             <input type="number" class="income" required><br></p>
             <p>More Info
-            <input type="text" class="info" maxlength="6"></p>
+            <input type="text" class="info" pattern=".{6,}"></p>
             <p>Gender<br>
                 <input type="radio" value="male">Male
                 <input type="radio" value="female">Female

@@ -1,0 +1,69 @@
+.name{
+    border-color: #c0bcbc;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 0.2em;
+    background-color: rgb(246, 248, 250);
+    width: 25em;
+    height: 2em;
+}
+.email{
+    border-color: #c0bcbc;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 0.2em;
+    background-color: rgb(246, 248, 250);
+    width: 25em;
+    height: 2em;
+}
+.message{
+    border-color: #c0bcbc;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 0.2em;
+    background-color: rgb(246, 248, 250);
+    width: 25em;
+    height: 12em;
+}
+.button{
+    border: 0.5em;
+    background-color: #64B5F6;
+    border-radius: 0.3em;
+    width: 5em;
+    height: 2.2em;
+    padding: auto;
+    margin-top: 1em;
+    text-align: center;
+    color: white;
+}
+form{
+    text-align:center;
+    padding: 5em;
+    font-weight: bold;
+    position: relative;
+    width  : 20em;
+    height : 30em;
+    margin : 0 auto;
+    background: #E3F2FD;
+}
+::placeholder{
+    color: #a3a0a0;
+    text-align: left;
+    text-align-last: inherit;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+}
+.message::placeholder{
+    background-color: rgb(246, 248, 250);
+    width: 25em;
+    height: 12em;
+    text-align: left;
+    margin-top: 0.2em;
+    position: absolute;
+}
+p{
+    text-align: left;
+    padding-left: 0.5em;
+    margin-top: 0.8em;
+    margin-bottom: 0.2em;
+}
