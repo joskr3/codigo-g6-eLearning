@@ -1,0 +1,71 @@
+.name{
+    border-color: #c0bcbc;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 0.2em;
+    background-color: rgb(246, 248, 250);
+    width: 20em;
+    height: 2em;
+}
+.age{
+    border-color: #c0bcbc;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 0.2em;
+    background-color: rgb(246, 248, 250);
+    width: 20em;
+    height: 2em;
+}
+.income{
+    border-color: #c0bcbc;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 0.2em;
+    background-color: rgb(246, 248, 250);
+    width: 20em;
+    height: 2em;
+}
+.info{
+    border-color: #c0bcbc;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 0.2em;
+    background-color: rgb(246, 248, 250);
+    width: 20em;
+    height: 4em;
+}
+select{
+    border-color: #c0bcbc;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 0.4em;
+    color: #000000;
+    font-weight: bold;
+    width  : 20em;
+    height : 2em;
+}
+.plan{
+    border-color: #c0bcbc;
+    border-style: solid;
+}
+.button{
+    border: 0.5em;
+    background-color: #337AB7;
+    border-radius: 0.3em;
+    width: 5em;
+    height: 2.2em;
+    padding: auto;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+form{
+    text-align:left;
+    padding: 5em;
+    font-weight: bold;
+    position: relative;
+    width  : 20em;
+    height : 30em;
+    margin : 0 auto;
+    background: #F5F5F5;
+}
