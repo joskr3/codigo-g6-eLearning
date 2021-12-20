@@ -1,0 +1,48 @@
+.form{
+  width: 100%;
+  max-width: 60px;
+  margin:0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form input {
+  width: 500%;
+  height: 35px;
+  margin: 0.2rem;
+  padding-left: 8px;
+}
+
+.titulo{
+  text-align: center;
+  color:#62757D;
+  font-size: 22px;
+}
+
+.subtitulo{
+  text-align: center;
+  color:#8296AB;
+  font-size: 16px;
+}
+
+.next-button {
+  background-color: #12AD5E;
+  color: #FAFDFC;
+  box-shadow: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 11px 4px;
+  height: 38px;
+  width: 120px;
+}
