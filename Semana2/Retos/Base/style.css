@@ -4,7 +4,7 @@ body{
     width: 100vw;   
 }
 
-header,main{
+header, main{
     background: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -14,10 +14,27 @@ main{
     height: 20vh;
     width: 100vw;     
 }
-.input-text{
-   height: 44px;
-   width: 80px;
-   margin-top: 0;  
-   margin-bottom: 0;
-   padding: 8px 12px;
-}
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    resize: vertical;
+  }
+input[type=password]{
+    width: 100%;
+    padding: 12px;
+    resize: vertical;
+  }
+button[type=submit]{
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  }
+
+ .col{
+    width: 90%;
+    margin-top: 6px;
+  }
