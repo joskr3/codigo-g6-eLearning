@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario intermedio</title>
 </head>
 <body>
-    mi reto intermedio para presentar al profe
+    
+    <form action="POST">
+        <h4 id="tit_form">Sing Up</h4>
+        <label for="firsname">Firs name</label> <br>
+        <input type="text" name="firsname" class="caja" title="Falta completar este campo" required>
+        <br>
+        <label for="age">Age</label><br>
+        <input maxlength="101" minlength="0" type="number" name="age" class="caja" title="Falta completar este campo" pattern="[0-9]" required/>
+        <br>
+        <label for="income">Income</label><br>
+        <input type="number" name="income" class="caja" title="Falta completar este campo" required/>
+        <br>
+        <label for="moreinfo">More Info</label><br>
+        <input type="text" name="moreinfo" class="caja" title="More info"/>
+        <br>
+        <label for="gender">Gender</label>
+        <br>
+        
+        <input type="radio" name="gender" value="1" checked>Male
+        <input type="radio" name="gender" value="2">Female
+        <input type="radio" name="gender" value="3">Trans 
+    
+        <br>
+        <label for="plan">Plan</label><br>
+        <select name="plan" id="plan">
+        <option value="planbasico">plan básico</option>
+        <option value="planintermedio">plan intermedio</option>
+        <option value="planavanzado">plan avanzado</option>
+        </select>
+        <p class="center-buton">
+        <button type="submit" title="submit" class="boton">Update</button>
+        </p>
+
+    </form>
+
 </body>
 </html>
