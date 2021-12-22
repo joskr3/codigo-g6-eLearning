@@ -1,0 +1,29 @@
+form{
+    background-color: #EFEFEF;
+    margin: 0 auto;
+    width: 250px;
+    padding: 20px;
+}
+.caja{
+    padding: 2px;
+    width: 230px;
+}
+#caja2{
+    padding: 10px;
+    width: 210px; 
+}
+.boton{
+    background-color: #6495ED;
+    color: white;
+    border: 0;
+    padding-left: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 15px;
+    text-size-adjust: 0;
+    font-weight: bold;
+}
+#plan{
+    padding: 3px;
+    width: 220px; 
+}
