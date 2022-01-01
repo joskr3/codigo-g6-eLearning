@@ -1,3 +1,45 @@
 *{
-    background-color: white;
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.todo-content{
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.div-img-twitter{
+    float: left;
+    height: 100%;
+    max-width: 600px;
+}
+.contenido-centro{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin: 40px;
+}
+.icono-twitter{
+    height: 34.6px;
+    width: 42.57px;
+}
+.img-twitter{
+    height: 700px;
+    width: 100%;
+}
+.div-titulo{
+    display: table;
+    text-align: center;
+}
+h1{
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
 }
