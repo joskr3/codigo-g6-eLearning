@@ -61,7 +61,7 @@ h3{
 }
 .div-boton{
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* cambiar a columna para ambos botones */
     text-align: center;
     margin-top: 25px;
 }
@@ -74,9 +74,29 @@ h3{
     color: black;
     font-size: 14px;
     border-radius: 50px;
+    margin: 3px;
 }
 .LgbsSe-Bz112c{
     height: 18px;
     width: 18px;
     background-color: white;
+}
+p{
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+p::after,p::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.6em;
+}
+p::before{
+    left: -140px;
+}
+p::after{
+    right: -140px;
 }
