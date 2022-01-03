@@ -1,0 +1,12 @@
+.img-center {
+  width: 500px;
+  margin:auto;
+  display: block;
+}
+
+
+
+.img-circular{
+  width: 100px;
+  border-radius: 50%;
+}
