@@ -2,10 +2,10 @@
     margin: 0px;
     padding: 0px;
     border: 0px;
+    box-sizing: border-box;
 }
 html{
     display: block;
-    background-color: black;
 }
 body{
     display: block;
@@ -137,8 +137,6 @@ header{
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     transform: translate(0, 0);
 }
 .fa-unlock-alt:before {
@@ -157,19 +155,81 @@ header{
     height: 60px;
     margin: 10px 0px 0px 0px;
 }
-.contenido-imagenes{
-    margin: 0 auto;
-    position: relative;
+
+
+
+.imagenes-container{
+    border: 5px solid black;
+    height: 500px;
     overflow: hidden;
-    z-index: 1;
 }
-.contenido-imagenes, .swipcontsingle{
-    width: 100%;
-    height: auto;
-    float: left !important;
-    padding: 0;
-    margin: 0;
+.imagenes-slider{
+    border: 1px solid black;
+    height: 100%;
     position: relative;
-    z-index: 1 !important;
+    
+}
+.swip-foto{
+    height: 100%;
+    opacity: 0.5;
+}
+.swip-foto img{
+    height: 100%;
+    width: 100%;
 }
 
+.swip-texto {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    
+}
+.swip-texto h2{
+    color: #fff;
+    text-transform: none;
+    font-size: 55px;
+    line-height: 50px;
+    max-width: 900px;
+    margin: 0 0 40px 0;
+    font-weight: normal;
+    height: 70%;
+    width: 100%;
+    max-width: 100%;
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
+    font-family: 'Pacifico', cursive;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swip-texto p{
+    height: 100%;
+    width: 80%;
+    padding-left: 200px;
+    color: #fff;
+    font-size: 23px;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swip-texto h2 span{
+    color: #fa9608;
+    margin: 0;
+}
+
+
+.button-slider{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+}

@@ -40,23 +40,33 @@
     </header>
     <main>
         <div class="imagenes-container">
-            <div class="imagenes-wrapper">
-                <div class="imagenes-slider" data-imagenes-slider-index="0" style="width: 1000px;">
+                <div class="imagenes-slider" id="imagen1">
                     <div class="swip-foto">
-                        <img src="../image/slide1.jpg" alt="">
+                        <img class="imagen" src="../image/slide1.jpg" alt="">
                     </div>
                     <div class="swip-texto">
                         <h2>
                             <span>Conectate</span>
                             " en cualquier lugar "
                         </h2>
+                        
                         <p class="texto-slider">
                             " Instalamos, configuramos y acondicionamos todo tipo de dispositivos para que puedas disfrutar al máximo de tu Internet "
                         </p>
 
                     </div>
+                    <div class="button-slider">
+                        <div class="button-prev">
+                            <a href="#imagen5"><i>PREV</i></a> 
+                        </div>
+                        <div class="button-next">
+                            <a href="#imagen2">NEXT</a> 
+                        </div>
+                        
+                    </div>
+                    
                 </div>
-                <div class="imagenes-slider" data-imagenes-slider-index="1" style="width: 1000px;">
+                <div class="imagenes-slider" id="imagen2">
                     <div class="swip-foto">
                         <img src="../image/slide2.jpg" alt="">
                     </div>
@@ -70,8 +80,16 @@
                         </p>
 
                     </div>
+                    <div class="button-slider">
+                        <div class="button-prev">
+                            <a href="#imagen1">PREV</a> 
+                        </div>
+                        <div class="button-next">
+                            <a href="#imagen3">NEXT</a> 
+                        </div>
+                    </div>
                 </div>
-                <div class="imagenes-slider" data-imagenes-slider-index="2" style="width: 1000px;">
+                <div class="imagenes-slider" id="imagen3">
                     <div class="swip-foto">
                         <img src="../image/slide3.jpg" alt="">
                     </div>
@@ -85,8 +103,16 @@
                         </p>
 
                     </div>
+                    <div class="button-slider">
+                        <div class="button-prev">
+                            <a href="#imagen2">PREV</a> 
+                        </div>
+                        <div class="button-next">
+                            <a href="#imagen4">NEXT</a> 
+                        </div>
+                    </div>
                 </div>
-                <div class="imagenes-slider" data-imagenes-slider-index="3" style="width: 1000px;">
+                <div class="imagenes-slider" id="imagen4">
                     <div class="swip-foto">
                         <img src="../image/slide4.jpg" alt="">
                     </div>
@@ -100,8 +126,16 @@
                         </p>
 
                     </div>
+                    <div class="button-slider">
+                        <div class="button-prev">
+                            <a href="#imagen3">PREV</a> 
+                        </div>
+                        <div class="button-next">
+                            <a href="#imagen5">NEXT</a> 
+                        </div>
+                    </div>
                 </div>
-                <div class="imagenes-slider" data-imagenes-slider-index="4" style="width: 1000px;">
+                <div class="imagenes-slider" id="imagen5">
                     <div class="swip-foto">
                         <img src="../image/slide5.jpg" alt="">
                     </div>
@@ -115,16 +149,19 @@
                         </p>
 
                     </div>
+                    <div class="button-slider">
+                        <div class="button-prev">
+                            <a href="#imagen4">PREV</a> 
+                        </div>
+                        <div class="button-next">
+                            <a href="#imagen1">NEXT</a> 
+                        </div>
+                    </div>
                 </div>
 
 
-            </div>
-            <div class="button-next">
-
-            </div>
-            <div class="button-prev">
-
-            </div>
+            
+            
 
         </div>
     </main>
