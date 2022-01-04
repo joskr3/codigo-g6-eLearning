@@ -160,7 +160,7 @@ header{
 
 .imagenes-container{
     border: 5px solid black;
-    height: 500px;
+    height: 700px;
     overflow: hidden;
 }
 .imagenes-slider{
@@ -170,18 +170,29 @@ header{
     
 }
 .swip-foto{
-    height: 100%;
-    opacity: 0.5;
+    height: 100%; 
+    position: relative;
 }
 .swip-foto img{
     height: 100%;
     width: 100%;
+    
+}
+.swip-foto:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
 }
 
 .swip-texto {
     height: 100%;
     width: 100%;
     text-align: center;
+    
     
 }
 .swip-texto h2{
@@ -233,3 +244,36 @@ header{
     padding: 20px;
 
 }
+.button-prev{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-top: 0 !important;
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+}
+.flecha-prev{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 30px;
+    border-top: solid 10px white;
+    border-right: solid 10px white;
+    transform: rotate(225deg);
+    opacity: 0.5;
+    
+}
+.flecha-next{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 30px;
+    border-top: solid 10px white;
+    border-right: solid 10px white;
+    transform: rotate(45deg);
+    opacity: 0.5;
+}
+
+
