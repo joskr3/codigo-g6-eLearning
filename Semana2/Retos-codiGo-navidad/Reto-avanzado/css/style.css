@@ -275,5 +275,73 @@ header{
     transform: rotate(45deg);
     opacity: 0.5;
 }
+footer{
+    width: 100%;
+    float: left;
+    margin: 0;
+    min-height: 100px;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    background: #fafafa;
+}
+.redes-sociales{
+    width: 220px;
+    height: 40px;
+    padding: 0;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -110px;
+    float: none;
+    text-align: center;
+}
+.redes-sociales a{
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    margin: 0 5px;
+    display: inline-block;
+    border-radius: 100%;
+    position: relative;
+    float: none;
+}
+.redes-sociales a span{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #393939;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 100%;
+    transform: scale(0,0);
+    -o-transform: scale(0,0);
+    -webkit-transform: scale(0,0);
+    -moz-transform: scale(0,0);
+    transition: all .35s ease-in-out;
+    -moz-transition: all .35s ease-in-out;
+    -webkit-transition: all .35s ease-in-out;
+    -o-transition: all .35s ease-in-out;
+    opacity: 0;
+}
+.redes-sociales a i{
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+.rfacebook{
+    background: #3c5a98 !important;
+}
+.rtwitter{
+    background: #54abee !important;
+}
+.rgoogle{
+    background: #d95232 !important;
+}
 
 
