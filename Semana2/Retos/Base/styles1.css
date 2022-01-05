@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+.cuadros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    
+}
+
+.boton {
+    display: flex;      
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.75rem;      
+}
+
+.button-next{
+    border: 1px solid #303134;
+    border-radius: 4px;
+    color: #e8eaed;
+    background-color: #43be2a;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+  }
