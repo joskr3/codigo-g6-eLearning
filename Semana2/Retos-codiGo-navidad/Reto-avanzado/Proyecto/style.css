@@ -117,9 +117,10 @@ main{
     margin-bottom: 10px;
 }
 
-.hr-o hr{
+.hr-o div{
     width: 200px;
-    border: 1px solid rgb(228, 223, 223);
+    border: 1px solid rgb(238, 232, 232);
+    border-top: none;
 }
 
 .telefono{
