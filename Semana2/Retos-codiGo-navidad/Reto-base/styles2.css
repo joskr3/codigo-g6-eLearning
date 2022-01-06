@@ -1,0 +1,126 @@
+header {
+    height: 10vh;
+    width: 100vw;
+    background-color:rgb(118, 83, 151);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  main {
+    height: 80vh;
+    width: 100vw;
+    background-color:rgb(192, 92, 142);
+    
+  }
+  
+  footer {
+    height: 10vh;
+    width: 100vw;
+    background-color: #b36233;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+
+.cabeza{
+    margin-top: 2rem;
+}
+
+.zona1{
+
+    height: 150px;
+    border: 1px solid #dceb0b;
+    background-color: khaki;
+    width: 1400px;
+    margin-top: 2rem;
+ 
+
+} 
+
+.texto1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    
+    
+}
+
+.parra1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+ 
+}
+
+.zona2{
+
+    height: 300px;
+    border: 1px solid #085833;
+    background-color: rgb(61, 165, 75);
+    width: 1400px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+} 
+
+.into-zona2{
+
+    height: 200px;
+    border: 1px solid #dceb0b;
+    background-color: khaki;
+    width: 800px;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+.zona3{
+
+    height: 300px;
+    border: 1px solid #085833;
+    background-color: rgb(61, 165, 75);
+    width: 1400px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} 
+
+.into-zona3{
+
+    height: 200px;
+    border: 1px solid #dceb0b;
+    background-color: khaki;
+    width: 800px;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+.pie{
+    margin-top: 2rem;
+}
