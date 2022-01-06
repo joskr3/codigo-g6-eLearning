@@ -6,4 +6,4 @@ ej: hacer una landong page sencilla que tenga los sigueintes elementos: un heade
 
 Integrantes:
 
-Ramas:josue-retamozo-vargas
+Ramas: freddy-munoz-h

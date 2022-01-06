@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: white;
+}
+
+/* Creando el main */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 94vh;
+}
+
+.foto-portada{
+    width: 55%;
+    height: 100%;
+    background-image: url('https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-tw{
+    width: 380px;
+}
+
+.login-register{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.div-img-tw-min{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 15vh;
+}
+
+.img-tw-min{
+    width: 45px;
+}
+
+.login-register h1{
+    font-size: 4.4rem;
+    font-family: 'Archivo Black', sans-serif;
+    line-height: 90px;
+}
+
+.login-register h2{
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.register .icon-google{
+    width: 20px;
+}
+
+.register .icon-apple{
+    width: 20px;
+}
+
+.register{
+    border: 1px solid rgb(214, 208, 208);
+    width: 280px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgb(94, 92, 92);
+    margin-bottom: 10px;
+}
+
+.register:hover{
+    border: 1px solid rgb(193, 211, 240);
+    cursor: pointer;
+}
+
+.apple{
+    color: black;
+}
+
+.apple:hover{
+    cursor: pointer;
+    background-color: rgb(231, 231, 231);
+    border: 1px solid rgb(187, 187, 187);
+}
+
+.hr-o{
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.97em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.hr-o hr{
+    width: 200px;
+    border: 1px solid rgb(228, 223, 223);
+}
+
+.telefono{
+    background-color: #1d9bf0;
+    border: none;
+    color: white;
+    font-size: 0.88rem;
+    font-weight: 300;
+}
+
+.telefono:hover{
+    background-color: #0f86d6;
+}
+
+.p-register{
+    font-size: 0.7rem;
+    margin-bottom: 55px;
+}
+
+.p-register a{
+    color: #1d9bf0;
+    font-weight: 400;
+}
+
+.login-acount{
+    margin-bottom: 20px;
+}
+
+.login-acount span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+}
+
+.iniciar-sesion{
+    border: 1px solid rgb(209, 209, 209);
+}
+
+.iniciar-sesion:hover{
+    border: 1px solid rgb(209, 209, 209);
+    background-color: #e9f4fc;
+}
+
+.register span{
+    color: #1d9bf0;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+footer{
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul li{
+    list-style: none;
+    margin-left: 22px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    font-size: 0.81rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1f2020;
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
