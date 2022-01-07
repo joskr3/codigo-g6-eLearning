@@ -9,6 +9,20 @@ header{
     display: flex;
     justify-content: center;
 }
+
+main {
+    background-color: #FBE7CF ;
+}
 .header-text{
     margin-top: 30px;
+}
+
+.contenedor-1{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+.contenedor-1-imagen{
+    margin-right: 30px;
 }
