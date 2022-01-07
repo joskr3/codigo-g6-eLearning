@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +15,7 @@ header {
 }
 
 header > :first-child {
-  font-family: "PT Sans Harrow", sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 
 header > :last-child {
@@ -27,7 +29,7 @@ header > :last-child > a {
   color: #000;
   font-size: 20px;
   margin-right: 20px;
-  font-family: "PT Sans Harrow", sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 
 main {
@@ -41,12 +43,14 @@ main {
 
 main > :first-child {
   margin: auto;
+  flex-direction: column;
+  margin: auto;
 }
 
 main > :first-child > h1 {
   margin-bottom: 2rem;
   text-align:center;
-  font-family: 'PT Sans Harrow', sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 main > :first-child > img {
@@ -72,7 +76,7 @@ main > :last-child{
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 40px 0 ;
+  margin: 40px 0px ;
 }
 
 footer{
@@ -85,7 +89,7 @@ footer{
 
 footer > p{
   font-size: small;
-
+  color: #949393;
 }
 
 footer >nav{
@@ -96,5 +100,5 @@ footer >nav{
 
 footer > .contenedor-redes-sociales > img{
   cursor: pointer;
-  margin-right: 10px;;
+  margin-right: 10px;
 }
