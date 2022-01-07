@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+}
+header{
+    background-color: #DFD5E6;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    border:1px solid  #c49fdf;
+}
+header > :first-child{
+    margin-top: 30px ;
+}
+
+main {
+    padding: 20px auto;
+    background-color: #F1D0CD;
+    padding-top: 30px;
+}
+main > :first-child{
+    background-color: #FDF2D0 ;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #f7d87b;
+}
+main > :first-child > :first-child{
+    margin-bottom: 20px;
+}
+main > :nth-child(2){
+    display: flex;
+    padding: 20px;
+    background-color: #9EC2D3;
+    border: 1px solid #6db4d4;
+    margin: 0px 30px;
+}
+main > :nth-child(2) > :first-child{
+    border-radius: 50%;
+    border: 2px solid blueviolet;
+    margin: 20px 30px;
+}
+main > :nth-child(2) > :last-child{
+    margin-right: 30px;
+    margin-left: 10px;
+    background-color: #FDF2D0;
+    border: 1px solid #f7d87b;
+    padding: 15px;
+}
+main > :nth-child(2) > :last-child> :first-child{
+    margin-bottom: 15px;
+}
+
+main > :last-child{
+    display: flex;
+    padding: 20px;
+    background-color: #9EC2D3;
+    border: 1px solid #6db4d4;
+    margin: 0px 30px;
+    margin-top: 20px;
+}
+main > :last-child > :first-child{
+    border-radius: 50%;
+    border: 2px solid blueviolet;
+    margin: 20px 30px;
+}
+main > :last-child> :last-child{
+    margin-right: 30px;
+    margin-left: 10px;
+
+    background-color: #FDF2D0;
+    border: 1px solid #f7d87b;
+    padding: 15px;
+}
+main > :last-child > :last-child> :first-child{
+    margin-bottom: 15px;
+}
+
+footer{
+    background-color: #D9E7D6;
+    border: 1px solid #9ce48c;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+footer > :first-child{
+    margin-top: 30px ;
+}
