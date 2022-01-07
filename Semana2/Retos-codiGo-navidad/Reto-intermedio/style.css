@@ -76,3 +76,23 @@ main > :last-child{
     flex-wrap: wrap;
     margin:40px 0px;
 }
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #D9E7D7;
+    border: 1px solid #8ee083;
+}
+footer > p {
+    font-size: small;
+    color: #949393;
+}
+footer > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer > .contenedor-redes-sociales > img {
+    cursor: pointer;
+    margin-right: 10px;
+}
