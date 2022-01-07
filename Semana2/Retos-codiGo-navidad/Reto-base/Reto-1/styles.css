@@ -1,0 +1,77 @@
+
+*{
+    margin: 0;
+}
+header{
+    background-color: #DDE8FA;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background-color: #FBE7CF ;
+
+    /* padding : arriba(top) derecha(right) abajo(bottom) izquierda(left);
+    padding : 10px 25px 0px 13px */
+
+    /* padding : arriba-abajo(padding vertical) derecha-izquierda(padding horizontal)
+    padding : 10px 45px */
+
+    /* equivalente a padding : 0 20px; */
+    /* padding-top:0px;
+    padding-bottom:0px;
+    padding-left: 20px;
+    padding-right: 20px; */
+    padding: 0 20px;
+}
+.header-text{
+    margin-top: 30px;
+}
+
+.contenedor-1{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+.contenedor-1-imagen{
+    margin-right: 30px;
+}
+.contenedor-2 {
+    margin-bottom: 30px;
+}
+.contenedor-2 > h1 {
+    margin-bottom: 15px;
+}
+
+.contenedor-3 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.contenedor-3 > :first-child{
+    margin-right: 30px;
+}
+
+.contenedor-3 > :nth-child(2){
+    margin-right: 25px;
+}
+.contenedor-3 > :last-child{
+    margin-right: 10px;
+}
+.contenedor-3-imagen{
+    border-radius: 50%;
+}
+
+footer{
+    background-color: #D9E7D6;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+footer > :first-child{
+    margin-top: 30px ;
+}
