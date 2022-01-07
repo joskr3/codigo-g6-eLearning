@@ -51,3 +51,28 @@ main > :first-child > h1 {
 main > :first-child > img {
     border-radius: 25%;
 }
+main > :nth-child(2), main > :nth-child(3){
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FDF2D0;
+    border: 1px solid #f7d87b;
+}
+
+main > :nth-child(2)> h2 , main > :nth-child(3)> h2{
+    margin-bottom: 1rem;
+}
+/* main > :nth-child(4){
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+main > :last-child{
+    display:flex;
+    justify-content: space-around ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:40px 0px;
+}
