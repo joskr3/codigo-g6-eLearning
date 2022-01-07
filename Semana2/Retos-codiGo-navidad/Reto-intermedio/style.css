@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     padding: 20px;
     background-color: #DBE5F7;
     border: 1px solid #7ca7f7;
@@ -20,14 +20,34 @@ header > :first-child{
 }
 header > :last-child{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 header > :last-child > a{
-    
     text-decoration: none;
     color: #000;
     font-size: 20px;
     margin-right: 20px;
     font-family: 'PT Sans Narrow', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px;
+    background-color: #FBE7CF;
+    border: 1px solid #f7d87b;
+}
+main > :first-child{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+main > :first-child > h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+main > :first-child > img {
+    border-radius: 25%;
 }
