@@ -8,7 +8,9 @@ p{
     font-family: twitterFontAlt;
 }
 body{
-    background-color: black
+    background-color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 main{
@@ -91,4 +93,44 @@ a{
     color: #516D8E;
     text-decoration: none;
     cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-links + .rights{
+    display: flex;
+}
+
+footer > .contenedor-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+
+.contenedor-links > nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+   
+}
+
+.link-footer {
+    color: #6F767D;
+    cursor: pointer;
+    cursor: pointer;
+    font-size: 13px;
+}
+.rights {
+    color: #6F767D ;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
 }
