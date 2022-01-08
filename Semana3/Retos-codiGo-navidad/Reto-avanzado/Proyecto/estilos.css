@@ -118,6 +118,7 @@ footer > .contenedor-links {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
    
 }
 
@@ -133,4 +134,23 @@ footer > .contenedor-links {
     justify-content: center;
     cursor: pointer;
     font-size: 13px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        height: auto;
+    }
+    .imagen-fondo{
+        width: 100vw;
+        
+    }
+    .twitter-logo{
+       margin-top: 900px;
+    }
+
 }
