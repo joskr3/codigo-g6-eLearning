@@ -1,0 +1,42 @@
+@font-face{
+    font-family: Retro-font;
+    src: url(../Reto-Semanal/media/VCR_OSD_MONO.ttf);
+}
+*{
+    font-family: Retro-font;
+   }
+body{
+   background-color: rgb(210,223,218);
+}
+header{
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+}
+main{
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    flex-direction: column;
+}
+header >:first-child{
+    margin-bottom: 1rem;
+    display: flex;
+    border: 3px solid black;
+    border-radius: 11px;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 12rem;
+    margin:0px;
+    height: 8vh;
+}
+header>:first-child>:first-child{
+    font-weight: 500;
+    padding-bottom: 16px;
+}
+main>:first-child{
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+}
