@@ -7,12 +7,14 @@
    }
 body{
    background-color: rgb(210,223,218);
+   margin: 0px
 }
 header{
     display: flex;
     width: 100vw;
     height: 10vh;
     justify-content: center;
+    margin-top: 5px;
 }
 main{
     display: flex;
@@ -76,4 +78,12 @@ main>:last-child>:last-child{
     color: white;
     font-size: 20px;
     font-weight: 600;
+}
+@media only screen and (max-width: 600px){
+    header{
+        width: 500px;
+    }
+    main{
+        width: 500px;
+    }
 }
