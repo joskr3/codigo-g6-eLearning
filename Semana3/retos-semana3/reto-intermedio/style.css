@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    border: 0;
+}
+header{
+    background-color: rgb(0, 0, 150);
+    
+}
+header nav{
+    margin: 0px 50px;
+    padding: 2px 0px;
+    display: flex;
+    justify-content:space-between
+}
+main{
+    margin: 0px 50px;
+}
+.menu a{   
+    color: white;
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.figure1{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.container figure img{
+    display: block;
+    flex-basis: 100%;
+    width: 300px;
+    
+}
+
