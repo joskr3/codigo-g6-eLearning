@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+header{
+    background-color: black;
+    color: white;
+    border: solid black; 
+}
+#titulos{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+#titulos h1{
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+#titulos h3{
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: gray;
+}
+main{
+    display: flex; 
+    margin-top: 5px; 
+}
+.caja2{
+    margin: 5px;
+    border: 1px solid gray;
+    text-align: center;
+}
+.caja2 h4{
+    margin-bottom: 15px;
+}
+.caja2 img{
+    width: 200px;
+    display: block;
+    margin: auto
+
+}
+.caja2 img#css{
+    width: 130px;
+}
+.caja2 p{
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
