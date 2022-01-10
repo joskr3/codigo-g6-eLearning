@@ -5,7 +5,6 @@
 
 *{
     font-family: pixel;
-    color: #777;
 }
 
 .title-container {
@@ -16,13 +15,16 @@
 
 .main-container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 16px;
+    background-color: #fff;
 }
 
 .fighter-container {
     display: flex;
     flex-direction: column;
-    margin: 0 16px 16px 16px
+    margin: 16px 16px 32px 16px;
 }
 
 .fighter-container__name {
@@ -35,13 +37,14 @@
     border: 4px solid #333;
     border-radius: 4px;
     margin-bottom: 16px;
-    
+    background-color: #ddd;
+    color: #333;
 }
 
 .fighter-container__img {
     display: flex;
     justify-content: center;
-    /* align-items: flex-end; */
+    align-items: center;
     max-width: 300px;
     height: 240px;
 
@@ -49,7 +52,17 @@
 }
 
 img {
+    height: 200px;
     object-fit: contain;
+    transition: transform .2s;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+img:focus {
+    outline: 4px solid #333;
 }
 
 .fighter-container__description {
@@ -63,49 +76,53 @@ img {
     line-height: 24px;
     border: 4px solid #333;
     border-radius: 4px;
+    background-color: #ddd;
+    color: #333;
 }
 
 .buttons-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin: 8px 0;
 }
 
-.button-container__1 {
+.button-container {
     display: flex;
     justify-content: center;
     min-width: 100px;
     padding: 8px 0px;
+    margin: 0 32px;
     border: 4px solid #333;
     border-radius: 4px;
+    cursor: pointer;
+
+    transition: transform .2s;
+}
+
+.button-container:hover {
+    transform: scale(1.2);
+}
+
+.button_color-red {
     background-color: #CD4533;
 }
 
-.button-container__2 {
-    display: flex;
-    justify-content: center;
-    min-width: 100px;
-    padding: 8px 0px;
-    border: 4px solid #333;
-    border-radius: 4px;
+.button_color-green {
     background-color: #75CD33;
 }
-.button-container__1 > a {
+
+.button-container > a {
     text-decoration: none;
 }
 
-
-.button-container__2 > a {
-    text-decoration: none;
-}
-
-.button-container__1 > a > span {
+.button-container > a > span {
     text-decoration: none;
     color: #ddd;
 }
 
-.button-container__2 > a > span {
-    text-decoration: none;
-    color: #ddd;
+@media screen and (max-width: 1344px ) {
+    .main-container {
+        max-width: 700px;
+        margin: auto;
+    }
 }
-
-
