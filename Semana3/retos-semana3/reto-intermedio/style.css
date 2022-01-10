@@ -13,7 +13,11 @@ header nav{
     justify-content:space-between
 }
 main{
-    margin: 0px 50px;
+    margin: 0;
+}
+main h2{
+    text-align: center;
+    margin-top: 20px;
 }
 .menu a{   
     color: white;
@@ -21,21 +25,63 @@ main{
 }
 .container{
     display: flex;
-    width: 90%;
     margin: 0 auto;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
 }
 .figure1{
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 10px;
+}
+.figure1 img{
+    max-width: 300px;
+    margin: 10px 0;
+}
+.figure1 h3{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.figure1 p{
     text-align: center;
 }
-.container figure img{
-    display: block;
-    flex-basis: 100%;
-    width: 300px;
-    
+.figure1 div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+span{
+    font-weight: bold;
+}
+button{
+    background-color: rgb(12, 182, 85);
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
+@media only screen and (max-width: 1020px) {
+    .container{
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        
+    }
+}
+@media only screen and (max-width: 900px) {
+    .container{
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        
+    }
+}
+@media only screen and (max-width: 480px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
