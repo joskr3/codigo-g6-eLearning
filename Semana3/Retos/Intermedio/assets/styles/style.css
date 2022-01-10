@@ -9,6 +9,7 @@ header {
 main {
     display: flex;
     flex-direction: column;
+    margin-top: 40px;
 }
 
 /*
@@ -16,10 +17,10 @@ main {
  *
  */
 .menu {
+    position: fixed;
     display: flex;
     width: 100%;
     justify-content: center;
-
 }
 
 .menu > ul {
@@ -75,7 +76,7 @@ main {
 .product-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 48px;
+    margin: 0 8px 48px 8px;
 }
 
 /*
@@ -111,6 +112,7 @@ main {
     border: none;
     padding: 8px 16px;
     background-color: #00999A;
+    cursor: pointer;
 }
 
 /*
