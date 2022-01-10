@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+*{
+    margin: 0;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+header{
+    background-color: black;
+    color: white;
+    /* height: 30%; */
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen1 {
+    height: 30px;
+    align-self: flex-start;
+    margin: 10px;
+}
+
+.titulo1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.titulo2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.boton {
+    background-color: rgb(126, 123, 123);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 5px 8px; 
+}
+
+main {
+    display: flex;
+    /* height: 70%; */
+    align-items: center;
+    /* flex-flow: row wrap; */
+}
+
+
+.images-main{
+    height: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contenedor{
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 6px;
+    box-shadow: inset 3px 3px 3px rgba(255,255,255,.7), inset -2px -2px 3px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+}
+
+.paragraph-titles, .paragraph{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.paragraph {
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.paragraph-titles{
+    font-size: 20px;
+    font-weight: bold;
+}
+
