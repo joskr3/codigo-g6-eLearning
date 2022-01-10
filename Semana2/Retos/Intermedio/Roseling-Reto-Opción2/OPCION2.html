@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen">
+    <title>SEMANA 2</title>
+</head>
+<body>
+    <form>
+        <h1>Sing Up</h1>
+        <div>
+            <p>First name
+            <input type="text" class="name" required><br></p>
+            <p>Age<br>
+            <input type="number" class="age" pattern=".{1,120}" required></p>
+            <p>Income
+            <input type="number" class="income" required><br></p>
+            <p>More Info
+            <input type="text" class="info" pattern=".{6,}"></p>
+            <p>Gender<br>
+                <input type="radio" value="male">Male
+                <input type="radio" value="female">Female
+                <input type="radio" value="trans">Trans</p>
+            <p>Plan <br>
+            <select>
+                <option selected>Select Plan</option>
+                <option>Uno</option>
+                <option>Dos</option>
+                <option>Tres</option>
+            </select></p>
+            <input type="checkbox" class="plan" name="casilla"> Suscribe to Newsletter <br><br>
+        </div>
+        <div>
+            <input type="submit" class="button" value="Update">
+        </div>
+    </form>
+</body>
+</html>
