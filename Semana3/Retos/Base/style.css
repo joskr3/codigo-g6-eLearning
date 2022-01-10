@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+body p {
+    text-align: center;
+}
+
+/*Navegador*/
+.nav-hamburger {
+    background-color: #000;
+    height: 40px;
+    position: fixed;
+}
+
+.nav-hamburger .fa-bars {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/*cabecera*/
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 0 25px 0;
+}
+
+.header-content p {
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+}
+.header-content h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    padding: 20px 0;
+    text-align: center;
+}
+.header-content button {
+    background-color: #666666;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* contenedor de main */
+
+.main-content {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.main-content .card {
+    border: rgba(117, 112, 106, 0.2) solid 2px;
+    margin: 10px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 50px 60px 50px;
+}
+
+.main-content .card .icon {
+    font-size: 150px;
+    margin: 20px 0;
+}
+
+.main-content .card .description_card {
+    font-size: 0.9rem;
+}
+
+.main-content .card:hover {
+    background-color: rgba(102, 102, 102, 0.2);
+    transition: transform 0.8s ease;
+    transform: scale(1.05);
+    transform-origin: center;
+}
+
+/*foorter contenido*/
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/********** Responsive media query **********/
+/*Tablet*/
+@media only screen and (max-width: 900px) {
+    .main-content .card {
+        margin: 5px;
+        padding: 20px 30px 30px 30px;
+    }
+
+    .main-content .card .icon {
+        font-size: 120px;
+        margin: 20px 0;
+    }
+
+    .main-content .card .description_card {
+        font-size: 0.7rem;
+    }
+}
+
+/*Mobile*/
+@media only screen and (max-width: 480px) {
+    
+        
+
+    .main-content {
+        background-color: #fff;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .main-content .card {
+        margin: 10px;
+        width: auto;
+    }
+}
