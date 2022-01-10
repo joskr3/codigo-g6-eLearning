@@ -4,9 +4,230 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Reto intermedio</title>
 </head>
 <body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg class="bullet-img" viewBox="-96 0 512 512" xmlns="http://www.w3.org/2000/svg" >
+                            <g>
+                                <path d="M160 352Q120 352 92 324 64 296 64 256 64 216 92 188 120 160 160 160 200 160 228 188 256 216 256 256 256 296 228 324 200 352 160 352Z" />
+                            </g>
+                            
+                        </svg>
+                    </a>
+                </li>
+              <li><a href="#">CAMERAS</a></li>
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+    </header>
+    <main>
+        <div class="title-container">
+            <h1>Cameras</h1>
+        </div>
+        <div class="main-container">
+            <div class="product-container">
+                <div class="product-container__img">
+                    <img class="product-img" src="./assets/img/smartphone.jpg" alt="Smartphone">
+                </div>
+                <div class="product-container__info1">
+                    <div class="product-name">
+                        <span>Smartphone</span>
+                    </div>
+                    <div class="product-description">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nisi.</span>
+                    </div>
+                </div>
+                <div class="product-container__info2">
+                    <div class="product-price">
+                        <span>Price: 450€ </span>
+                    </div>
+                    <div class="product-price">
+                        <span>In Stock</span>
+                    </div>
+                </div>
+                <button class="product-container__button">
+                    <svg class="button-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;"xml:space="preserve">
+                        <g>
+                            <path d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M165,300 c-74.44,0-135-60.561-135-135S90.56,30,165,30s135,60.561,135,135S239.439,300,165,300z"/>
+                            <path d="M226.872,106.664l-84.854,84.853l-38.89-38.891c-5.857-5.857-15.355-5.858-21.213-0.001c-5.858,5.858-5.858,15.355,0,21.213l49.496,49.498c2.813,2.813,6.628,4.394,10.606,4.394c0.001,0,0,0,0.001,0c3.978,0,7.793-1.581,10.606-4.393l95.461-95.459c5.858-5.858,5.858-15.355,0-21.213C242.227,100.807,232.73,100.806,226.872,106.664z"/>
+                        </g>
+                    </svg>
+                    <div class="button-text">
+                        <span>ADD TO CART</span>
+                    </div>
+                </button>
+            </div>
+            <div class="product-container">
+                <div class="product-container__img">
+                    <img class="product-img" src="./assets/img/polaroid-camera.jpg" alt="Polaroid camera">
+                </div>
+                <div class="product-container__info1">
+                    <div class="product-name">
+                        <span>Some Old Polaroid Camera That Produces Hipstery Effects</span>
+                    </div>
+                    <div class="product-description">
+                        <span>Lorem ipsum dolor sit amet</span>
+                    </div>
+                </div>
+                <div class="product-container__info2">
+                    <div class="product-price">
+                        <span>Price: 250€ </span>
+                    </div>
+                    <div class="product-price">
+                        <span>In Stock</span>
+                    </div>
+                </div>
+                <button class="product-container__button">
+                    <svg class="button-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;"xml:space="preserve">
+                        <g>
+                            <path d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M165,300 c-74.44,0-135-60.561-135-135S90.56,30,165,30s135,60.561,135,135S239.439,300,165,300z"/>
+                            <path d="M226.872,106.664l-84.854,84.853l-38.89-38.891c-5.857-5.857-15.355-5.858-21.213-0.001c-5.858,5.858-5.858,15.355,0,21.213l49.496,49.498c2.813,2.813,6.628,4.394,10.606,4.394c0.001,0,0,0,0.001,0c3.978,0,7.793-1.581,10.606-4.393l95.461-95.459c5.858-5.858,5.858-15.355,0-21.213C242.227,100.807,232.73,100.806,226.872,106.664z"/>
+                        </g>
+                    </svg>
+                    <div class="button-text">
+                        <span>ADD TO CART</span>
+                    </div>
+                </button>
+            </div>
+            <div class="product-container">
+                <div class="product-container__img">
+                    <img class="product-img" src="./assets/img/go-pro.jpg" alt="GroPro">
+                </div>
+                <div class="product-container__info1">
+                    <div class="product-name">
+                        <span>GoPro Hero 4 Silver </span>
+                    </div>
+                    <div class="product-description">
+                        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis facilis aliquam itaque non reiciendis doloribus mollitia modi voluptas corrupti a.</span>
+                    </div>
+                </div>
+                <div class="product-container__info2">
+                    <div class="product-price">
+                        <span>Price: 210€ </span>
+                    </div>
+                    <div class="product-price">
+                        <span>In Stock</span>
+                    </div>
+                </div>
+                <button class="product-container__button">
+                    <svg class="button-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;"xml:space="preserve">
+                        <g>
+                            <path d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M165,300 c-74.44,0-135-60.561-135-135S90.56,30,165,30s135,60.561,135,135S239.439,300,165,300z"/>
+                            <path d="M226.872,106.664l-84.854,84.853l-38.89-38.891c-5.857-5.857-15.355-5.858-21.213-0.001c-5.858,5.858-5.858,15.355,0,21.213l49.496,49.498c2.813,2.813,6.628,4.394,10.606,4.394c0.001,0,0,0,0.001,0c3.978,0,7.793-1.581,10.606-4.393l95.461-95.459c5.858-5.858,5.858-15.355,0-21.213C242.227,100.807,232.73,100.806,226.872,106.664z"/>
+                        </g>
+                    </svg>
+                    <div class="button-text">
+                        <span>ADD TO CART</span>
+                    </div>
+                </button>
+            </div>
+            <div class="product-container">
+                <div class="product-container__img">
+                    <img class="product-img" src="./assets/img/camera1.jpg" alt="camera 1">
+                </div>
+                <div class="product-container__info1">
+                    <div class="product-name">
+                        <span>Camera 1</span>
+                    </div>
+                    <div class="product-description">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nisi.</span>
+                    </div>
+                </div>
+                <div class="product-container__info2">
+                    <div class="product-price">
+                        <span>Price: 150€ </span>
+                    </div>
+                    <div class="product-price">
+                        <span>In Stock</span>
+                    </div>
+                </div>
+                <button class="product-container__button">
+                    <svg class="button-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;"xml:space="preserve">
+                        <g>
+                            <path d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M165,300 c-74.44,0-135-60.561-135-135S90.56,30,165,30s135,60.561,135,135S239.439,300,165,300z"/>
+                            <path d="M226.872,106.664l-84.854,84.853l-38.89-38.891c-5.857-5.857-15.355-5.858-21.213-0.001c-5.858,5.858-5.858,15.355,0,21.213l49.496,49.498c2.813,2.813,6.628,4.394,10.606,4.394c0.001,0,0,0,0.001,0c3.978,0,7.793-1.581,10.606-4.393l95.461-95.459c5.858-5.858,5.858-15.355,0-21.213C242.227,100.807,232.73,100.806,226.872,106.664z"/>
+                        </g>
+                    </svg>
+                    <div class="button-text">
+                        <span>ADD TO CART</span>
+                    </div>
+                </button>
+            </div>
+            <div class="product-container">
+                <div class="product-container__img">
+                    <img class="product-img" src="./assets/img/camera2.jpg" alt="Camera 2">
+                </div>
+                <div class="product-container__info1">
+                    <div class="product-name">
+                        <span>Camera 2</span>
+                    </div>
+                    <div class="product-description">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nisi.</span>
+                    </div>
+                </div>
+                <div class="product-container__info2">
+                    <div class="product-price">
+                        <span>Price: 275€ </span>
+                    </div>
+                    <div class="product-price">
+                        <span>In Stock</span>
+                    </div>
+                </div>
+                <button class="product-container__button">
+                    <svg class="button-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;"xml:space="preserve">
+                        <g>
+                            <path d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M165,300 c-74.44,0-135-60.561-135-135S90.56,30,165,30s135,60.561,135,135S239.439,300,165,300z"/>
+                            <path d="M226.872,106.664l-84.854,84.853l-38.89-38.891c-5.857-5.857-15.355-5.858-21.213-0.001c-5.858,5.858-5.858,15.355,0,21.213l49.496,49.498c2.813,2.813,6.628,4.394,10.606,4.394c0.001,0,0,0,0.001,0c3.978,0,7.793-1.581,10.606-4.393l95.461-95.459c5.858-5.858,5.858-15.355,0-21.213C242.227,100.807,232.73,100.806,226.872,106.664z"/>
+                        </g>
+                    </svg>
+                    <div class="button-text">
+                        <span>ADD TO CART</span>
+                    </div>
+                </button>
+            </div>
+            <div class="product-container">
+                <div class="product-container__img">
+                    <img class="product-img" src="./assets/img/camera3.jpg" alt="Camera 3">
+                </div>
+                <div class="product-container__info1">
+                    <div class="product-name">
+                        <span>Camera 3</span>
+                    </div>
+                    <div class="product-description">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nisi.</span>
+                    </div>
+                </div>
+                <div class="product-container__info2">
+                    <div class="product-price">
+                        <span>Price: 375€ </span>
+                    </div>
+                    <div class="product-price">
+                        <span>In Stock</span>
+                    </div>
+                </div>
+                <button class="product-container__button">
+                    <svg class="button-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;"xml:space="preserve">
+                        <g>
+                            <path d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M165,300 c-74.44,0-135-60.561-135-135S90.56,30,165,30s135,60.561,135,135S239.439,300,165,300z"/>
+                            <path d="M226.872,106.664l-84.854,84.853l-38.89-38.891c-5.857-5.857-15.355-5.858-21.213-0.001c-5.858,5.858-5.858,15.355,0,21.213l49.496,49.498c2.813,2.813,6.628,4.394,10.606,4.394c0.001,0,0,0,0.001,0c3.978,0,7.793-1.581,10.606-4.393l95.461-95.459c5.858-5.858,5.858-15.355,0-21.213C242.227,100.807,232.73,100.806,226.872,106.664z"/>
+                        </g>
+                    </svg>
+                    <div class="button-text">
+                        <span>ADD TO CART</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </main>
+    
     
 </body>
 </html>
