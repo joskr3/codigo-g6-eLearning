@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    height: auto;
+    background-color: #457b9d;
+}
+
+header nav ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+header nav ul li{
+    text-align: center;
+    width: 25%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li:hover{
+    background-color: #95989b;
+    cursor: pointer;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.active{
+    background-color: #1d3557;
+}
+
+main{
+    width: 100%;
+}
+
+main h1{
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: rgb(158, 157, 157);
+}
+
+.div-galery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div-galery-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    margin: 0px 20px 20px 20px;
+    padding: 0px 60px 60px 60px;
+}
+
+
+.div-galery-content img{
+    width: 250px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+.div-galery-content h2{
+    font-size: 1.3rem;
+    padding: 10px 0 10px 0px;
+}
+
+.div-galery-content p{
+    font-size: 0.8rem;
+}
+
+.price{
+    width: 250px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price span{
+    background-color: rgb(224, 221, 221);
+    color: black;
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.div-galery-content .button{
+    position: relative;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    background-color: #457b9d;
+}
+
+.button .img-button{
+    position: absolute;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+}
+
+.button .img-button img{
+    width: 16px;
+    height: 16px;
+}
+
+.button .text-button{
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width:900px) {
+    .div-galery-content{
+        width: 40vw;
+    }
+    .div-galery-content img{
+        width: 200px;
+        height: 130px;
+    }
+    .price{
+        width: 200px;
+    }
+    .div-galery-content .button{
+        width: 200px;
+    }
+  }
+  
+
+@media screen and (max-width:480px) {
+    .div-galery-content{
+        width: 70vw;
+    }
+    .div-galery-content img{
+        width: 300px;
+        height: 230px;
+    }
+    .price{
+        width: 300px;
+    }
+    .div-galery-content .button{
+        width: 300px;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    header nav ul li{
+        width: 100%;
+    }
+    
+  }
