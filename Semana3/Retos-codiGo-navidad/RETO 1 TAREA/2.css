@@ -37,19 +37,19 @@ main {
   
 }
 
-.contenedor-1-imagen > :first-child { 
+.contenedor-imagen-1 { 
     margin-right: 26px;
    
     
 }
 
-.contenedor-1 > :nth-child(2){
-    margin-right: 27px; 
+.contenedor-imagen-2{
+    margin-right: 26px; 
     
 }
 
-.contenedor-1 > :last-child{
-    margin-right: 10px;
+.contenedor-imagen-3{
+    margin-right: 26px;
     
 }
 
