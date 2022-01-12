@@ -14,14 +14,9 @@ header{
 
 header > :first-child{
 
-    margin-top: 100px ;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-top: 100px ;  
     font-size: 90px;
-    font-family: monospace;
-    text-align: center;
-    
+    font-family: monospace;  
     
 }
 
@@ -33,24 +28,29 @@ main {
 
 .contenedor-1{
     display: flex;
-    justify-content: center;
-    margin-bottom: 60px;
+    flex-direction: row;
     flex-wrap: wrap;
-
+    justify-content: space-around;
+    margin-bottom: 60px;
+    align-items: flex-start;
+    
   
 }
 
 .contenedor-1-imagen > :first-child { 
     margin-right: 26px;
+   
     
 }
 
 .contenedor-1 > :nth-child(2){
     margin-right: 27px; 
+    
 }
 
 .contenedor-1 > :last-child{
     margin-right: 10px;
+    
 }
 
 .contenedor-2 {
