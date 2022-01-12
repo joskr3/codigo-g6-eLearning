@@ -74,6 +74,7 @@ footer > :first-child{
 
 footer > :last-child{
     margin-top: 20px ;
+    text-align: left;
 }
 
 
