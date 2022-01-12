@@ -21,6 +21,7 @@ header > :first-child{
 }
 
 main {
+
     background-color: #ffffff ;
     border:0px 1px 0px 1px solid #fdfdfd ;
  
@@ -32,6 +33,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 60px;
+    margin-top: 60px;
     align-items: flex-start;
     
   
@@ -79,7 +81,7 @@ footer > :last-child{
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 489px) {
 
     main {
         display: flex;
