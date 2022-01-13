@@ -1,0 +1,96 @@
+
+/* importar un font desde google font atravez de una url */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=Roboto:wght@300&display=swap');
+
+
+
+/* con el selector "*" selcccionamos todos los elementos del DOM (estructura html) , y le aplico un tipo de letra  */
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* le quito los margenes por defecto */
+body{
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+/* el display de tipo inline-block , coloca los elementos en linea (horizantales) y respetando el bloque , el heigh lo definimos con una altura de 60 VIEW HEIGHT(altura de la view(vista))*/
+header{
+    display:inline-block;
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 60vh; 
+    width: 100vw;
+}
+.primer-texto {
+    font-size: large;
+    margin-top: 2rem;
+}
+.segundo-texto {
+   font-size: 3.75rem;
+}
+/* convierte el texto a mayusculas(uppercase), fonto weight le da un grosor espesifico a la letra , y en el caso del view with , le decimos que el ancho de la view sea el 70% de la vista */
+button{
+    text-transform: uppercase;
+    padding: 0.5em;
+    background-color: #646369;
+    font-size: 1rem;
+    color: white;
+    font-weight: 900;
+    width: 70vw;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #646369;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    border-radius: 25px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 80vw;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 2rem;
+}
+.texto {
+    font-size: 1.25rem;
+}
+
+.imagen {
+    width:200px
+}
+
+/* Desde que le damos estilos , pensando primero en mobile(pantallas de celulares), debemos asegurarnos que tambien se vea bien para pantallas mas grandes como la de una computdora de escritorio */
+@media only screen and (min-width: 992px) {
+    header{
+        height: 40vh;
+    }
+    button{
+        width: 10vw;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    section{
+        padding: 2rem;
+        width: 25vw;
+    }
+}
+
