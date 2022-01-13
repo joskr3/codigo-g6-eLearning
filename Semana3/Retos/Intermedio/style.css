@@ -16,7 +16,7 @@ body {
     font-weight: 200;
 }
 
-header{
+header {
     background-color: #3c50ff;
     color: #fff;
     display: flex;
@@ -33,27 +33,26 @@ header .logo {
     text-align: center;
 }
 
-
-header .logo img{
+header .logo img {
     height: 70px;
-    margin-bottom: -10px;    
+    margin-bottom: -10px;
 }
 
-header nav{
+header nav {
     width: 75%;
     height: 100%;
 }
 
-header nav ul{
+header nav ul {
     display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
     height: 100%;
 }
 
-nav ul li{
+nav ul li {
     flex-grow: 1;
     list-style: none;
     font-weight: 400;
@@ -67,22 +66,21 @@ nav ul li a {
     color: #fff;
 }
 
-nav ul li:hover{
+nav ul li:hover {
     background-color: #2338f1;
 }
 
-
 /*main */
-main{
+main {
     width: 100%;
 }
 
 .title-main {
     text-align: center;
-    margin: 25px 0;
+    margin: 25px 0 0;
 }
 
-.title-main h1{
+.title-main h1 {
     font-size: 1.8rem;
     font-weight: 300;
     color: #646464;
@@ -93,71 +91,109 @@ main{
     margin: 10px 40px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    
 }
-.content-product .product{
+.content-product .product {
     display: flex;
     flex-direction: column;
-    min-height: 600px;
+    justify-content: space-between;
+    /*background-color: red;*/
+    width: 30%;
+    height: 480px;
+    margin: 30px 10px;
 }
 
-.content-product .product .product-imag{
-    width: 300px;
-    height: 200px;
+.content-product .product .product-imag {
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+    background-size: cover;
+    border: rgb(20, 175, 223) solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     
-
 }
 
-.content-product .product .product-imag img{
-    width: 300px;
-    height: 200px;
+.content-product .product .product-imag img {
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
     position: absolute;
 }
 
-.content-product .product .product-imag:first-child{
+.content-product .product .product-imag:first-child {
     z-index: 1;
 }
-.content-product .product h2{
-    margin-top: 20px;
+.content-product .product h2 {
+    /*margin-top: 20px;*/
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
 }
 
-.content-product .product .product-price{
+.content-product .product p {
+    /*margin-top: 20px;*/
+    font-size: 1rem;
+    min-height: 80px;
+    max-height: 80px;
+    text-align: center;
+    
+    
+}
+.content-product .product .product-price {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-    padding: 10px;
+    margin: 10px 0;
 }
-.content-product .product .product-price span{
+.content-product .product .product-price span {
     background-color: #cccccc;
     font-weight: bold;
     font-size: 0.8rem;
     border-radius: 20px;
     padding: 5px 10px;
+    
 }
 
-.content-product .product .product-add{
+.content-product .product .product-add {
     background-color: rgb(20, 175, 223);
     border-radius: 5px;
     border: 0;
     height: 40px;
     color: white;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    cursor: pointer;
-}
-.content-product .product .product-add :hover{
-    background: rgb(12, 157, 201);
+    flex-wrap: nowrap;
+    position: relative;
+    height: 35px;
 }
 
-.content-product .product .product-add :first-child{
-    margin: 5px 15px;
+.content-product .product .product-add :first-child {    
+    left: 15px; 
+    position: absolute;
 }
-.content-product .product .product-add span{
-    text-align: center;
-    width: 100%;
+
+.content-product .product .product-add:hover
+,.content-product .product .product-add:before {
+    background-color: rgb(22, 145, 182);
+    
 }
+
+
+
+
+
 
 /*foorter contenido*/
 .footer-content {
