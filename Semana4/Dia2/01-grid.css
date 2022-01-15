@@ -10,8 +10,13 @@
     display: grid;
     /* tenemos que definir las columnas y filas que vamos a tener, es una grilla */
     /* segun la cantidad de tamaños que indiquemos, se formarán las columnas y filas */
-    grid-template-columns: 100px 150px 250px;
-    grid-template-rows: 200px 200px 200px;
+    /* repeat(cant, tamaño) */
+    /* grid-template-columns: 100px 150px 250px; */
+    /* fr es una unidad de medida como px, %, representa el espacio libre */
+    grid-template-columns: repeat(4, 2fr);
+    /* grid-template-columns: 1fr 2fr 3fr; no es restrictivo del repeat */
+    /* grid-template-rows: 200px 200px 200px; */
+    grid-template-rows: repeat(3, 150px);
 }
 
 .item {
