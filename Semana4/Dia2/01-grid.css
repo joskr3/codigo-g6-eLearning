@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
+/* las reglas de grid se aplican al padre */
 .contenedor {
     border: 2px solid blue;
+    display: grid;
+    /* tenemos que definir las columnas y filas que vamos a tener, es una grilla */
+    /* segun la cantidad de tamaños que indiquemos, se formarán las columnas y filas */
+    grid-template-columns: 100px 150px 250px;
+    grid-template-rows: 200px 200px 200px;
 }
 
 .item {
