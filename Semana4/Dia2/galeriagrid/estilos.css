@@ -30,6 +30,10 @@
     background-position: center;
     box-shadow: 3px 3px 3px gray;
     transition: all 0.3s;
+    /* animación 
+	animation: nombre tiempo aceleracion ejecución
+	*/
+    animation: mianimacion 0.5s ease-out normal;
 }
 
 .caja:hover {
