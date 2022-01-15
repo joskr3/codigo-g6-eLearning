@@ -22,11 +22,20 @@
 }
 
 .caja {
+    /* estado inicial de la transición */
     background: #eee;
     font-size: 48px;
     color: white;
     background-size: cover;
     background-position: center;
+    box-shadow: 3px 3px 3px gray;
+    transition: all 0.3s;
+}
+
+.caja:hover {
+    box-shadow: 5px 5px 5px gray;
+    /* translate(ejeX, ejeY) scale(numerodecimal) */
+    transform: translate(0, 5px) scale(1.021);
 }
 
 .caja:nth-of-type(1) {
@@ -74,4 +83,27 @@
     grid-column: 1 / 4;
     grid-row: 4 / 5;
     background-image: url("./img/tile19.jpg");
+}
+
+/* KEYFRAMES */
+
+@keyframes mianimacion {
+    /* FRAMES */
+    /* #% {
+		PROPIEDADES:CSS
+	} */
+    0% {
+        /* no se va a ver nada */
+        transform: scale(0);
+    }
+    70% {
+        /* se va a agrandar un poquito */
+        transform: scale(1.05);
+        color: black;
+    }
+    100% {
+        /* lo dejamos sin escalar, escala1:1 */
+        transform: scale(1);
+        color: white;
+    }
 }
