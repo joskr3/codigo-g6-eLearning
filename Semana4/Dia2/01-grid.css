@@ -13,7 +13,9 @@
     /* repeat(cant, tamaño) */
     /* grid-template-columns: 100px 150px 250px; */
     /* fr es una unidad de medida como px, %, representa el espacio libre */
-    grid-template-columns: repeat(4, 2fr);
+    /* grid-template-columns: repeat(4, 2fr); */
+    /* minmax(tamañomin, tamañomax) que va a tener la columna o fila del grid */
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
     /* grid-template-columns: 1fr 2fr 3fr; no es restrictivo del repeat */
     /* grid-template-rows: 200px 200px 200px; */
     grid-template-rows: repeat(3, 150px);
