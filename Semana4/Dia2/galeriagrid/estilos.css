@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* temporal */
+    border: 2px solid lightgray;
+}
+
+.contenedor {
+    padding: 50px;
+    min-width: 800px;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 0 auto;
+    /* GRID */
+    display: grid;
+    /* repeat(cant, tamaño) */
+    /* minmax(tamañomin, tamañomax) */
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    grid-template-rows: repeat(4, minmax(150px, 1fr));
+}
