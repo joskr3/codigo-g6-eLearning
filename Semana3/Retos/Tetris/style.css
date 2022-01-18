@@ -1,0 +1,33 @@
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-family: "Saira", sans-serif;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    
+    
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    margin: 20px auto;
+    margin-left: auto; 
+    margin-right: auto;
+    
+    
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(12, 50px);
+}
+
+main .square {
+    box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+}
