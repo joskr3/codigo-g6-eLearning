@@ -1,0 +1,17 @@
+*{
+    border:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.contenedor{
+    border:2px solid blue;
+    display:grid;
+    /*tenemos que definir las columnas y filas que vamos a tener*/
+    /* segun la cantidad de tamaños que indiquemos, se
+    formaran las columnas y filas*/
+    grid-template-columns: 100px 150px 250px;
+    grid-template-rows: 150px 150px 150px;
+}
+.item{
+    border:2px solid red;
+}
