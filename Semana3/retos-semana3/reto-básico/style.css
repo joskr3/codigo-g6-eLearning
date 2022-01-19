@@ -7,21 +7,20 @@ header{
     background-color: black;
     color: white;
     border: solid black; 
+    height: 30vh;
+
 }
 #titulos{
     margin-top: 15px;
     display: flex;
     align-items: center;
-    
     flex-direction: column; 
 }
-#titulos p{
-    text-align: center;
-}
+
 #titulos h1{
     padding-top: 15px;
     padding-bottom: 25px;
-    text-align: center;
+    
 }
 #titulos h3{
     margin-bottom: 15px;
@@ -36,7 +35,8 @@ main{
 .caja2{
     margin: 5px;
     border: 1px solid rgba(0,0,0,0.2);
-    box-shadow: 0.1em 0.1em 0 0 rgba(0,0,0,0.3);         
+    box-shadow: 0.1em 0.1em 0 0 rgba(0,0,0,0.3);  
+    border-radius: 1em;       
     text-align: center;
     padding-bottom: 100px;
 }
@@ -45,10 +45,6 @@ main{
     width: 200px;
     display: block;
     margin: auto
-
-}
-.caja2 img#css{
-    width: 130px;
 }
 .caja2 p{
     margin-top: 15px;
@@ -58,14 +54,15 @@ main{
 @media only screen and (max-width: 900px) {
     main{
         display: flex; 
-        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 @media only screen and (max-width: 450px) {
     main{
         display: flex; 
-        flex-direction: column;
+        flex-wrap: wrap;
     }
+
 }
 
 
