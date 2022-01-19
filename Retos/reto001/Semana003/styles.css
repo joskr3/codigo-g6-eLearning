@@ -1,0 +1,52 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Contenedor-1 Contenedor-1 Contenedor-1"
+      "contenedor-2 contenedor-3 contenedor-4"
+      "contenedor-2 contenedor-3 contenedor-4";
+  }
+  
+  .Contenedor-1 { grid-area: Contenedor-1; text-align: center; background-color: black; }
+  
+  .contenedor-2 { grid-area: contenedor-2; }
+  
+  .contenedor-3 { grid-area: contenedor-3; }
+  
+  .contenedor-4 { grid-area: contenedor-4; }
+  
+  span.cabecera {
+    
+    font-size: medium;
+    font-family: 150% serif;
+    text-align: center;
+    color:white;
+  }
+  
+  
+  html, body , .container {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* For presentation only, no need to copy the code below */
+  
+  .container * {
+    border: 1px solid red;
+    position: relative;
+  }
+  
+  .container *:after {
+    content:attr(class);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  
