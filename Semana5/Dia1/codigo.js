@@ -168,3 +168,18 @@ if (numeroPar !== numeroImpar){
 
 // * necesitamos tres variables = (la altura y el peso de cada uno) y el mayorBMI , para saber quien es el que tiene el mayor BMI
 
+let altura_Ana = 1.64
+let peso_Ana = 80
+let altura_Juan = 1.71
+let peso_Juan = 76
+let bmi_Ana = peso_Ana/(altura_Ana*2)
+let bmi_Juan = peso_Juan/(altura_Juan*2)
+
+console.log("BMI ANA = "+bmi_Ana)
+console.log("BMI JUAN = "+bmi_Juan)
+
+if (bmi_Ana>bmi_Juan) {
+    console.log("Ana tiene el BMI mas alto")
+} else {
+    console.log("Juan tiene el BMI mas alto")
+}
