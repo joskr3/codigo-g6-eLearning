@@ -213,3 +213,58 @@ let palabraOtraPalabra = "Hola";
 // snake-case
 let palabra_otra_palabra = "Hola";
 
+
+
+// Ejercicio 2 - Competicion
+
+// Hay 2 equpos de gimnasia , los delfines  y los koalas , ellos compiten 3 veces
+// Y el ganador con el puntaje mas alto se lleva el trofeo
+
+// objetivos:
+
+// 1 . Calcular el puntaje promedio de cada equipo
+// 2 . Comparar los puntajes , para determinar el ganador o el empate
+// * debo implemetar un puntaje minimo de 100 puntos de diferencia  para que el equipo que gane 
+// * El empate ocurre cuando los dos equipos tienes igual o mas de 100 puntos , sino nadie se lleva el trofeo
+
+
+let puntajeDelfines = [1000, 150, 90];
+let puntajeKoalas = [10, 200, 130];
+
+
+// length me devuelve la cantidad de elementos que tiene un array
+function calcularPuntaje(arrayDePuntajes) {
+    let sumaDePuntajes = 0;
+    for (let i = 0; i < arrayDePuntajes.length; i++) {
+        sumaDePuntajes += arrayDePuntajes[i];
+    }
+    return sumaDePuntajes / arrayDePuntajes.length;
+}
+
+let puntajePromedioDelfines = calcularPuntaje(puntajeDelfines);
+let puntajePromedioKoalas = calcularPuntaje(puntajeKoalas);
+
+function determinarGanador(puntajeDelfines, puntajeKoalas) {
+
+    let ganadorDelfines = puntajeDelfines > puntajeKoalas && (puntajeDelfines - puntajeKoalas >= 100)
+
+    let ganadorKoalas = puntajeKoalas > puntajeDelfines && (puntajeKoalas - puntajeDelfines >= 100)
+
+    let empate = puntajeDelfines === puntajeKoalas
+
+    if (ganadorDelfines) {
+        return "Delfines";
+    } else if (ganadorKoalas) {
+        return "Koalas";
+    } else if (empate) {
+        return "Empate";
+    }
+    else {
+        return "No hay ganador";
+    }
+}
+
+let determinarResultado = determinarGanador(puntajePromedioDelfines, puntajePromedioKoalas);
+
+console.log(determinarResultado)
+
