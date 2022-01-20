@@ -244,19 +244,22 @@ function calcularPuntaje(arrayDePuntajes) {
 let puntajePromedioDelfines = calcularPuntaje(puntajeDelfines);
 let puntajePromedioKoalas = calcularPuntaje(puntajeKoalas);
 
-function determinarGanador(puntajeDelfines, puntajeKoalas) {
 
-    let ganadorDelfines = puntajeDelfines > puntajeKoalas && (puntajeDelfines - puntajeKoalas >= 100)
+let ganadorDelfines = puntajePromedioDelfines > puntajePromedioKoalas && (puntajePromedioDelfines - puntajePromedioKoalas >= 100)
 
-    let ganadorKoalas = puntajeKoalas > puntajeDelfines && (puntajeKoalas - puntajeDelfines >= 100)
+let ganadorKoalas = puntajePromedioKoalas > puntajePromedioDelfines && (puntajePromedioKoalas - puntajePromedioDelfines >= 100)
 
-    let empate = puntajeDelfines === puntajeKoalas
+let empate = puntajePromedioDelfines === puntajePromedioKoalas
 
-    if (ganadorDelfines) {
+
+
+
+function determinarGanador(resultadoDelfines, resultadoKoalas, resultadoEmpate) {
+    if (resultadoDelfines) {
         return "Delfines";
-    } else if (ganadorKoalas) {
+    } else if (resultadoKoalas) {
         return "Koalas";
-    } else if (empate) {
+    } else if (resultadoEmpate) {
         return "Empate";
     }
     else {
@@ -264,7 +267,26 @@ function determinarGanador(puntajeDelfines, puntajeKoalas) {
     }
 }
 
-let determinarResultado = determinarGanador(puntajePromedioDelfines, puntajePromedioKoalas);
+function determinarGanador2(resultadoDelfines, resultadoKoalas, resultadoEmpate) {
+
+    switch (true) {
+        case (resultadoDelfines):
+            return "Delfines";
+            break;
+        case (resultadoKoalas):
+            return "Koalas";
+            break;
+        case (resultadoEmpate):
+            return "Empate";
+            break;
+        default:
+            return "No hay ganador";
+    }
+}
+
+
+
+let determinarResultado = determinarGanador(ganadorDelfines, ganadorKoalas, empate);
 
 console.log(determinarResultado)
 
