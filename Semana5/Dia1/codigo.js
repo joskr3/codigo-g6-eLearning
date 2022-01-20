@@ -228,10 +228,21 @@ let palabra_otra_palabra = "Hola";
 // * El empate ocurre cuando los dos equipos tienes igual o mas de 100 puntos , sino nadie se lleva el trofeo
 
 
+// SOLUCION:
+
+// Primero: Creamos un array con tres resultados de las 3 competiciones(puntajes) para cada equipo
 let puntajeDelfines = [1000, 150, 90];
 let puntajeKoalas = [10, 200, 130];
 
 
+
+
+// Segundo: Calculamos el promedio de los puntajes
+// Un parametro en una funcion es informacion que necetiamos para que la funcion funcione
+// Mi funcion "calcularPuntaje" recibe un array de puntajes y devuelve el promedio
+// es una variable que se llama sumaPuntajes acumulare los valores que se se vayan sumando en la ejecucion del for
+//  en el for empiezo a recorrer mi array en el indice 0 (let i = 0), despues lo recorrere mienstras ese indice sea menor a la cantidad de elementos del array, y aumentare de uno en uno el indice para eventualmente salir del for(i++)
+// al final la funcion devuelve la suma de los puntajes dividido entre la cantidad de elementos del array
 // length me devuelve la cantidad de elementos que tiene un array
 function calcularPuntaje(arrayDePuntajes) {
     let sumaDePuntajes = 0;
@@ -241,25 +252,36 @@ function calcularPuntaje(arrayDePuntajes) {
     return sumaDePuntajes / arrayDePuntajes.length;
 }
 
+
+
+// Tercero: Calculamos el punataje del ganador
 let puntajePromedioDelfines = calcularPuntaje(puntajeDelfines);
 let puntajePromedioKoalas = calcularPuntaje(puntajeKoalas);
 
 
+
+// en las siguientes lineas de codigo , comparamos los puntajes promedios de los dos equipos y si tienen una diferencia de 100 puntos o mas
 let ganadorDelfines = puntajePromedioDelfines > puntajePromedioKoalas && (puntajePromedioDelfines - puntajePromedioKoalas >= 100)
-
 let ganadorKoalas = puntajePromedioKoalas > puntajePromedioDelfines && (puntajePromedioKoalas - puntajePromedioDelfines >= 100)
-
 let empate = puntajePromedioDelfines === puntajePromedioKoalas
 
 
+// Cuarto: resultado final es una variable de tipo string(cadena de texto) que obtendra su valor del operador ternario(version resumida del if-else)
+// evaluo si el ganaor son los los delfines , si es asi, devuelvo la cadena de /texto "Delfines", sino , evaluo si el ganador son los koalas, si es asi , devuelvo la cadena de texto "Koalas" , sino , devuelvo la cadena de texto "Empate"
+let resultadoFinal = ganadorDelfines === true ? "Delfines" : ganadorKoalas === true ? "Koalas" : "Empate";
 
 
-function determinarGanador(resultadoDelfines, resultadoKoalas, resultadoEmpate) {
-    if (resultadoDelfines) {
+
+// Quinto: imprimir en consola el resultado final
+// resultado final me devolvera un string , por lo que lo imprimo en consola
+// mi funcion determinarGanador recibe un string y devuelve un string
+// compara si el valor equivale a "Delfines" si es asi devuelve "Delfines", igual para koalas y empate
+function determinarGanador(resultadoFinal) {
+    if (resultadoFinal === "Delfines") {
         return "Delfines";
-    } else if (resultadoKoalas) {
+    } else if (resultadoFinal === "Koalas") {
         return "Koalas";
-    } else if (resultadoEmpate) {
+    } else if (resultadoFinal === "Empate") {
         return "Empate";
     }
     else {
@@ -267,16 +289,19 @@ function determinarGanador(resultadoDelfines, resultadoKoalas, resultadoEmpate) 
     }
 }
 
-function determinarGanador2(resultadoDelfines, resultadoKoalas, resultadoEmpate) {
 
-    switch (true) {
-        case (resultadoDelfines):
+// el el caso de la funcion determninarGanador2 recibe un string y devuelve un string
+// En este funcion uso un switch 
+// el cual evulua el valor de la variable resultado(que llega como resultadoFinal) y dependiendo de la respuesta devuelve un string (que puede ser Delfines, Koalas o Empate)
+function determinarGanador2(resultado) {
+    switch (resultado) {
+        case "Delfines":
             return "Delfines";
             break;
-        case (resultadoKoalas):
+        case "Koalas":
             return "Koalas";
             break;
-        case (resultadoEmpate):
+        case "Empate":
             return "Empate";
             break;
         default:
@@ -284,9 +309,8 @@ function determinarGanador2(resultadoDelfines, resultadoKoalas, resultadoEmpate)
     }
 }
 
-
-
-let determinarResultado = determinarGanador(ganadorDelfines, ganadorKoalas, empate);
+// asiganr el valor final a determinarResultado , para imprimirlo en la consola
+let determinarResultado = determinarGanador(resultadoFinal);
 
 console.log(determinarResultado)
 
