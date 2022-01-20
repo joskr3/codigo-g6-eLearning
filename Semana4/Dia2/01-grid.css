@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
   border: 0;
   padding: 0;
   box-sizing: border-box;
@@ -36,3 +37,49 @@
   /* grid-column: 1/1; */
   grid-row: 2/4;
 }
+=======
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* las reglas de grid se aplican al padre */
+.contenedor {
+    border: 2px solid blue;
+    display: grid;
+    /* tenemos que definir las columnas y filas que vamos a tener, es una grilla */
+    /* segun la cantidad de tamaños que indiquemos, se formarán las columnas y filas */
+    /* repeat(cant, tamaño) */
+    /* grid-template-columns: 100px 150px 250px; */
+    /* fr es una unidad de medida como px, %, representa el espacio libre */
+    /* grid-template-columns: repeat(4, 2fr); */
+    /* minmax(tamañomin, tamañomax) que va a tener la columna o fila del grid */
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    /* grid-template-columns: 1fr 2fr 3fr; no es restrictivo del repeat */
+    /* grid-template-rows: 200px 200px 200px; */
+    grid-template-rows: repeat(3, 150px);
+    /* brecha, espacio = gap */
+    gap: 20px;
+
+    /* grid implicito */
+    /* que si hay elementos fuera de nuestra grilla principal usen este tamaño */
+    grid-auto-rows: 200px;
+    grid-auto-columns: 250px;
+    grid-auto-flow: row; /*column*/
+}
+
+.item {
+    border: 2px solid red;
+}
+
+/* de los elementos con la clase item escoge el primero, es un pseudo-clase general no es restrictiva de grid */
+.item:nth-of-type(1) {
+    /* grid-column: #inicio, #final; en base a las alineaciones */
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.item:nth-of-type(5) {
+    grid-row: 2 / 4;
+}
+>>>>>>> ce8edc9c23114dce2dbcacd32f32a39f10569758
