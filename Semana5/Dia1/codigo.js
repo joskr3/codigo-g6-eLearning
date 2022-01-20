@@ -100,7 +100,7 @@ let numeroMenor = 5;
 
 if (numeroMayor > numeroMenor) {
     console.log("El numero mayor es mayor que el menor");
-}else {
+} else {
     console.log("El numero mayor es menor que el menor");
 }
 
@@ -111,23 +111,23 @@ let mayorDeEdadEnUsa = 21;
 let mayorDeEdadEnJapon = 20;
 
 
-if (mayorDeEdadEnPeru >= 18){
+if (mayorDeEdadEnPeru >= 18) {
     console.log("Es mayor de edad , puede entrar al bar");
-}else{
+} else {
     console.log("No es mayor de edad , no puede entrar al bar");
 }
 
 
-if (mayorDeEdadEnPeru === mayorDeEdadEnUsa){
+if (mayorDeEdadEnPeru === mayorDeEdadEnUsa) {
     console.log("Es mayor de edad en USA , puede entrar al bar");
-}else {
+} else {
     console.log("No es mayor de edad en USA , no puede entrar al bar");
 }
 
 
-if (mayorDeEdadEnPeru !== mayorDeEdadEnUsa){
+if (mayorDeEdadEnPeru !== mayorDeEdadEnUsa) {
     console.log("Es mayor de edad en Peru , pero no es USA , no puede entrar al bar en USA");
-}else{
+} else {
     console.log("No es mayor de edad en Peru , pero es USA , puede entrar al bar en USA");
 }
 
@@ -138,11 +138,11 @@ let mayorDeEdadEnCuba = true;
 let mayorDeEdadEnIran = false;
 let mayorDeEdadEnRusia = true;
 
-if (mayorDeEdadEnCuba || mayorDeEdadEnRusia || mayorDeEdadEnIran){
+if (mayorDeEdadEnCuba || mayorDeEdadEnRusia || mayorDeEdadEnIran) {
     console.log("Eres mayor de edad, puedes entrar al bar");
 }
 
-if((mayorDeEdadEnCuba || mayorDeEdadEnIran) && mayorDeEdadEnRusia){
+if ((mayorDeEdadEnCuba || mayorDeEdadEnIran) && mayorDeEdadEnRusia) {
     console.log("Eres mayor de edad, puedes entrar al bar");
 }
 
@@ -150,13 +150,13 @@ let numeroPar = 10;
 let numeroImpar = 11;
 
 // !== - > si es que no son iguales
-if (numeroPar !== numeroImpar){
+if (numeroPar !== numeroImpar) {
     console.log("Son numeros diferentes");
 }
 
 
 
-// EJERCICIO 1 -  BMI
+// EJERCICIO 1 -  BMI(indice de masa corporal)
 
 //formula bmi ->>  bmi = peso / ( altura * altura)
 
@@ -167,4 +167,49 @@ if (numeroPar !== numeroImpar){
 // para imprimir en consola --> console.log(Lo que quiero imprimir)
 
 // * necesitamos tres variables = (la altura y el peso de cada uno) y el mayorBMI , para saber quien es el que tiene el mayor BMI
+
+
+let alturaAna = 1.70;
+let alturaJuan = 1.80;
+
+let pesoJuan = 80;
+let pesoAna = 70;
+
+
+let bmiAna1 = pesoAna / (alturaAna * alturaAna);
+let bmiJuan1 = pesoJuan / (alturaJuan * alturaJuan);
+
+if (bmiAna1 > bmiJuan1) {
+    console.log("Ana tiene el mayor BMI");
+} else {
+    console.log("Juan tiene el mayor BMI");
+}
+
+
+
+function calcularBmi(peso, altura) {
+    return peso / (altura * altura);
+}
+
+function calcularMayorBMI(bmiAna = 0, bmiJuan = 0) {
+    if (bmiAna > bmiJuan) {
+        return "Ana tiene el mayor BMI";
+    } else if (bmiAna < bmiJuan) {
+        return "Juan tiene el mayor BMI";
+    } else {
+        return "Ambos tienen el mismo BMI";
+    }
+}
+
+let bmiAna = calcularBmi(pesoAna, alturaAna);
+let bmiJuan = calcularBmi(pesoJuan, alturaJuan);
+let mayorBMI = calcularMayorBMI(bmiAna, bmiJuan);
+
+console.log(mayorBMI);
+
+//camel-case
+let palabraOtraPalabra = "Hola";
+
+// snake-case
+let palabra_otra_palabra = "Hola";
 
