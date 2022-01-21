@@ -28,7 +28,7 @@ let nulo = null;
 // tipo undefined
 let indefinido;
 
-// tipo obejto
+// tipo objeto
 let persona = {
   nombre: "Juan",
   apellido: "Perez",
@@ -75,8 +75,8 @@ for (let indice = 0; indice < listaDeCualquierElemento.length; indice++) {
 let suma = 2 + 3;
 let resta = 2 - 3;
 
-let multiplicacion = 2 * 3;
-let division = 2 / 3;
+let multiplicacion = 2 * 3
+let division = 2 / 3
 
 let parentesis = (2 + 3) * 4;
 
@@ -94,15 +94,9 @@ let numeroMayor = 10;
 let numeroMenor = 5;
 
 if (numeroMayor > numeroMenor) {
-<<<<<<< HEAD
   console.log("El numero mayor es mayor que el menor");
 } else {
   console.log("El numero mayor es menor que el menor");
-=======
-    console.log("El numero mayor es mayor que el menor");
-} else {
-    console.log("El numero mayor es menor que el menor");
->>>>>>> d96b17b9ec12a20d7ebdfc26a6d223e857842143
 }
 
 let mayorDeEdadEnPeru = 18;
@@ -110,7 +104,6 @@ let mayorDeEdadEnUsa = 21;
 
 let mayorDeEdadEnJapon = 20;
 
-<<<<<<< HEAD
 if (mayorDeEdadEnPeru >= 18) {
   console.log("Es mayor de edad , puede entrar al bar");
 } else {
@@ -131,27 +124,6 @@ if (mayorDeEdadEnPeru !== mayorDeEdadEnUsa) {
   console.log(
     "No es mayor de edad en Peru , pero es USA , puede entrar al bar en USA"
   );
-=======
-
-if (mayorDeEdadEnPeru >= 18) {
-    console.log("Es mayor de edad , puede entrar al bar");
-} else {
-    console.log("No es mayor de edad , no puede entrar al bar");
-}
-
-
-if (mayorDeEdadEnPeru === mayorDeEdadEnUsa) {
-    console.log("Es mayor de edad en USA , puede entrar al bar");
-} else {
-    console.log("No es mayor de edad en USA , no puede entrar al bar");
-}
-
-
-if (mayorDeEdadEnPeru !== mayorDeEdadEnUsa) {
-    console.log("Es mayor de edad en Peru , pero no es USA , no puede entrar al bar en USA");
-} else {
-    console.log("No es mayor de edad en Peru , pero es USA , puede entrar al bar en USA");
->>>>>>> d96b17b9ec12a20d7ebdfc26a6d223e857842143
 }
 
 let mayorDeEdadEnCuba = true;
@@ -159,19 +131,11 @@ let mayorDeEdadEnIran = false;
 let mayorDeEdadEnRusia = true;
 
 if (mayorDeEdadEnCuba || mayorDeEdadEnRusia || mayorDeEdadEnIran) {
-<<<<<<< HEAD
   console.log("Eres mayor de edad, puedes entrar al bar");
 }
 
 if ((mayorDeEdadEnCuba || mayorDeEdadEnIran) && mayorDeEdadEnRusia) {
   console.log("Eres mayor de edad, puedes entrar al bar");
-=======
-    console.log("Eres mayor de edad, puedes entrar al bar");
-}
-
-if ((mayorDeEdadEnCuba || mayorDeEdadEnIran) && mayorDeEdadEnRusia) {
-    console.log("Eres mayor de edad, puedes entrar al bar");
->>>>>>> d96b17b9ec12a20d7ebdfc26a6d223e857842143
 }
 
 let numeroPar = 10;
@@ -179,19 +143,12 @@ let numeroImpar = 11;
 
 // !== - > si es que no son iguales
 if (numeroPar !== numeroImpar) {
-<<<<<<< HEAD
-  console.log("Son numeros diferentes");
-}
-
-// EJERCICIO 1 -  BMI
-=======
     console.log("Son numeros diferentes");
 }
 
 
 
 // EJERCICIO 1 -  BMI(indice de masa corporal)
->>>>>>> d96b17b9ec12a20d7ebdfc26a6d223e857842143
 
 //formula bmi ->>  bmi = peso / ( altura * altura)
 
@@ -203,7 +160,6 @@ if (numeroPar !== numeroImpar) {
 
 // * necesitamos tres variables = (la altura y el peso de cada uno) y el mayorBMI , para saber quien es el que tiene el mayor BMI
 
-<<<<<<< HEAD
 let nombre1 = "Juan";
 
 let persona1 = {
@@ -226,7 +182,6 @@ if (bmi1 > bmi2) {
 } else {
   console.log("Juan tiene el mayo BMI");
 }
-=======
 
 let alturaAna = 1.70;
 let alturaJuan = 1.80;
@@ -283,7 +238,7 @@ let palabra_otra_palabra = "Hola";
 
 // 1 . Calcular el puntaje promedio de cada equipo
 // 2 . Comparar los puntajes , para determinar el ganador o el empate
-// * debo implemetar un puntaje minimo de 100 puntos de diferencia  para que el equipo que gane 
+// * debo implemetar un puntaje minimo de 100 puntos de diferencia  para que el equipo que gane
 // * El empate ocurre cuando los dos equipos tienes igual o mas de 100 puntos , sino nadie se lleva el trofeo
 
 
@@ -291,7 +246,7 @@ let palabra_otra_palabra = "Hola";
 
 // Primero: Creamos un array con tres resultados de las 3 competiciones(puntajes) para cada equipo
 let puntajeDelfines = [1000, 150, 90];
-let puntajeKoalas = [10, 200, 130];
+let puntajeKoalas = [10, 2000, 130];
 
 
 
@@ -327,9 +282,8 @@ let empate = puntajePromedioDelfines === puntajePromedioKoalas
 
 // Cuarto: resultado final es una variable de tipo string(cadena de texto) que obtendra su valor del operador ternario(version resumida del if-else)
 // evaluo si el ganaor son los los delfines , si es asi, devuelvo la cadena de /texto "Delfines", sino , evaluo si el ganador son los koalas, si es asi , devuelvo la cadena de texto "Koalas" , sino , devuelvo la cadena de texto "Empate"
+
 let resultadoFinal = ganadorDelfines === true ? "Delfines" : ganadorKoalas === true ? "Koalas" : "Empate";
-
-
 
 // Quinto: imprimir en consola el resultado final
 // resultado final me devolvera un string , por lo que lo imprimo en consola
@@ -350,27 +304,23 @@ function determinarGanador(resultadoFinal) {
 
 
 // el el caso de la funcion determninarGanador2 recibe un string y devuelve un string
-// En este funcion uso un switch 
+// En este funcion uso un switch
 // el cual evulua el valor de la variable resultado(que llega como resultadoFinal) y dependiendo de la respuesta devuelve un string (que puede ser Delfines, Koalas o Empate)
 function determinarGanador2(resultado) {
     switch (resultado) {
         case "Delfines":
             return "Delfines";
-            break;
         case "Koalas":
             return "Koalas";
-            break;
         case "Empate":
             return "Empate";
-            break;
         default:
             return "No hay ganador";
     }
 }
 
-// asiganr el valor final a determinarResultado , para imprimirlo en la consola
-let determinarResultado = determinarGanador(resultadoFinal);
+// asignar el valor final a determinarResultado , para imprimirlo en la consola
+let determinarResultado = determinarGanador(resultadoFinal)
 
 console.log(determinarResultado)
 
->>>>>>> d96b17b9ec12a20d7ebdfc26a6d223e857842143
