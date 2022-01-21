@@ -48,7 +48,7 @@ let persona = {
 
 // let nuevaPersona = Persona("Juan", "Perez", 30);
 
-console.log(persona.nombre);
+console.log(persona.edad);
 
 // tipo array
 
@@ -167,4 +167,26 @@ if (numeroPar !== numeroImpar){
 // para imprimir en consola --> console.log(Lo que quiero imprimir)
 
 // * necesitamos tres variables = (la altura y el peso de cada uno) y el mayorBMI , para saber quien es el que tiene el mayor BMI
+
+let persona1 = { 
+    nombre: "Ana", 
+    peso: 50, 
+    altura: 1.55 
+};
+
+let persona2 = { 
+    nombre: "Juan", 
+    peso: 80, 
+    altura: 1.70
+};
+
+let calculandobmiAna = Math.round(persona1.peso / (persona1.altura * persona1.altura))
+
+let calculandobmiJuan = Math.round(persona2.peso / (persona2.altura * persona2.altura))
+
+if(calculandobmiAna < calculandobmiJuan){
+    console.log(persona2.nombre + " tiene el mayor BMI")
+}else{
+    console.log(persona1.nombre + " Ana tiene el mayor BMI")
+}
 
