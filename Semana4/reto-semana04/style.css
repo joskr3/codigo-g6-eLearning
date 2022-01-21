@@ -69,7 +69,6 @@ li.active {
 /* CODEANDO ESTILOS PARA EL BOX - GALERIA DE IMAGENES */
 .titulo{
     padding: 10px;
-    
     text-align: center;
     
 }
@@ -112,4 +111,21 @@ li.active {
 .caja:nth-of-type(7) {
   grid-column: 3 / 1 ;
   grid-row:  7 / 5;
+}
+
+
+/* AGREGANDO ESTILOS AL FOOTER */
+
+footer {
+    background-color: #9b9495;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color:white;
+    padding: 20px;
+  }
+
+  h4, small{
+    margin: 10px;
 }
