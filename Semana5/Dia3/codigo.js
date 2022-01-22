@@ -320,18 +320,56 @@ console.log(vecinosDePeru);
 vecinosDePeru[vecinosDePeru.indexOf("Argentina")] = "Alemania";
 console.log(vecinosDePeru);
 
-if(!vecinosDePeru.includes("Suiza")){
+if (!vecinosDePeru.includes("Suiza")) {
     vecinosDePeru.push("Suiza");
     console.log("Suiza se ha incorporado a tu lista de vecinos");
 }
 
 console.log(vecinosDePeru);
 
-vecinosDePeru
+
+// Objetos
+
+// Ejercicio 12
+
+// Crea un objeto llamado mi pais , que contenga las siguientes propiedades: pais , capital , idioma y poblacion 
 
 
+let miPais = {
+    pais: "Peru",
+    capital: "Lima",
+    idioma: "español",
+    poblacion: "10000000",
+    vecinos: ["Argentina", "Brasil", "Chile", "Colombia", "Ecuador"],
 
 
+    describir: function () {
+        return `${this.pais} es un pais de ${this.idioma} con una poblacion de ${this.poblacion} habitantes y tiene ${this.vecinos.length} vecinos`
+    },
+
+    esIsla: function () {
+        return this.vecinos.length == 1? true : false;
+    }
+
+
+}
+
+
+console.log(`Mi pais es ${miPais.pais} , su capital es ${miPais.capital} , su idioma es ${miPais.idioma} y su poblacion es ${miPais.poblacion} habitantes y sus vecinos son ${miPais.vecinos.map(vecino => " " +vecino)}`);
+
+let dismunirPoblacion = miPais["poblacion"] / 2;
+
+console.log(dismunirPoblacion)
+
+
+// Metodos de objetos
+
+// Ejercicio 13
+
+// Vamos a agregar un metodo que se llama describir al objeto miPais , este metodo debe imprimir en consola la siguiente informacion:(usare la palabra reservada this para referirnos al objeto)
+
+// llamamos al metodo describir
+// agregamos otro metodo lllamado , esUnaIsla al obejto miPais, este metodo se definira como una nueva propiedad en el obejto , llamada esIsla , y este metodo debe devolver un valor booleano , true si el pais es una isla , false en caso contrario
 
 
 
