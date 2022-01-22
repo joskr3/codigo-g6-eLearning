@@ -313,4 +313,3 @@ function determinarGanador2(resultado) {
 let determinarResultado = determinarGanador(resultadoFinal);
 
 console.log(determinarResultado)
-
