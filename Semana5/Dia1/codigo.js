@@ -31,7 +31,7 @@ let nulo = null;
 let indefinido
 
 
-// tipo obejto
+// tipo objeto
 let persona = {
     nombre: "Juan",
     apellido: "Perez",
@@ -70,7 +70,6 @@ for (let indice = 0; indice < listaDeCualquierElemento.length; indice++) {
 }
 
 
-
 let suma = 2 + 3
 let resta = 2 - 3
 
@@ -81,7 +80,7 @@ let parentesis = (2 + 3) * 4;
 
 
 let expresion = 2 + 3 * 4
-    ;
+    
 
 let a = 2
 let b = 4
@@ -93,7 +92,6 @@ console.log(cuadradoPerfecto);
 
 
 // if- else
-
 
 let numeroMayor = 10;
 let numeroMenor = 5;
@@ -232,7 +230,7 @@ let palabra_otra_palabra = "Hola";
 
 // Primero: Creamos un array con tres resultados de las 3 competiciones(puntajes) para cada equipo
 let puntajeDelfines = [1000, 150, 90];
-let puntajeKoalas = [10, 200, 130];
+let puntajeKoalas = [10, 2000, 130];
 
 
 
@@ -268,9 +266,8 @@ let empate = puntajePromedioDelfines === puntajePromedioKoalas
 
 // Cuarto: resultado final es una variable de tipo string(cadena de texto) que obtendra su valor del operador ternario(version resumida del if-else)
 // evaluo si el ganaor son los los delfines , si es asi, devuelvo la cadena de /texto "Delfines", sino , evaluo si el ganador son los koalas, si es asi , devuelvo la cadena de texto "Koalas" , sino , devuelvo la cadena de texto "Empate"
+
 let resultadoFinal = ganadorDelfines === true ? "Delfines" : ganadorKoalas === true ? "Koalas" : "Empate";
-
-
 
 // Quinto: imprimir en consola el resultado final
 // resultado final me devolvera un string , por lo que lo imprimo en consola
@@ -297,19 +294,16 @@ function determinarGanador2(resultado) {
     switch (resultado) {
         case "Delfines":
             return "Delfines";
-            break;
         case "Koalas":
             return "Koalas";
-            break;
         case "Empate":
             return "Empate";
-            break;
         default:
             return "No hay ganador";
     }
 }
 
-// asiganr el valor final a determinarResultado , para imprimirlo en la consola
-let determinarResultado = determinarGanador(resultadoFinal);
+// asignar el valor final a determinarResultado , para imprimirlo en la consola
+let determinarResultado = determinarGanador(resultadoFinal)
 
 console.log(determinarResultado)
