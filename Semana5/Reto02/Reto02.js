@@ -4,9 +4,10 @@ let TP = ""; /*Tipo de pago*/
 let PA = 0; /*Precio de hamburguesa*/
 let CA = 0; /*Cargo por el uso de tarjeta*/
 let TO = 0; /*Total sin cargo*/
-let TOT = 0; /*Total con cargo*/
+
 
 function totalizar(TI, TP, N) {
+  let TOT = 0; /*Total con cargo*/
   CA = 0;
   if (TP == "credito") {
     TO = precioHamburguesa(TI) * N;
@@ -15,7 +16,7 @@ function totalizar(TI, TP, N) {
     TO = precioHamburguesa(TI) * N;
     CA = 0;
   }
-  TOT = (TO + CA);
+  TOT = TO + CA;
   return TOT;
 }
 
