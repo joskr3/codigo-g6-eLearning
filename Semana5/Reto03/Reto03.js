@@ -4,22 +4,21 @@ siguientes tres citas 100 c/u */
 
 let NC=0;
 let CC=0;
-
+let TOT = 0;
 
 function calculaCostos(NC){
-  let TOT = 0;
   for(i=1; i<=NC;i++){
     if(i<=3){
-      TOT = TOT+200;
+      CC = CC+200;
     }else if(i>3 && i<=5){
-      TOT = TOT + 150;
+      CC = CC + 150;
     }else if(i>5 && i<=8){
-      TOT = TOT + 100;
+      CC = CC + 100;
     }else{
       TOT = TOT + 50;
     }
   }
-  return TOT;
+  return CC;
 }
 
-console.log(calculaCostos(8));
+console.log("Costo de Cita: " + calculaCostos(9) + "\nCosto Tratamiento: " + TOT);
