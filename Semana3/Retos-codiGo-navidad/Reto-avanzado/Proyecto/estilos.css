@@ -1,0 +1,156 @@
+@font-face {
+    font-family: twitterFontAlt;
+    src: url(../fonts/MTFChubb.ttf);
+ }
+
+p{
+    color: white;
+    font-family: twitterFontAlt;
+}
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    width: 100vw;
+    
+}
+main:first-child{
+    float: left;  
+}
+
+.imagen-fondo {
+    float:left;
+    width: 60vw;
+    height: 100vh;
+    height: 9;
+    z-index: -1;
+    position: relative;
+}
+.twitter-logo{
+    position: absolute;
+    max-height: 380px;
+    height: 40%;
+    top:20%;
+    left: 15%;
+}
+
+main:last-child{
+    max-width: 50vw;
+    float:right;
+}
+
+.texto-prueba {
+    color: white;
+    width: 100%;
+}
+.twitter-logo-2{
+    height: 2.7rem;
+}
+.sign-up {
+    display: flex;
+    justify-content: space-around;
+    background-color : white;
+    border-radius: 25px;
+    flex-shrink: inherit;
+    width: 60%;
+    height: auto;
+    margin-bottom: 1;
+    cursor: pointer;
+}
+.sign-in{
+    display: flex;
+    justify-content: space-around;
+    background-color : transparent;
+    border: 1px solid  #428AD2;
+    border-radius: 25px;
+    flex-shrink: inherit;
+    width: 60%;
+    height: auto;
+    margin-bottom: 1;
+    cursor: pointer;
+}
+.linea-separadora {
+    border-top: #bbb;
+    width: 100%;
+    /* height: 0.05rem; */
+    height: 0.5px;
+    margin-top: 1.35rem;
+}
+.contenedor-or {
+    display: flex;
+    width: 60%;
+}
+.texto-or{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+a{
+    color: #516D8E;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-links + .rights{
+    display: flex;
+}
+
+footer > .contenedor-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+
+.contenedor-links > nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+   
+}
+
+.link-footer {
+    color: #6F767D;
+    cursor: pointer;
+    cursor: pointer;
+    font-size: 13px;
+}
+.rights {
+    color: #6F767D ;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        height: auto;
+    }
+    .imagen-fondo{
+        width: 100vw;
+        
+    }
+    .twitter-logo{
+       margin-top: 900px;
+    }
+
+}
