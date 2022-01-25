@@ -1,0 +1,201 @@
+h1{
+    font-family: "TwitterChirpExtendedHeavy",'Oswald', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.name{
+    border-color: #c0bcbc;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 0.2em;
+    background-color: rgb(246, 248, 250);
+    width: 25em;
+    height: 2em;
+}
+
+.buttonasdsas{
+    border: 0.5em;
+    background-color: #ffffff00;
+    border-radius: 2em;
+    border-color: rgb(0, 0, 0);
+    width: 20em;
+    height: 3em;
+    padding: auto;
+    margin-top: 1.5em;
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+
+}
+.button{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.445);
+    display: inline-block;
+    border: 0.05em solid #c4c4c4;
+    border-radius: 2em;
+    text-align: center;
+    padding: auto;
+    width: 20em;
+    height: 2.5em;
+    margin-top: 2em;
+    color: #111111;
+    text-decoration: none;
+    background-position: center;
+}
+.button:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    line-height: 1.5em;
+    margin: 0.4em 0.4em -10em;
+    position: relative;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADx0lEQVRIiaWVfUwcRRjGn5md3b3eHcdxBcRaW4KEnNT41TTxq7GoDRH7R1uIqanCGUoMrVYLJtXURJtqoqma0PhRbdUqmhIl0BrrJY0mWo0BtKi1IdikLSoiPe8OOPnY292Z8Y/LAXccHE2fZJPd953n+c3OTHYJFqHxN1+l8V963dTlWg4pNWkYIVpwVdj74mtmNi9ZqBkJ1PjFSLQeZrxKclEGbrOEiwCMRQlTf4Cut7KSsmN5+9/ICMsIiO4IePlff+yXU5O1EELLOktN6yO5eY35bV+cygqI1G4qF6HQcWmZpdmCU5OoTX2+hvxPg0dml9nsh3Dt5jJ+afhr2FbRZYUDICr7k+Z6v5lTT96M7dnlMH/+8bSMx8vnDNL1fqI7WsHUXlAyCc6LZTxeKePGg+CcEU0bUJZdW+F7r21gXkC4+r59YnTsuZQupQb15j275IHqA65Ag0g3RwI15WIk+opSUPiE7/Dc8GmA1XOnj5+/cHGi82oPjyjJcJsuzX8ov+1E+3zLshhRAIBxsUYpCHty6n6H6jcSZKfr3aWPPX1F4UByk7lRCQBEN+HedA5GzwrbGrphH6momGPYdmiyiEtkPbqMwji0zRliMtQK++yOG2daAo7bQ105FR8MZzIORsUJ08at2QAOFf0ArqdirE8DuDe1Tc9lC8gmi8P79ldxRiWhV5qVUZRA40IyqhSsMwE2mtKVvGwh72IAUmI810lMSnLXA1Q5k2wIKDg8VX5b3cndhZmMGkOjQ0Vl+qUquDB7HFMw+MhdukicIsUdhP3f5hHpwt6JNeg2PMytDu0B8GQ64PNmd1d6LXBwomQwKotTAaRn+nWJc1XHb3LlaP3Y3eg2PACASXtqe+Wx+o3ZluKpj6ZYKCZbhJxZOgLApeP4NICtDkafGV/71j/2zLdPSMlG4rGj6zsf3fl8V0vGdd8SbPKdHwl/YljYMLuuMZxZU6KcSsIAAM3fvezsHv71tMFNf3qQpqj9GlVbKaE/aVQ1TGEVmdxaawv7YcrzvM7QdoiJ6xKzJxCFHnL/0cddJ1MAAFDz5U7/3+OXvrWEnXGD5xOFipzRrUB0HTwO+npnk6t5pjdL7VUH+q9xF92rKerA5QAELMS8H8K9ouPgTSvp7lR4mtqrWs6u8pXe4tHc71NC7cUAVKqGCp2+uq03r258oXpJimfBn/6WYJP/36lIQ5xbVbbkpbZInAICApWymKqwXoeif1bsWf7xO/fsjWXKWBCQ1JG+Dvr9UK/HwfRlQgoHlzyU78gLv3THLiOb93/yTWaqQyHHqwAAAABJRU5ErkJggg==") no-repeat left center transparent;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.button2{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.445);
+    display: inline-block;
+    border: 0.05em solid #c4c4c4;
+    border-radius: 2em;
+    text-align: center;
+    padding: auto;
+    width: 20em;
+    height: 2.5em;
+    margin-top: 2em;
+    color: #111111;
+    text-decoration: none;
+    background-position: center;
+}
+.button2:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    line-height: 1.5em;
+    margin: 0.4em 0.4em -10em;
+    position: relative;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABMklEQVRIic3VvytGURzH8ZcfPT1JBkkyymQwGEwWqwwyGQ2y22Q1S2aDTJLRaCB/gUUGGWQgD0mS8ns4V/R4nu65p6t86jvc2+3z/pzzPfd7+OfqRuUvjPuwhScMlm3eizN8oIZq2YD1zPwDy2Wbt+I+M99VQvp2dP0wqmADM9m7fvRk4EKqYknY6xfcYhuTGMMaLoSVvOEYs7GgDuz73ucitRIDWE00f8BEnnkPHhMBczHppxLNL4UD8Uv1TRmISdFAR3iNATRMEaGm86gecJMIGNHkp2tr8DyfAKjiHQcxH9akNfoFiyLG989hllLTeYDhLE2K+YUwCXK1mQiI7l83zgua7yl4zEdxV2dSw4nvO+GrToVr9JdaciBDWBCO4A4O8YxOYayM40oY39dF0pemT5MXrqh3DYwGAAAAAElFTkSuQmCC") no-repeat left center transparent;
+    background-size: 100% 100%;
+    background-position: center;
+}
+h3{
+    font-family: sans-serif;
+    font-size: 1em;
+    text-align: left;
+    margin-left: 8em;
+}
+.button3{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    background-color: #1A8CD8;
+    display: inline-block;
+    border: 0.05em solid #c4c4c4;
+    border-radius: 2em;
+    text-align: center;
+    padding: auto;
+    width: 20em;
+    height: 2.5em;
+    margin-top: 0em;
+    color: #ffffff;
+    text-decoration: none;
+    background-position: center;
+}
+.button3:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 0em;
+    width: 0em;
+    line-height: 1.5em;
+    margin: 0.4em 0.4em -10em;
+    position: relative;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.img1{
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse;
+    opacity: 0em;
+    width: 60em;
+    height: 57em;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 50%;
+    min-height: 50%;
+}
+section{
+    text-align: left;
+    position: relative;
+    margin-left: 3em;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 30%;
+    min-height: 30%;
+}
+.img2{
+    position: flex;
+    height: 4em;
+    width: 4em;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 10%;
+    min-height: 10%;
+}
+p{
+    font-family: "TwitterChirpExtendedHeavy",'Oswald', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+h6{
+    font-family: serif;
+    text-align: left;
+    margin-top: 1em;
+    font-size: 0.8em;
+}
+h4{
+    font-family: serif;
+    text-align: left;
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+.button4{
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #ffffff00;
+    display: inline-block;
+    border: 0.05em solid #c4c4c4;
+    border-radius: 2em;
+    text-align: center;
+    padding: auto;
+    width: 20em;
+    height: 2.5em;
+    margin-top: 0em;
+    color: #1A8CD8;
+    text-decoration: none;
+    background-position: center;
+}
+.button4:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 0em;
+    width: 0em;
+    line-height: 1.5em;
+    margin: 0.4em 0.4em -10em;
+    position: relative;
+    background-size: 100% 100%;
+    background-position: center;
+}
+footer{
+    text-align: center;
+    font-size: 0.8em;
+    position: relative;
+    background-position: center;
+    padding: auto;
+    display: inline-block;
+}
