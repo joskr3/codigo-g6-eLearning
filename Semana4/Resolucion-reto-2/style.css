@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=Roboto:wght@300&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    width: 100vw;
+    background-color: #300497;
+    color: white;
+    height: 10vh;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+button{
+    background-color: #300497;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    flex-basis: 0;
+}
+button:hover{
+    background-color: rgb(78, 78, 78);
+    color: white;
+}
+
+h1{
+    color: rgb(224, 224, 224);
+    margin-bottom: 0px;
+    
+}
+h3{
+    font-weight: bold;
+}
+.titulo{
+    color: rgb(156, 155, 155);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contenido {
+    width: 60%;
+    margin: 0 auto;
+}
+.container-pills{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    font-size: small;
+}
+.container-pills > p{
+    padding: 0.65em;
+    background-color: rgb(221, 219, 219);
+    border-radius: 25px;
+    
+    font-weight: 900;
+}
