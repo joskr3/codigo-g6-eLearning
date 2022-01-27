@@ -41,7 +41,6 @@ document.querySelector('.resetear').addEventListener('click', () => {
         } else {
             puntaje = 0
         }
-
         mostrarMensaje(adivinar > numeroSecreto ? '🔥 Caliente !' : '🥶 Frio !', 'mensaje');
 
 
@@ -51,6 +50,11 @@ document.querySelector('.resetear').addEventListener('click', () => {
         mostrarMensaje('🤔 Lo siento , perdiste! ', 'mensaje');
         document.querySelector('.puntaje').textContent = 0;
     }
+    if (adivinar >=5){
+        window.alert("LO SIENTO PERDISTE EL JUEGO 😢")
+        document.querySelector('body').style.backgroundColor = 'red';
+    }
+
 })
 
 

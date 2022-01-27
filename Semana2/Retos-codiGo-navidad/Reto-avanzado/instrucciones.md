@@ -6,4 +6,4 @@ ej: hacer una landong page sencilla que tenga los sigueintes elementos: un heade
 
 Integrantes: Roseling Yanira Chambilla Marquez
 
-Ramas:josue-retamozo-vargas
+Ramas:Roseling Yanira Chambilla Marquez
