@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<<<<<<< HEAD:Semana2/Retos-codiGo-navidad/Reto-avanzado/Proyecto/reto-avanzado.html
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reto Avanzado - Twitter, es lo que esta pansando</title>
+        <link rel="stylesheet" href="./estilos.css" />
+        <!-- Font awesome  https://fontawesome.com/icons?d=gallery-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+            integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+            crossorigin="anonymous"
+        />
+        <link rel="shortcut icon" href="./icons8-twitter-48.png" />
+
+    </head>
+    <body>
+        <div class="container-1">
+            <img src="./Background-image.png" alt="" />
+
+            <section>
+                <header>
+                    <i class="fab fa-twitter"></i>
+                    <h1>
+                        Lo que está <br />
+                        pasando ahora
+                    </h1>
+                    <h2>Únete a Twitter hoy mismo.</h2>
+                </header>
+                <div class="content-actions">
+                    <button><img src="./icons8-logo-de-google.svg" />Registrarse con Google</button>
+                    <button><i class="fab fa-apple"></i>Registrarse con Apple</button>
+                    <div class="or-class">
+                        <div></div>
+                        <span>o</span>
+                        <div></div>
+                    </div>
+                    <button class="primary">Regístrate con el numero de teléfon...</button>
+                    <div class="conditions">
+                        <p>Al registrarte, aceptas los <a href="#">Términos de servicio</a> y la <a href="#">Política de privacidad</a>, incluida la política de <a href="#">Uso de Cookies</a>.</p>
+                    </div>
+                    <div>
+                        <h3>¿Ya tienes una cuenta?</h3>
+                        <button>Iniciar sesión</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Condiciones de Servicio</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                    <li><a href="#">Accesibilidad</a></li>
+                    <li><a href="#">Información de anuncios</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Estado</a></li>
+                    <li><a href="#">Empleos</a></li>
+                    <li><a href="#">Recursos para marcas</a></li>
+                    <li><a href="#">Publicidad</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Twitter para empresas</a></li>
+                    <li><a href="#">Desarrolladores</a></li>
+                    <li><a href="#">Guía</a></li>
+                    <li><a href="#">Configuración</a></li>
+                </ul>
+            </nav>
+            <div>
+                &copy; 2022 Twitter, Inc.
+            </div>
+        </footer>
+    </body>
+</html>
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="codigo.js"></script>
+    <title>Repaso</title>
+</head>
+<body>
+    
+</body>
+</html>
+>>>>>>> main:Semana5/Dia3/index.html
