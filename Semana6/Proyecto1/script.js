@@ -2,7 +2,7 @@
 let numeroSecreto = Math.floor(Math.random() * 20) + 1;
 let puntaje = 0;
 let puntajeMayor = 0;
-
+let intentos=0;
 
 const mostrarMensaje = (mensaje, query) => {
     document.querySelector(`.${query}`).textContent = mensaje;
@@ -15,7 +15,9 @@ document.querySelector('.resetear').addEventListener('click', () => {
     const adivinar = Number(document.querySelector('.adivinar').value);
 
     if (!adivinar) {
-        mostrarMensaje('✋🏼 No adivinaste el numero', 'mensaje');
+        if(!intentosMaximos(intentos)){
+            mostrarMensaje('✋🏼 No adivinaste el numero', 'mensaje');
+        }
     } else if (numeroSecreto === adivinar) {
         puntaje++;
         mostrarMensaje('Correcto', 'mensaje');
@@ -35,21 +37,26 @@ document.querySelector('.resetear').addEventListener('click', () => {
 
 
     } else if (numeroSecreto !== adivinar) {
+        intentos++;
+        if(!intentosMaximos(intentos)){
+            if (puntaje > 0) {
+                puntaje--
+            } else {
+                puntaje = 0
+            }
 
-        if (puntaje > 0) {
-            puntaje--
-        } else {
-            puntaje = 0
+            mostrarMensaje(adivinar > numeroSecreto ? '🔥 Caliente !' : '🥶 Frio !', 'mensaje');
+
+
+            document.querySelector('.puntaje').textContent = puntaje < 0 ? 0 : puntaje;
         }
 
-        mostrarMensaje(adivinar > numeroSecreto ? '🔥 Caliente !' : '🥶 Frio !', 'mensaje');
-
-
-        document.querySelector('.puntaje').textContent = puntaje < 0 ? 0 : puntaje;
-
     } else {
-        mostrarMensaje('🤔 Lo siento , perdiste! ', 'mensaje');
-        document.querySelector('.puntaje').textContent = 0;
+        intentos++;
+        if(!intentosMaximos(intentos)){
+            mostrarMensaje('🤔 Lo siento , perdiste! ', 'mensaje');
+            document.querySelector('.puntaje').textContent = 0;
+        }
     }
 })
 
@@ -73,10 +80,24 @@ document.querySelector('.repetir').addEventListener('click', () => {
 })
 
 
+function intentosMaximos(intentos){
+    if(intentos==5){
+        document.querySelector("body").style.backgroundColor="red";
+        mostrarMensaje("🤔 Lo siento , perdiste! ", "mensaje");
+        window.alert('Perdiste!');
+        document.querySelector(".puntaje").textContent=0;
+        intentos=0;
+        puntaje=0;
+        return true;
+    }else{
+        return false;
+    }
+}
+
 //  Tarea:
 
 // definir un limite de intentos(5)
 
-// si se equivocan 5 veces , mostrar una alerta(alert) que diga , "Perdiste" y resetea el juego 
+// si se equivocan 5 veces , mostrar una alerta(alert) que diga , "Perdiste" y resetea el juego
 // y cambiar el color de fondo del body a rojo
 
