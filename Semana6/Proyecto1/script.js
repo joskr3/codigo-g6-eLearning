@@ -21,26 +21,18 @@ window.onload = function() {
    console.log(numeroSecreto);
 };
 
-<<<<<<< HEAD
-    if (!adivinar) {
-        if(!intentosMaximos(intentos)){
-            mostrarMensaje('✋🏼 No adivinaste el numero', 'mensaje');
-        }
-    } else if (numeroSecreto === adivinar) {
-=======
 // Aca le digo : busca el elemnto que se llame "boton-adivinar " en el DOM y agregale el evento "click" , este evento(que es una funcion/metodo) recibe dos parametros , el primero es el nombre del evento y el segundo parametro es una funcionalidad(funcion/ funcion anonima/ funcion flecha)
 document.querySelector('.boton-adivinar').addEventListener('click', () => {
-   
+
    // recupero el valor del elemnto qye contine el numero que queremos adivinar , primero selecciono mi elemento del DOM y a continuacion con .value obtengo el valor actual de ese elemento
-    const adivinar = Number(document.querySelector('.input-adivinar').value); 
-    
+    const adivinar = Number(document.querySelector('.input-adivinar').value);
+
     // aca comparo si tengo los mismo valores(si coinciden mis numeros)
      if (numeroSecreto === adivinar) {
         // console.log("Entro a la segunda condicion--- cuando numero secreto y adivinar son iguales",numeroSecreto,adivinar)
         // debugger;
 
         // si coinciden, aumento mi puntaje en 1
->>>>>>> 3191983b92cd80a173fff90bebe4b5beca2ade40
         puntaje++;
         //ejecuto/llamo  mi funcion "mostrar mensaje" que recibe dos parametros , el texto que quiero mostrar y el lugar(el elmento HTMl) donde lo quiero mostrar
         mostrarMensaje('Correcto', 'mensaje');
@@ -64,28 +56,6 @@ document.querySelector('.boton-adivinar').addEventListener('click', () => {
         }
 
     } else if (numeroSecreto !== adivinar) {
-<<<<<<< HEAD
-        intentos++;
-        if(!intentosMaximos(intentos)){
-            if (puntaje > 0) {
-                puntaje--
-            } else {
-                puntaje = 0
-            }
-
-            mostrarMensaje(adivinar > numeroSecreto ? '🔥 Caliente !' : '🥶 Frio !', 'mensaje');
-
-
-            document.querySelector('.puntaje').textContent = puntaje < 0 ? 0 : puntaje;
-        }
-
-    } else {
-        intentos++;
-        if(!intentosMaximos(intentos)){
-            mostrarMensaje('🤔 Lo siento , perdiste! ', 'mensaje');
-            document.querySelector('.puntaje').textContent = 0;
-        }
-=======
         // console.log("Entro a la tercera condicion ",numeroSecreto,adivinar)
         // debugger;
 
@@ -97,7 +67,7 @@ document.querySelector('.boton-adivinar').addEventListener('click', () => {
         }
 
 
-        
+
         // le asigno un valor "caliente " o "frio" dependiendo del valor booelano de la condicion "adivinar > numeroSecreto"
         mostrarMensaje(adivinar > numeroSecreto ? '🔥 Caliente !' : '🥶 Frio !', 'mensaje');
 
@@ -109,7 +79,6 @@ document.querySelector('.boton-adivinar').addEventListener('click', () => {
         // debugger;
         mostrarMensaje('🤔 Lo siento , perdiste! ', 'mensaje');
         document.querySelector('.puntaje').textContent = 0;
->>>>>>> 3191983b92cd80a173fff90bebe4b5beca2ade40
     }
 })
 
