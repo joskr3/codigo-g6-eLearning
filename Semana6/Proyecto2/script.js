@@ -18,9 +18,14 @@ const cerrarModal = () => {
     overlay.classList.add("escondido")
 }
 
+botonesAbrirModales.forEach((n) => {
+  console.log(n);
+  n.addEventListener("click", () => {
+    abrirModal();
+  });
+});
 
-
-// vamos a recorrer la lista de botones que obtengo en botonesAbrirModales 
+// vamos a recorrer la lista de botones que obtengo en botonesAbrirModales
 // a cada boton le vamos a agregar un evento click y le vamos a pasar la funcion abrirModal
 
 // al boton de cerrar le vamos a pasar un evento click , la funcion para cerrar
