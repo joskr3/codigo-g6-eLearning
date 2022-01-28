@@ -10,13 +10,18 @@ const mostrarMensaje = (mensaje, query) => {
 
 // quiero seleccionar el elemente cuya clase sea "repetir" y a este elemento le agrego un evento click
 
-document.querySelector('.resetear').addEventListener('click', () => {
-    console.log(numeroSecreto);
-    const adivinar = Number(document.querySelector('.adivinar').value);
+// window.onload = function() {
+//    console.log(numeroSecreto);
+// };
 
-    if (!adivinar) {
-        mostrarMensaje('✋🏼 No adivinaste el numero', 'mensaje');
-    } else if (numeroSecreto === adivinar) {
+document.querySelector('.boton-adivinar').addEventListener('click', () => {
+   
+    const adivinar = Number(document.querySelector('.input-adivinar').value); 
+    
+     if (numeroSecreto === adivinar) {
+        // console.log("Entro a la segunda condicion--- cuando numero secreto y adivinar son iguales",numeroSecreto,adivinar)
+        // debugger;
+
         puntaje++;
         mostrarMensaje('Correcto', 'mensaje');
 
@@ -33,9 +38,9 @@ document.querySelector('.resetear').addEventListener('click', () => {
             document.querySelector('.label-puntaje-mayor').textContent = `🎖 Puntaje mas alto: ${puntajeMayor}`;
         }
 
-
     } else if (numeroSecreto !== adivinar) {
-
+        // console.log("Entro a la tercera condicion ",numeroSecreto,adivinar)
+        // debugger;
         if (puntaje > 0) {
             puntaje--
         } else {
@@ -44,17 +49,18 @@ document.querySelector('.resetear').addEventListener('click', () => {
 
         mostrarMensaje(adivinar > numeroSecreto ? '🔥 Caliente !' : '🥶 Frio !', 'mensaje');
 
-
         document.querySelector('.puntaje').textContent = puntaje < 0 ? 0 : puntaje;
 
     } else {
+        // console.log("Entro a la ultima condicion")
+        // debugger;
         mostrarMensaje('🤔 Lo siento , perdiste! ', 'mensaje');
         document.querySelector('.puntaje').textContent = 0;
     }
 })
 
 
-document.querySelector('.repetir').addEventListener('click', () => {
+document.querySelector('.boton-repetir').addEventListener('click', () => {
     puntaje = 0;
     numeroSecreto = Math.floor(Math.random() * 20) + 1;
 
