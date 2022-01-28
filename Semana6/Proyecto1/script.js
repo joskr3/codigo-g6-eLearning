@@ -1,7 +1,5 @@
 
 
-<<<<<<< HEAD
-=======
 const mostrarMensaje = (mensaje, query) => {
     document.querySelector(`.${query}`).textContent = mensaje;
 }
@@ -75,7 +73,6 @@ document.querySelector('.boton-repetir').addEventListener('click', () => {
     document.querySelector('.numero').style.width = '15rem';
 
 })
->>>>>>> d388160b3129f9439edd913346dea070ba580cf5
 
 
 //  Tarea:
