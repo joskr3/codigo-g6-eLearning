@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.6;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: linear-gradient(to bottom, #f9f9f9 0%, #ececec 100%);
+}
+
+.mostrar-modal {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1.75rem 3.5rem;
+    margin:5rem 2rem;
+    border: none;
+    background-color: white;
+    color: #444;
+    border: 10rem;
+    cursor: pointer;
+}
+
+.cerrar-modal{
+    position: absolute;
+    top:1.2rem
+}
