@@ -4,20 +4,24 @@ let puntaje = 0;
 let puntajeMayor = 0;
 
 
-let variable = puntjeMayor// undefined
+// let variable = puntjeMayor// undefined
 
 
 // esta funcion toma dos parametros uno es el mensaje que quiero mostrar y el segundo es donde lo voy a mostrar(en que elemento del DOM)
-const mostrarMensaje = (mensaje, query) => {
+const mostrarMensaje = (mensaje, query) =>{
     // En el DOM , voy buscar la primera coincidencia(elemento de HTML) que tenga ese nombre en la clase ej. <div class="mensaje" > contenido </div> y le va asiganr atravez del metodo textContent(contenido del texto) el valor mensaje
     document.querySelector(`.${query}`).textContent = mensaje;
+    // return true
+    // el return define el tipo de la funcion
 }
+
+
 
 // quiero seleccionar el elemente cuya clase sea "repetir" y a este elemento le agrego un evento click
 
-// window.onload = function() {
-//    console.log(numeroSecreto);
-// };
+window.onload = function() {
+   console.log(numeroSecreto);
+};
 
 
 // Aca le digo : busca el elemnto que se llame "boton-adivinar " en el DOM y agregale el evento "click" , este evento(que es una funcion/metodo) recibe dos parametros , el primero es el nombre del evento y el segundo parametro es una funcionalidad(funcion/ funcion anonima/ funcion flecha)
@@ -35,6 +39,8 @@ document.querySelector('.boton-adivinar').addEventListener('click', () => {
         puntaje++;
         //ejecuto/llamo  mi funcion "mostrar mensaje" que recibe dos parametros , el texto que quiero mostrar y el lugar(el elmento HTMl) donde lo quiero mostrar
         mostrarMensaje('Correcto', 'mensaje');
+
+        console.log(typeof(mostrarMensaje('Correcto', 'mensaje')))
 
         document.querySelector('.numero').textContent = numeroSecreto;
 
