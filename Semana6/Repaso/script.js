@@ -101,3 +101,25 @@ function retirar() {
         }
     });
 }
+
+// VAMOS A HACER LA FUNCIONALIDAD DE RETIRO
+
+function irAFuncionDeDeposito() {
+    let usuario = iniciarSesion();
+    if (usuario) {
+        document.querySelector(".contenedor-retiro").style.display = "none";
+        document.querySelector(".contenedor-deposito").style.display = "block";
+        document.querySelector(".contenedor-consulta").style.display = "none";
+    }
+}
+
+function depositar() {
+    let usuario = iniciarSesion();
+    arrayUsuarios.forEach(elementoArray => {
+        if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
+            elementoArray.balance = elementoArray.balance + parseInt(document.getElementById("operacion-deposito").value);
+            // alert("Retiro realizado con exito");
+            console.log(usuario.balance)
+        }
+    });
+}
