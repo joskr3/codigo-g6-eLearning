@@ -123,3 +123,15 @@ function depositar() {
         }
     });
 }
+
+
+function irAFuncionDeConsulta() {
+    let usuario = iniciarSesion();
+    if (usuario) {
+        document.querySelector(".contenedor-retiro").style.display = "none";
+        document.querySelector(".contenedor-deposito").style.display = "none";
+        document.querySelector(".contenedor-consulta").style.display = "block";
+
+        document.querySelector("#resultado-consulta").innerHTML = usuario.balance + "  " + usuario.moneda;
+    }
+}
