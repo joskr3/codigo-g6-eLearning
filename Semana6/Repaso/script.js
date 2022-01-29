@@ -58,6 +58,17 @@ function iniciarSesion() {
         contenedorInfo.style.display = "block";
         // console.log(datosUsuario)
         // console.log(document.getElementById("label-usuario"))
+
+        // let elemento = document.getElementById("elemento1");
+
+        // let listaClasesDelElemento = elemento.classList;
+
+        // console.log(listaClasesDelElemento);
+
+        document.querySelector(".contenedor-retiro").style.display = "none";
+        document.querySelector(".contenedor-deposito").style.display = "none";
+        document.querySelector(".contenedor-consulta").style.display = "none";
+
         return datosUsuario
 
     } else {
