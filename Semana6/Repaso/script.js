@@ -103,11 +103,13 @@ function retirar() {
     });
 }
 
+// VAMOS A HACER LA FUNCIONALIDAD DE RETIRO
+
 function irAFuncionDeDeposito() {
     let usuario = iniciarSesion();
     if (usuario) {
-        document.querySelector(".contenedor-deposito").style.display = "block";
         document.querySelector(".contenedor-retiro").style.display = "none";
+        document.querySelector(".contenedor-deposito").style.display = "block";
         document.querySelector(".contenedor-consulta").style.display = "none";
     }
 }
@@ -116,9 +118,35 @@ function depositar() {
     let usuario = iniciarSesion();
     arrayUsuarios.forEach(elementoArray => {
         if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
-            elementoArray.balance = elementoArray.balance + parseInt(document.getElementById("label-monto-retiro").value);
-            // alert("Deposito realizado con exito");
+            elementoArray.balance = elementoArray.balance + parseInt(document.getElementById("operacion-deposito").value);
+            // alert("Retiro realizado con exito");
             console.log(usuario.balance)
         }
     });
 }
+
+
+function irAFuncionDeConsulta() {
+    let usuario = iniciarSesion();
+    if (usuario) {
+        document.querySelector(".contenedor-retiro").style.display = "none";
+        document.querySelector(".contenedor-deposito").style.display = "none";
+        document.querySelector(".contenedor-consulta").style.display = "block";
+
+        document.querySelector("#resultado-consulta").innerHTML = usuario.balance + "  " + usuario.moneda;
+    }
+}
+
+function resetear() {
+    document.getElementById("label-usuario").value = "";
+    document.getElementById("label-password").value = "";
+    document.getElementById("label-monto-retiro").value = "";
+    document.getElementById("operacion-deposito").value = "";
+    document.querySelector(".contenedor-retiro").style.display = "none";
+    document.querySelector(".contenedor-deposito").style.display = "none";
+    document.querySelector(".contenedor-consulta").style.display = "none";
+    document.querySelector(".contenedor-info-usuario").style.display = "none";
+}
+
+document.querySelector(".resetear-evento").addEventListener("click", resetear);
+
