@@ -135,3 +135,17 @@ function irAFuncionDeConsulta() {
         document.querySelector("#resultado-consulta").innerHTML = usuario.balance + "  " + usuario.moneda;
     }
 }
+
+function resetear() {
+    document.getElementById("label-usuario").value = "";
+    document.getElementById("label-password").value = "";
+    document.getElementById("label-monto-retiro").value = "";
+    document.getElementById("operacion-deposito").value = "";
+    document.querySelector(".contenedor-retiro").style.display = "none";
+    document.querySelector(".contenedor-deposito").style.display = "none";
+    document.querySelector(".contenedor-consulta").style.display = "none";
+    document.querySelector(".contenedor-info-usuario").style.display = "none";
+}
+
+document.querySelector(".resetear-evento").addEventListener("click", resetear);
+
