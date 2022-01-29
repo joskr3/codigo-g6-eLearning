@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Cajero</title>
+</head>
+
+<body>
+    <label for="usuario">Usuario: </label>
+    <input id="label-usuario" name=" usuario" type="text" placeholder="ej. Juan">
+    <br>
+    <label for="password">Contraseña: </label>
+    <input id="label-password" type="password" name="password" placeholder="ej. Juan">
+    <br>
+    <button id="boton-ingresar" type="button"    onclick="iniciarSesion()">Ingresar</button>
+
+    <div class="contenedor-info-usuario esconder">
+        <h1>Bienvenido</h1>
+        <p>Nombre: <span id="nombre-usuario"></span></p>
+        <p>Nombre de usuario: <span id="username-usuario"></span> </p>
+        <p>Email: <span id="email-usuario"></span></p>
+        <!-- <p>Moneda: <span id="tipo-moneda-usuario"></span></p>
+        <h2>Saldo: <span id="saldo-usuario"></span></h2> -->
+
+
+        <div class="contenedor-operaciones">
+            <h3>Operaciones</h3>
+            <button id="boton-retirar" type="button" onclick="irAFuncionDeRetiro()" >Retirar</button>
+            <button id="boton-depositar" type="button">Depositar</button>
+            <button id="boton-consultar" type="button">Consultar</button>
+        </div>
+
+        <div class="contenedor-retiro mostrar">
+            <h3>Retiro</h3>
+            <label for="operacion-retiro">Monto: </label>
+            <input id="label-monto-retiro" type="number" name="monto-retiro" placeholder="ej. 100">
+            <br>
+            <button id="btn-retirar" type="button" onclick="retirar()">Retirar</button>
+
+            <button type="button" class="resetear">Volver al inicio</button>
+
+        </div>
+
+        <div  id ="elemento1" class=" contenedor-deposito       mostrar">
+            <h3>Deposito</h3>
+            <label for="monto-deposito">Monto: </label>
+            <input id="operacion-deposito" type="number" name="monto-deposito" placeholder="ej. 100">
+            <br>
+            <button id="btn-depositar" type="button">Retirar</button>
+            <button type="button" class="resetear">Volver al inicio</button>
+        </div>
+
+        <div class="contenedor-consulta mostrar">
+            <h3>Consulta</h3>
+            <button id="btn-consultar" type="button">Consultar</button>
+
+            <div class="contenedor-resultado-consulta mostrar">
+                <h3>Resultado de la consulta</h3>
+                <p>Saldo: <span id="resultado-consulta"></span></p>
+                <button type="button" class="resetear">Volver al inicio</button>
+            </div>
+</body>
+
+</html>
