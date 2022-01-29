@@ -31,7 +31,7 @@
         <div class="contenedor-operaciones">
             <h3>Operaciones</h3>
             <button id="boton-retirar" type="button" onclick="irAFuncionDeRetiro()" >Retirar</button>
-            <button id="boton-depositar" type="button">Depositar</button>
+            <button id="boton-depositar" type="button" onclick="irAFuncionDeDeposito()">Depositar</button>
             <button id="boton-consultar" type="button">Consultar</button>
         </div>
 
@@ -51,7 +51,7 @@
             <label for="monto-deposito">Monto: </label>
             <input id="operacion-deposito" type="number" name="monto-deposito" placeholder="ej. 100">
             <br>
-            <button id="btn-depositar" type="button">Retirar</button>
+            <button id="btn-depositar" type="button" onclick="depositar()">Depositar</button>
             <button type="button" class="resetear">Volver al inicio</button>
         </div>
 

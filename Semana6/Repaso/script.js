@@ -82,6 +82,7 @@ function iniciarSesion() {
     }
 }
 
+;
 function irAFuncionDeRetiro() {
     let usuario = iniciarSesion();
     if (usuario) {
@@ -97,6 +98,26 @@ function retirar() {
         if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
             elementoArray.balance = elementoArray.balance - parseInt(document.getElementById("label-monto-retiro").value);
             // alert("Retiro realizado con exito");
+            console.log(usuario.balance)
+        }
+    });
+}
+
+function irAFuncionDeDeposito() {
+    let usuario = iniciarSesion();
+    if (usuario) {
+        document.querySelector(".contenedor-deposito").style.display = "block";
+        document.querySelector(".contenedor-retiro").style.display = "none";
+        document.querySelector(".contenedor-consulta").style.display = "none";
+    }
+}
+
+function depositar() {
+    let usuario = iniciarSesion();
+    arrayUsuarios.forEach(elementoArray => {
+        if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
+            elementoArray.balance = elementoArray.balance + parseInt(document.getElementById("label-monto-retiro").value);
+            // alert("Deposito realizado con exito");
             console.log(usuario.balance)
         }
     });

@@ -1,6 +1,6 @@
 let numeroSecreto = Math.floor(Math.random() * 20) + 1;
 let puntaje = 0;
-let puntajeMayor = 0;
+//let puntajeMayor = 0;
 let contador = 0;
 
 
