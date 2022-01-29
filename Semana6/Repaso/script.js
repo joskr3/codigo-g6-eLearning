@@ -146,3 +146,6 @@ function resetear() {
     document.querySelector(".contenedor-consulta").style.display = "none";
     document.querySelector(".contenedor-info-usuario").style.display = "none";
 }
+
+document.querySelector(".resetear-evento").addEventListener("click", resetear);
+
