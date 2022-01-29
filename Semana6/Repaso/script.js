@@ -1,7 +1,7 @@
 let arrayUsuarios = [
     {
         nombre: "Juan",
-        usuario: "juan",
+        usuario: "juan123",
         apellido: "Perez",
         edad: 20,
         email: "juan@mail.com",
@@ -41,7 +41,7 @@ function iniciarSesion() {
     const usuario = document.getElementById("label-usuario").value;
     const password = document.getElementById("label-password").value;
     let datosUsuario = null;
-    
+
     let usuarioValido = false;
     let passwordValido = false;
     for (let i = 0; i < arrayUsuarios.length; i++) {
@@ -54,7 +54,7 @@ function iniciarSesion() {
         }
     }
     if (usuarioValido && passwordValido) {
-        alert("Bienvenido");
+        // alert("Bienvenido");
         contenedorInfo.style.display = "block";
         // console.log(datosUsuario)
         // console.log(document.getElementById("label-usuario"))
@@ -69,10 +69,35 @@ function iniciarSesion() {
         document.querySelector(".contenedor-deposito").style.display = "none";
         document.querySelector(".contenedor-consulta").style.display = "none";
 
+
+        document.querySelector("#nombre-usuario").innerHTML = datosUsuario.nombre;
+        document.querySelector("#username-usuario").innerHTML = datosUsuario.usuario;
+        document.querySelector("#email-usuario").innerHTML = datosUsuario.email;
+
         return datosUsuario
 
     } else {
         alert("Usuario o contraseña incorrectos");
         return null
     }
+}
+
+function irAFuncionDeRetiro() {
+    let usuario = iniciarSesion();
+    if (usuario) {
+        document.querySelector(".contenedor-retiro").style.display = "block";
+        document.querySelector(".contenedor-deposito").style.display = "none";
+        document.querySelector(".contenedor-consulta").style.display = "none";
+    }
+}
+
+function retirar() {
+    let usuario = iniciarSesion();
+    arrayUsuarios.forEach(elementoArray => {
+        if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
+            elementoArray.balance = elementoArray.balance - parseInt(document.getElementById("label-monto-retiro").value);
+            // alert("Retiro realizado con exito");
+            console.log(usuario.balance)
+        }
+    });
 }
