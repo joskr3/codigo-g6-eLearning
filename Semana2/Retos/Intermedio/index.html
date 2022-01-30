@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Reto 2 - Sem2</title>
+    </head>
+    <body>
+        <section>
+            <h1>Sign Up</h1>
+            <form action="./index.html">
+                <label>First Name</label>
+                <input type="text" name="name" class="salto_de_linea" minlength="7" required>
+                <label for="">Age</label>
+                <input type="number" name="age" min="0" max="120" class="salto_de_linea" required>
+                <label for="">Income</label>
+                <input type="text" name="income" minlength="7" class="salto_de_linea" required>
+                <label for="">More Info</label>
+                <textarea minlength="7" class="salto_de_linea_2" id="text-area" required></textarea>
+                <label for="">Gender</label>
+                <div class="salto_de_linea_2">
+                    <input type="radio" name="genero" value="M" class="radio" required>Male
+                    <input type="radio" name="genero" value="F" class="radio" required>Female
+                    <input type="radio" name="genero" value="M" class="radio" required>Trans
+                </div> 
+                <label>Plan</label>
+                <select class="salto_de_linea" id="plan" required>
+                    <option selected disabled>Select Plan</option>
+                    <option name="plan" value="A">Plan A</option>
+                    <option name="plan" value="B">Plan B</option>
+                    <option name="plan" value="C">Plan C</option>
+                </select>
+                <div class="salto_de_linea_2">        
+                    <input type="checkbox" class="check" required>Suscribe to Newsletter
+                </div>    
+                <input type="submit" value="Update" id="button">
+            </form>
+        </section>        
+    </body>
+</html>

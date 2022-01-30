@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Reto 3 - Sem2</title>
+    </head>
+    <body>
+        <section>
+            <h1>Contact Form</h1>
+            <form action="./index.html">
+                <label>First Name</label>
+                <input type="text" placeholder="John" class="salto_de_linea" minlength="7" required> 
+                <label>Last Name</label>
+                <input type="text" placeholder="Doe" class="salto_de_linea" minlength="7" required>
+                <label>Email</label>
+                <input type="email" placeholder="you@domain.com" class="salto_de_linea" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
+                <label>Message</label>
+                <textarea placeholder="Enter your message here ..." minlength="20" maxlength="140" class="salto_de_linea" id="text-area" pattern="[^A-Za-z0-9 .'?!,@$#-_]" required></textarea>
+                <input type="submit" value="Submit" id="button">
+            </form>
+        </section>
+    </body>
+</html>

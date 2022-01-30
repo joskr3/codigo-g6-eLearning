@@ -1,25 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap");
 
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
-header{
-    background-color: coral;
+header {
+  background-color: coral;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
-header .titulo, .subtitulo {
-    text-align: center;
+header .titulo,
+.subtitulo {
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 5px;
 }
 
 .titulo {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  width: fit-content;
+  background-color: #f0f0f0;
+  margin-bottom: 10px !important;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFCAEF;
+  width: 80%;
+}
+
+aside {
+  background-color: #A8F9A8;
+  padding-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 20%;
 }
 
 .subtitulo {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  width: fit-content;
+  font-size: 20px;
+  background-color: #f0f0f0;
+}
+
+nav {
+  padding-top: 30px;
+  text-align: center;
+  background-color: #FFECAD;
+  height: 40px;
+}
+nav > a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.tarjeta-1 {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+.tarjeta-1-imagen {
+  margin: 40px;
+}
+.tarjeta-1-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tarjeta-1-contenedor-texto {
+  margin: 10px;
+}
+
+.tarjeta-2 {
+  margin: 50px;
+  padding: 30px;
+}
+
+.tarjeta-2,
+.tarjeta-1 {
+  background-color: #8FD8DA;
+}
+
+aside > p,
+aside > h3 {
+  text-align: center;
+}
+
+aside > p {
+  margin-bottom: 500px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  background-color: #A8C5F9;
+  height: 100px;
+}
+.footer-contenedor-texto {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
 }
