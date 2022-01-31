@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolucion Ejercicios</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <h3>Resolucion Ejercicio 1</h3>
+        <p>Desarrolle el siguiente algoritmo: </br>
+        Un productor de leche lleva el registro de lo que produce en galones. Realice un algoritmo, y representelo en JS, que ayude al productor a saber cuanto recibira por la entrega de su produccion de un dia (1 galon = 3.785 litros).
+        </p>
+        <div class="input-data">
+                <label for="litros">Ingrese Litros</label>
+                <input type="number" name="litros" id="litros" class="input">
+                <label for="litros">Ingrese Precio por Galon</label>
+                <input type="number" name="precio" id="precio" class="input">
+        </div>
+        <div>
+            <input type="text" name="resultado" id="resultado" class="input" placeholder="Pago Total">
+            <input type="button" value="Calcular" onclick="calculandopago()">
+        </div>
+    </section>
+    <section>
+        <h3>Resolucion Ejercicio 2</h3>
+        <p>Desarrolle el siguiente algoritmo: </br>
+        "El naufrago satisfecho" ofrece hamburguesas sencillas, dobles y triples, las cuals tienen un costo de $20.00, $25.00 y $28.00 respectivamente. La empresa acepta tarjetas de credito con un cargo de 5% sobre la compra. Suponiendo que los cleintes adquieren solo un tipo de hamburguesa, realice un algoritmo para determinar cuanto debe pagar una persona por N hamburguesas</p>
+        <div class="input-data">
+                <label for="select-hamb">Seleccione Tipo de hamburguesa</label>
+                <select name="select-hamb" id="select-hamb" class="select-option">
+                    <option value="sencilla">Sencilla</option>
+                    <option value="doble">Doble</option>
+                    <option value="triple">Triple</option>
+                </select>
+                <label for="select-pago">Seleccione Tipo de Pago</label>
+                <select name="select-pago" id="select-pago" class="select-option">
+                    <option value="efectivo">Efectivo</option>
+                    <option value="tarjetacredito">Tarjeta de Credito</option>
+                </select>
+                <label for="numerohamb">Ingrese Cantidad</label>
+                <input type="number" name="numerohamb" id="numerohamb" class="input">
+        </div>
+        <div>
+            <input type="text" name="resultado-hamb" id="resultado-hamb" class="input" placeholder="Pago Total">
+            <input type="button" value="Calcular" onclick="calculandoventa()">
+        </div>
+    </section>
+</body>
+</html>

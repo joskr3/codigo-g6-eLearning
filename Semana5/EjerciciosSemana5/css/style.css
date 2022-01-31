@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.input{
+    width: 150px;
+    height: 35px;
+}
+
+.input-data{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-data input{
+    margin-bottom: 10px;
+}
+
+.select-option{
+    width: 150px;
+}
