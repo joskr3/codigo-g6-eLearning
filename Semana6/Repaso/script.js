@@ -95,7 +95,7 @@ function retirar() {
     let usuario = iniciarSesion();
     arrayUsuarios.forEach(elementoArray => {
         if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
-            elementoArray.balance = elementoArray.balance - parseInt(document.getElementById("label-monto-retiro").value);
+            elementoArray.balance = elementoArray.balance - parseInt(document.getElementById ("label-monto-retiro").value);
             // alert("Retiro realizado con exito");
             console.log(usuario.balance)
         }
