@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.head-1{
+    background-color:rgb(250, 164, 190) ;
+}
+header h1, h2{
+    text-align:center;
+}
+
+nav{    
+    background-color:rgb(248, 248, 118);
+    text-align:center;
+    height: 40px;
+}
+
+nav ul {
+    display:inline-block;
+    text-decoration:none;
+    padding: 5px;
+    list-style:none;
+
+    
+}
+
+nav ul li{
+    float: left;
+    margin-top: 2px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px;
+    margin-left: 10em;
+}
+
+
+
+nav ul li a:hover{
+  background-color: #929fb3;
+}
+
+
+
+main{
+    background-color:rgb(226, 118, 172);
+    padding: 50px;
+    float: left;
+    height: 50em;
+    width: 50em;
+}
+.caja1{
+    background-color: rgb(76, 204, 166);
+    padding: 1.5em;
+    margin-bottom:2em;
+    font-size: 20px;
+    color:white;
+
+
+}
+.caja2{
+    background-color: rgb(76, 204, 166);
+    padding: 1.5em;
+    margin-top:2px;
+    font-size: 20px;
+    color:white;
+
+}
+
+img{
+    float:left;
+    padding-right:1em;
+    padding-bottom:0.3em;
+}
+
+aside{
+    background-color:rgb(137, 201, 42);
+    height:50em;
+    text-align: center;
+    
+  
+    
+}
+
+.aside1 h2 p{
+    background-color: rgb(76, 204, 166);
+    padding-bottom: 500px;
+    padding-top: 50px;
+
+   
+}
+.aside2{
+    padding:50px;
+    padding-top: 500px;
+
+}
+
+
+footer{
+    background-color: aqua;
+    text-align: center;
+}
+
+
+
