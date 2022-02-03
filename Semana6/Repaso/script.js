@@ -35,9 +35,15 @@ let contenedorInfo = document.getElementsByClassName(
   "contenedor-info-usuario"
 )[0];
 
+<<<<<<< HEAD
 window.onload = function () {
   contenedorInfo.style.display = "none";
 };
+=======
+window.onload= function () {
+    contenedorInfo.style.display = "none";
+}
+>>>>>>> 574abc129ec483551a902685c70a5b5350790e06
 
 function iniciarSesion() {
   const usuario = document.getElementById("label-usuario").value;
