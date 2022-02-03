@@ -33,7 +33,7 @@ let arrayUsuarios = [
 
 let contenedorInfo = document.getElementsByClassName("contenedor-info-usuario")[0];
 
-window.onload = function () {
+window.onload= function () {
     contenedorInfo.style.display = "none";
 }
 
