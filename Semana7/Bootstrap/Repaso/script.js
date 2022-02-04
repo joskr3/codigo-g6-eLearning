@@ -48,13 +48,13 @@ window.onload = function () {
 
 
 function obtenerUsuario() {
-    const usuario = document.getElementById("label-usuario").value;
+    const email = document.getElementById("label-email-usuario").value;
     const password = document.getElementById("label-password").value;
     let datosUsuario = null;
     let usuarioValido = false;
     let passwordValido = false;
     for (let i = 0; i < arrayUsuarios.length; i++) {
-        if (arrayUsuarios[i].usuario === usuario) {
+        if (arrayUsuarios[i].email === email) {
             usuarioValido = true;
             datosUsuario = arrayUsuarios[i];
             if (arrayUsuarios[i].password === password) {
