@@ -33,54 +33,78 @@
         </div>
     </div>
     <!-- Fin del primer contenedor -->
+    <!-- 
+    Ejercicio 1 : Queremos lograr que el siguiente contenedor , este centrado , de la misma manera que el anterior contenedor -->
 
-    <!-- Ejercicio 1 : Queremos lograr que el siguiente contenedor , este centrado , de la misma manera que el anterior contenedor -->
-        
+
+
+    <div class="contenedor-info-usuario esconder d-none justify-content-center  border border-primary rounded m-3 p-4">
+
         <!-- Inicio del contenido , que queremos centrar -->
+        <div class="d-flex flex-column justify-content-center border border-primary rounded  p-3 ">
+            <h1 class="text-white">Bienvenido</h1>
+            <p class="text-white">Nombre: <span class="text-white" id="nombre-usuario"></span></p>
+            <p class="text-white">Nombre de usuario: <span class="text-white" id="username-usuario"></span> </p>
+            <p class="text-white">Email: <span class="text-white" id="email-usuario"></span></p>
 
-    <div class="contenedor-info-usuario esconder">
-        <h1 class="text-white">Bienvenido</h1>
-        <p class="text-white">Nombre: <span class="text-white" id="nombre-usuario"></span></p>
-        <p class="text-white">Nombre de usuario: <span class="text-white" id="username-usuario"></span> </p>
-        <p class="text-white">Email: <span class="text-white" id="email-usuario"></span></p>
+            <div class="contenedor-operaciones container  ">
+                <h3 class="text-white row">Operaciones</h3>
+                <div class="d-flex justify-content-center">
+                    <button id="boton-retirar" class="btn btn-danger m-2  column w-50 p-3" type="button"
+                        onclick="irAFuncionDeRetiro()">
+                        <p style="font-weight: bold;"> Retirar</p>
+                    </button>
+                    <button id="boton-depositar" class="btn btn-success m-2 column w-50 p-3" type="button"
+                        onclick="irAFuncionDeDeposito()">
+                        <p style="font-weight: bold;"> Depositar</p>
+                    </button>
+                    <button id="boton-consultar" class="btn btn-info m-2 column w-50 p-3" type="button"
+                        onclick="irAFuncionDeConsulta()">
+                        <p style="font-weight: bold;"> Consultar saldo</p>
+                    </button>
+                </div>
 
-        <div class="contenedor-operaciones">
-            <h3>Operaciones</h3>
-            <button id="boton-retirar" type="button" onclick="irAFuncionDeRetiro()">Retirar</button>
-            <button id="boton-depositar" type="button" onclick="irAFuncionDeDeposito()">Depositar</button>
-            <button id="boton-consultar" type="button" onclick="irAFuncionDeConsulta()">Consultar</button>
+            </div>
+
+            <div class="contenedor-ejecutar-operaciones">
+                <div class="contenedor-retiro mostrar">
+                    <h3>Retiro</h3>
+                    <label for="operacion-retiro">Monto: </label>
+                    <input id="label-monto-retiro" type="number" name="monto-retiro" placeholder="ej. 100">
+                    <br>
+                    <button id="btn-retirar" type="button" onclick="retirar()">Retirar</button>
+
+                    <button type="button" class="resetear-evento">Volver al inicio</button>
+                </div>
+                <div id="elemento1" class=" contenedor-deposito       mostrar">
+                    <h3>Deposito</h3>
+                    <label for="monto-deposito">Monto: </label>
+                    <input id="operacion-deposito" type="number" name="monto-deposito" placeholder="ej. 100">
+                    <br>
+                    <button id="btn-depositar" type="button" onclick="depositar()">Depositar</button>
+                    <button type="button" class="resetear" onclick="resetear()">Volver al inicio</button>
+                </div>
+                <div class="contenedor-consulta mostrar">
+                    <h3>Consulta</h3>
+                    <div class="contenedor-resultado-consulta mostrar">
+                        <h3>Resultado de la consulta</h3>
+                        <p>Saldo: <span id="resultado-consulta"></span></p>
+                        <button type="button" class="resetear" onclick="resetear()">Volver al inicio</button>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
+
         <!-- Fin del contenido , que queremos centrar -->
 
-        <div class="contenedor-retiro mostrar">
-            <h3>Retiro</h3>
-            <label for="operacion-retiro">Monto: </label>
-            <input id="label-monto-retiro" type="number" name="monto-retiro" placeholder="ej. 100">
-            <br>
-            <button id="btn-retirar" type="button" onclick="retirar()">Retirar</button>
 
-            <button type="button" class="resetear-evento">Volver al inicio</button>
-        </div>
+    </div>
 
-        <div id="elemento1" class=" contenedor-deposito       mostrar">
-            <h3>Deposito</h3>
-            <label for="monto-deposito">Monto: </label>
-            <input id="operacion-deposito" type="number" name="monto-deposito" placeholder="ej. 100">
-            <br>
-            <button id="btn-depositar" type="button" onclick="depositar()">Depositar</button>
-            <button type="button" class="resetear" onclick="resetear()">Volver al inicio</button>
-        </div>
-
-        <div class="contenedor-consulta mostrar">
-            <h3>Consulta</h3>
-            <div class="contenedor-resultado-consulta mostrar">
-                <h3>Resultado de la consulta</h3>
-                <p>Saldo: <span id="resultado-consulta"></span></p>
-                <button type="button" class="resetear" onclick="resetear()">Volver al inicio</button>
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
