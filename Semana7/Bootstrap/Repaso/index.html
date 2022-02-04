@@ -36,8 +36,6 @@
     <!-- 
     Ejercicio 1 : Queremos lograr que el siguiente contenedor , este centrado , de la misma manera que el anterior contenedor -->
 
-
-
     <div class="contenedor-info-usuario esconder d-none justify-content-center  border border-primary rounded m-3 p-4">
 
         <!-- Inicio del contenido , que queremos centrar -->
@@ -68,13 +66,17 @@
 
             <div class="contenedor-ejecutar-operaciones">
                 <div class="contenedor-retiro mostrar">
-                    <h3>Retiro</h3>
-                    <label for="operacion-retiro">Monto: </label>
-                    <input id="label-monto-retiro" type="number" name="monto-retiro" placeholder="ej. 100">
-                    <br>
-                    <button id="btn-retirar" type="button" onclick="retirar()">Retirar</button>
+                    <h3 class="text-white">Retiro</h3>
+                    <div class="input-group mb-3 w-25 p-3">
+                        <label class="input-group-text" for="operacion-retiro">Monto: </label>
+                        <input id="label-monto-retiro" class="form-control" type="number" name="monto-retiro"
+                            placeholder="ej. 100">
+                    </div>
 
-                    <button type="button" class="resetear-evento">Volver al inicio</button>
+                    <br>
+                    <button class="btn btn-warning" id="btn-retirar" type="button" onclick="retirar()">Retirar</button>
+
+                    <button type="button" class="resetear-evento btn btn-danger">Volver al inicio</button>
                 </div>
                 <div id="elemento1" class=" contenedor-deposito       mostrar">
                     <h3>Deposito</h3>
@@ -98,7 +100,6 @@
         </div>
 
         <!-- Fin del contenido , que queremos centrar -->
-
 
     </div>
 
