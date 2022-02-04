@@ -12,7 +12,10 @@
     <title>Cajero</title>
 </head>
 
-<body>
+<body style="background-color: black;">
+
+    <!-- Nos vamos a fijar en este contenedor , para replicarlo en el ejercio de abajo -->
+    <!-- Inicio del primer contenedor -->
     <div class="contenedor-inicio d-flex justify-content-center  border border-primary rounded m-3 p-4">
         <div class="d-flex flex-column justify-content-center border border-primary rounded  p-3">
             <div class="input-group mb-3">
@@ -29,12 +32,17 @@
                 onclick="iniciarSesion()">Ingresar</button>
         </div>
     </div>
+    <!-- Fin del primer contenedor -->
+
+    <!-- Ejercicio 1 : Queremos lograr que el siguiente contenedor , este centrado , de la misma manera que el anterior contenedor -->
+        
+        <!-- Inicio del contenido , que queremos centrar -->
 
     <div class="contenedor-info-usuario esconder">
-        <h1>Bienvenido</h1>
-        <p>Nombre: <span id="nombre-usuario"></span></p>
-        <p>Nombre de usuario: <span id="username-usuario"></span> </p>
-        <p>Email: <span id="email-usuario"></span></p>
+        <h1 class="text-white">Bienvenido</h1>
+        <p class="text-white">Nombre: <span class="text-white" id="nombre-usuario"></span></p>
+        <p class="text-white">Nombre de usuario: <span class="text-white" id="username-usuario"></span> </p>
+        <p class="text-white">Email: <span class="text-white" id="email-usuario"></span></p>
 
         <div class="contenedor-operaciones">
             <h3>Operaciones</h3>
@@ -42,6 +50,7 @@
             <button id="boton-depositar" type="button" onclick="irAFuncionDeDeposito()">Depositar</button>
             <button id="boton-consultar" type="button" onclick="irAFuncionDeConsulta()">Consultar</button>
         </div>
+        <!-- Fin del contenido , que queremos centrar -->
 
         <div class="contenedor-retiro mostrar">
             <h3>Retiro</h3>
