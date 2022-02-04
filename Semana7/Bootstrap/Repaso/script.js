@@ -126,6 +126,7 @@ function irAFuncionDeRetiro() {
         document.querySelector(".contenedor-retiro").style.display = "block";
         document.querySelector(".contenedor-deposito").style.display = "none";
         document.querySelector(".contenedor-consulta").style.display = "none";
+       // document.querySelector(".operacion-retiro").classList.add("text-white");
         console.log("Entro al if")
     }else{
         console.log("error")
