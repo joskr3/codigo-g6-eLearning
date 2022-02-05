@@ -43,11 +43,7 @@ let contenedorDatosUsuario = document.getElementById("datos-usuario");
 
 window.onload = function () {
     contenedorEjecutarOperaciones.style.display = "none";
-    //contenedorOperaciones.style.display = "none";
     contenedorInfoUsuario.style.display = "none";
-    //contenedorDatosUsuario.style.display = "none";
-   // console.log(contenedorEjecutarOperaciones)
-   console.log(contenedorInfoUsuario)
 }
 
 
@@ -78,10 +74,6 @@ function iniciarSesion() {
 
     if (usuario) {
         alerta("Bienvenido " + usuario.nombre, "success");
-
-        // contenedorInfoUsuario.classList.remove("d-none");
-        // contenedorOperaciones.classList.add("d-flex", "flex-column");
-
         contenedorInfoUsuario.style.display = "flex";
         contenedorInfoUsuario.style.justifyContent = "center"
 
@@ -98,16 +90,6 @@ function iniciarSesion() {
 }
 
 // TODO: Arreglar la alerta para que deje de mostrarse despues de 5 segundos
-
-// const miIntervaloDeTiempo = setTimeout(desaparecerAlerta, 3000);
-
-// function desaparecerAlerta() {
-//   document.getElementById("liveAlertPlaceholder").style.display = "none";
-// }
-
-// function dejarDeMostrarAlerta() {
-//   clearTimeout(miIntervaloDeTiempo);
-// }
 
 function alerta(mensaje, tipo) {
     // estamos creando una etiqueta div
@@ -138,9 +120,7 @@ function irAFuncionDeRetiro() {
         document.querySelector(".contenedor-deposito").style.display = "none";
         document.querySelector(".contenedor-consulta").style.display = "none";
         document.getElementById("datos-usuario").style.display = "none";
-        console.log("Entro al if")
-    } else {
-        console.log("error")
+        document.getElementById("datos-usuario").style.display = "none";
     }
 }
 
@@ -149,13 +129,9 @@ function retirar() {
     arrayUsuarios.forEach(elementoArray => {
         if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
             elementoArray.balance = elementoArray.balance - parseInt(document.getElementById("label-monto-retiro").value);
-            // alert("Retiro realizado con exito");
-            console.log(usuario.balance)
         }
     });
 }
-
-// VAMOS A HACER LA FUNCIONALIDAD DE RETIRO
 
 function irAFuncionDeDeposito() {
     const usuario = obtenerUsuario();
@@ -171,12 +147,10 @@ function depositar() {
     arrayUsuarios.forEach(elementoArray => {
         if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
             elementoArray.balance = elementoArray.balance + parseInt(document.getElementById("operacion-deposito").value);
-            // alert("Retiro realizado con exito");
             console.log(usuario.balance)
         }
     });
 }
-
 
 function irAFuncionDeConsulta() {
     const usuario = obtenerUsuario();
@@ -190,15 +164,17 @@ function irAFuncionDeConsulta() {
 }
 
 function resetear() {
-    document.getElementById("label-usuario").value = "";
+    let seleccionarBotonesReseteo = document.getElementsByClassName("resetear-evento");
+
+    document.getElementById("label-email-usuario").value = "";
     document.getElementById("label-password").value = "";
     document.getElementById("label-monto-retiro").value = "";
     document.getElementById("operacion-deposito").value = "";
     document.querySelector(".contenedor-retiro").style.display = "none";
     document.querySelector(".contenedor-deposito").style.display = "none";
     document.querySelector(".contenedor-consulta").style.display = "none";
-    document.querySelector(".contenedor-info-usuario").style.display = "none";
+    document.querySelector("#contenedor-info-usuario").style.display = "block";
+
+    contenedorDatosUsuario.style.display = "flex";
+    contenedorDatosUsuario.style.flexDirection = "column";
 }
-
-document.querySelector(".resetear-evento").addEventListener("click", resetear);
-
