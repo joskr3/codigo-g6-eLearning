@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1{
+    font-size: 2rem;
+}
+
+main hr{
+    border-top: 0.5px solid #d4d2d2;
+}
+
+.content{
+    border: 1px solid #d4d2d2;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.content-row {
+    padding: 10px 20px;
+    background-color: #e0dcdc63;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.content-row .input-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    width: 300px;
+    height: 38px;
+    margin-top: 20px;
+}
+
+.content-row .input-row .input-text {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    min-width: 200px;
+    border: 1px solid #d4d2d2;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-size: 0.9rem;
+    padding-left: 10px;
+    position: absolute;
+
+}
+
+.content-row .input-row label {
+    position: absolute;
+    color: #8b878763;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+    z-index: -1;
+    
+}
+.content-row .input-row .input-text::placeholder{
+    color: #8b878763;
+    font-size: 0.8rem;
+    font-weight: 600;
+    overflow: visible;
+}
+.content-row .input-row .input-text:focus::placeholder , /*cuiando tiene el focus y placeholder*/
+.content-row .input-row .input-text:focus + label, /*tiene el focus y actua sobre label*/
+.content-row .input-row .input-text:not(:placeholder-shown)  + label /* validando si placeholder esta oculto y actual sobre label*/{
+    transform: translate(-10px, -32px);
+    transition: all 0.7s ease;
+    color: rgb(0, 89, 255);
+}
+
+.content-row .button-add {
+    background-color: rgb(14, 194, 23);
+    color: #fff;
+    border: none;
+    width: 50px;
+    font-size: 0.9rem;
+    height: 38px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.content-row .button-add:hover{
+    transition: all 0.7s ease;
+    transform: scale(1.1);
+}
+
+/* ! Clean tas*/
+.content-row.clean-options{
+    font-size: 0.9rem;
+}
+
+.clean-options a{
+    text-decoration: none;
+    color: rgb(0, 89, 255);
+    font-weight: 500;
+    margin: 0 5px;
+}
+
+
+/* ! listas de task */
+
+.content-list{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-list{
+    width: 100%;
+    border-left: 1px solid #d4d2d2;
+    border-right: 1px solid #d4d2d2;
+    list-style: none;
+}
+.task-list .item-task{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    height: 30px;
+}
+.task-list .item-task:nth-child(odd){
+    border-top: 1px solid #d4d2d2;
+    border-bottom: 1px solid #d4d2d2;
+}
+.task-list .item-task:last-child{
+    border-bottom: 1px solid #d4d2d2;
+}
+
+.task-list .item-task{
+    font-size: 0.85rem;
+}
+
+.task-list .item-task input:checked + label{
+    font-size: 0.8rem;
+    color: red;
+    text-decoration: line-through;
+}
