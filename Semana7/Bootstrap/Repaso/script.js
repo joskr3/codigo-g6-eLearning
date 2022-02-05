@@ -30,6 +30,16 @@ let arrayUsuarios = [
         password: "1234",
         balance: 300,
         moneda: "PEN"
+    },
+    {
+        nombre: "Danny",
+        usuario: "Dann",
+        apellido: "Pandal",
+        edad: 30,
+        email: "dev.pandaldn@email.com",
+        password: "0000",
+        balance: 500,
+        moneda: "PEN"
     }
 ]
 
@@ -110,6 +120,13 @@ function alerta(mensaje, tipo) {
     botonCerrar.addEventListener('click', function () {
         etiqueta_envoltorio.remove();
     });
+    setTimeout(cerrarAlertas, 5000);
+}
+
+/* funcion que permite clickear los botones de cerrar*/
+const cerrarAlertas = () =>{
+    const botonCerrar = document.getElementById('boton-cerrar');
+    botonCerrar.click();
 }
 
 function irAFuncionDeRetiro() {
