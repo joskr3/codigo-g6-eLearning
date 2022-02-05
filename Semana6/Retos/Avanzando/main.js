@@ -46,6 +46,7 @@ buttonAdd.addEventListener('click', () => {
     }
 });
 
+
 const addItemTask = (item,index) => {
     let new_item = '<li class="item-task" id="task_' + index + '" index="' + index + '"><input type="checkbox" /><label for="task_' + index + '">' + item["task-name"] + '</label></li>';
     contentTask.innerHTML = contentTask.innerHTML + new_item;
