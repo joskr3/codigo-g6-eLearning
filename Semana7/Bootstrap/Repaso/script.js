@@ -32,6 +32,8 @@ let arrayUsuarios = [
 ]
 
 let contenedorInfo = document.getElementsByClassName("contenedor-info-usuario")[0];
+let placeholderDeLaAlerta = document.getElementById('liveAlertPlaceholder')
+let  activadorDeAlerta = document.getElementById('boton-ingresar')
 
 window.onload= function () {
     contenedorInfo.style.display = "none";
@@ -55,6 +57,7 @@ function iniciarSesion() {
     }
     if (usuarioValido && passwordValido) {
         // alert("Bienvenido");
+        alerta("Bienvenido", "success");
         contenedorInfo.style.display = "block";
         // console.log(datosUsuario)
         // console.log(document.getElementById("label-usuario"))
@@ -69,7 +72,6 @@ function iniciarSesion() {
         document.querySelector(".contenedor-deposito").style.display = "none";
         document.querySelector(".contenedor-consulta").style.display = "none";
 
-
         document.querySelector("#nombre-usuario").innerHTML = datosUsuario.nombre;
         document.querySelector("#username-usuario").innerHTML = datosUsuario.usuario;
         document.querySelector("#email-usuario").innerHTML = datosUsuario.email;
@@ -77,10 +79,26 @@ function iniciarSesion() {
         return datosUsuario
 
     } else {
-        alert("Usuario o contraseña incorrectos");
+        
+        alerta("Usuario o contraseña incorrectos/ alerta1", "danger")
         return null
     }
 }
+
+function alerta(mensaje, tipo) {
+  const etiqueta_envoltorio = document.createElement('div')
+  etiqueta_envoltorio.innerHTML = '<div class="alert alert-' + tipo + ' alert-dismissible" role="alert">' + mensaje + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+  placeholderDeLaAlerta.append(etiqueta_envoltorio)
+}
+
+// if (activadorDeAlerta) {
+//   alertTrigger.addEventListener('click', () =>{
+//     alerta('Nice, you triggered this alert message!', 'success')
+//   })
+// }
+
+
 
 function irAFuncionDeRetiro() {
     let usuario = iniciarSesion();
@@ -95,7 +113,7 @@ function retirar() {
     let usuario = iniciarSesion();
     arrayUsuarios.forEach(elementoArray => {
         if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
-            elementoArray.balance = elementoArray.balance - parseInt(document.getElementById ("label-monto-retiro").value);
+            elementoArray.balance = elementoArray.balance - parseInt(document.getElementById("label-monto-retiro").value);
             // alert("Retiro realizado con exito");
             console.log(usuario.balance)
         }

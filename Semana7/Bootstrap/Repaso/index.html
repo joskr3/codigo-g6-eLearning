@@ -12,37 +12,37 @@
     <title>Cajero</title>
 </head>
 
-<body>
-<<<<<<< HEAD
-    <div class="contenedor-inicio container">
-        <div class="d-inline-flex p-2 flex-column justify-content-center">
-            <label for="usuario">Usuario: </label>
-            <input id="label-usuario" name=" usuario" type="text" placeholder="ej. Juan">
-=======
-    <div class="contenedor-inicio d-flex justify-content-center p-4 border border-primary rounded m-3">
-        <div class="p-2  d-flex flex-column justify-content-center border border-primary rounded  p-3">
-            <div>
-                <label for="usuario">Usuario: </label>
-                <input id="label-usuario" name=" usuario" type="text" placeholder="ej. Juan">
+<body style="background-color: black;">
+
+    <!-- Nos vamos a fijar en este contenedor , para replicarlo en el ejercio de abajo -->
+    <!-- Inicio del primer contenedor -->
+    <div class="contenedor-inicio d-flex justify-content-center  border border-primary rounded m-3 p-4">
+        <div class="d-flex flex-column justify-content-center border border-primary rounded  p-3">
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="usuario">Usuario: </label>
+                <input id="label-usuario" class="form-control" name=" usuario" type="text" placeholder="ej. Juan">
             </div>
-    
-            <br>
-            <div>
-                <label for="password">Contraseña: </label>
-                <input id="label-password" type="password" name="password" placeholder="ej. Juan">
+
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="password">Contraseña: </label>
+                <input id="label-password" class="form-control" type="password" name="password" placeholder="ej. Juan">
             </div>
-            <br>
-            <button id="boton-ingresar" type="button" onclick="iniciarSesion()">Ingresar</button>
->>>>>>> d52c538b055bc73eb28a93d44531ca76ca90d382
+            <div class="position-fixed top-0 end-0 p-3" style="z-index: 11" id="liveAlertPlaceholder"></div>
+            <button id="boton-ingresar" class="btn btn-primary btn-lg" type="button"
+                onclick="iniciarSesion()">Ingresar</button>
         </div>
     </div>
+    <!-- Fin del primer contenedor -->
 
+    <!-- Ejercicio 1 : Queremos lograr que el siguiente contenedor , este centrado , de la misma manera que el anterior contenedor -->
+        
+        <!-- Inicio del contenido , que queremos centrar -->
 
     <div class="contenedor-info-usuario esconder">
-        <h1>Bienvenido</h1>
-        <p>Nombre: <span id="nombre-usuario"></span></p>
-        <p>Nombre de usuario: <span id="username-usuario"></span> </p>
-        <p>Email: <span id="email-usuario"></span></p>
+        <h1 class="text-white">Bienvenido</h1>
+        <p class="text-white">Nombre: <span class="text-white" id="nombre-usuario"></span></p>
+        <p class="text-white">Nombre de usuario: <span class="text-white" id="username-usuario"></span> </p>
+        <p class="text-white">Email: <span class="text-white" id="email-usuario"></span></p>
 
         <div class="contenedor-operaciones">
             <h3>Operaciones</h3>
@@ -50,6 +50,7 @@
             <button id="boton-depositar" type="button" onclick="irAFuncionDeDeposito()">Depositar</button>
             <button id="boton-consultar" type="button" onclick="irAFuncionDeConsulta()">Consultar</button>
         </div>
+        <!-- Fin del contenido , que queremos centrar -->
 
         <div class="contenedor-retiro mostrar">
             <h3>Retiro</h3>
