@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=Roboto:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cabecera {
+  background-color: #5fceb3;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+
+.cabecera__cuerpo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cabecera__cuerpo__titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "PT Sans Narrow', sans-serif";
+  color: white !important;
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #5fceb3;
+}
+
+.login__contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login__contenedor__input {
+  margin: 0.5rem;
+  width: 100%;
+  height: 2rem;
+  border: 1px solid #5fceb3;
+  border-radius: 3px;
+  caret-color: #5fceb3;
+}
+
+.login__contenedor__input:focus {
+  outline: none;
+  border: none;
+}
+
+.login__button {
+  margin: 0.5rem;
+  width: 25%;
+  height: 2rem;
+  border: 1px solid #5fceb3;
+  border-radius: 3px;
+  background-color: #5fceb3;
+  color: white;
+  font-weight: bold;
+  font-family: "PT Sans Narrow', sans-serif";
+}
+
+.login__button:focus {
+  outline: none;
+  border: none;
+}
+
+.contenedor-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+}
+
+.contenedor-info__centrado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-info__centrado__datos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-info__centrado__datos > h1, .contenedor-info__centrado__datos p {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "PT Sans Narrow', sans-serif";
+  color: black;
+}
+
+.contenedor-info__centrado__datos > p > span {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "PT Sans Narrow', sans-serif";
+  color: #ccc;
+}
+/*# sourceMappingURL=style.css.map */
