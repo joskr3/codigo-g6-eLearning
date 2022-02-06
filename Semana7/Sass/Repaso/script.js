@@ -30,15 +30,22 @@ let arrayUsuarios = [
         password: "1234",
         balance: 300,
         moneda: "PEN"
+    },
+    {
+        nombre: "Danny",
+        usuario: "Dann",
+        apellido: "Pandal",
+        edad: 30,
+        email: "dev.pandaldn@email.com",
+        password: "0000",
+        balance: 500,
+        moneda: "PEN"
     }
 ]
 
 let contenedorInfoUsuario = document.getElementById("contenedor-info-usuario");
 let contenedorOperaciones = document.getElementById("contenedor-operaciones")
-let contenedorEjecutarOperaciones = document.getElementsByClassName("contenedor-ejecutar-operaciones")[0];
-let contenedorBienvenida = document.getElementById("contenedor-bienvenida");
-let placeholderDeLaAlerta = document.getElementById('liveAlertPlaceholder')
-let activadorDeAlerta = document.getElementById('boton-ingresar')
+let contenedorEjecutarOperaciones = document.getElementById("contenedor-execute");
 let contenedorDatosUsuario = document.getElementById("datos-usuario");
 
 window.onload = function () {
@@ -64,7 +71,7 @@ function obtenerUsuario() {
     }
 
     let returnUser = usuarioValido && passwordValido ? datosUsuario : null
-    console.log(returnUser)
+    //console.log(returnUser)
     return returnUser
 
 }
@@ -77,9 +84,9 @@ function iniciarSesion() {
         contenedorInfoUsuario.style.display = "flex";
         contenedorInfoUsuario.style.justifyContent = "center"
 
-        document.querySelector(".contenedor-retiro").style.display = "none";
-        document.querySelector(".contenedor-deposito").style.display = "none";
-        document.querySelector(".contenedor-consulta").style.display = "none";
+        document.querySelector("#contenedor-retiro").style.display = "none";
+        document.querySelector("#contenedor-deposito").style.display = "none";
+        document.querySelector("#contenedor-saldo").style.display = "none";
         document.querySelector("#nombre-usuario").innerHTML = usuario.nombre || "undefined";
         document.querySelector("#username-usuario").innerHTML = usuario.usuario;
         document.querySelector("#email-usuario").innerHTML = usuario.email;
@@ -95,10 +102,10 @@ function alerta(mensaje, tipo) {
     // estamos creando una etiqueta div
     const etiqueta_envoltorio = document.createElement('div')
     // en esta linea agregamos una clase al div
-    etiqueta_envoltorio.classList.add('notification', tipo === "success" ? "is-success" : "is-danger")
+    etiqueta_envoltorio.classList.add('alerta__notify', tipo === "success" ? "alerta__success" : "alerta__danger")
 
     // creamos un nodo de boton(elemento/etiqueta button)
-    etiqueta_envoltorio.innerHTML = `<button class="delete" id="boton-cerrar" title="cerrar"> </button>${mensaje}`
+    etiqueta_envoltorio.innerHTML = `<button class="alerta__notify__delete" id="boton-cerrar" title="cerrar"> </button><span>${mensaje}</span>`
 
     // agregamos el nodo(elemento/etiqueta) de boton al div
     const elementoAlerta = document.getElementById('alerta')
@@ -110,17 +117,21 @@ function alerta(mensaje, tipo) {
     botonCerrar.addEventListener('click', function () {
         etiqueta_envoltorio.remove();
     });
+    setTimeout(cerrarAlertas, 5000);
+}
+/*  funcion que permite clickear los botones de cerrar */
+const cerrarAlertas = () =>{
+    const botonCerrar = document.querySelectorAll('.alerta__notify__delete');
+    botonCerrar.forEach(element => element.click())    
 }
 
 function irAFuncionDeRetiro() {
     const usuario = obtenerUsuario();
     if (usuario) {
-        document.querySelector(".contenedor-ejecutar-operaciones").style.display = "block";
-        document.querySelector(".contenedor-retiro").style.display = "block";
-        document.querySelector(".contenedor-deposito").style.display = "none";
-        document.querySelector(".contenedor-consulta").style.display = "none";
-        document.getElementById("datos-usuario").style.display = "none";
-        document.getElementById("datos-usuario").style.display = "none";
+        contenedorEjecutarOperaciones.style.display = "initial"
+        document.querySelector("#contenedor-retiro").style.display = "block";
+        document.querySelector("#contenedor-deposito").style.display = "none";
+        document.querySelector("#contenedor-saldo").style.display = "none";
     }
 }
 
@@ -128,7 +139,9 @@ function retirar() {
     const usuario = obtenerUsuario();
     arrayUsuarios.forEach(elementoArray => {
         if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
-            elementoArray.balance = elementoArray.balance - parseInt(document.getElementById("label-monto-retiro").value);
+            let amount = parseInt(document.getElementById("operacion-retiro").value);
+            elementoArray.balance = elementoArray.balance - amount;
+            alerta("Retiro realizado por S/. " + amount + " ", "success");
         }
     });
 }
@@ -136,9 +149,10 @@ function retirar() {
 function irAFuncionDeDeposito() {
     const usuario = obtenerUsuario();
     if (usuario) {
-        document.querySelector(".contenedor-retiro").style.display = "none";
-        document.querySelector(".contenedor-deposito").style.display = "block";
-        document.querySelector(".contenedor-consulta").style.display = "none";
+        contenedorEjecutarOperaciones.style.display = "initial"
+        document.querySelector("#contenedor-retiro").style.display = "none";
+        document.querySelector("#contenedor-deposito").style.display = "block";
+        document.querySelector("#contenedor-saldo").style.display = "none";
     }
 }
 
@@ -146,8 +160,9 @@ function depositar() {
     const usuario = obtenerUsuario();
     arrayUsuarios.forEach(elementoArray => {
         if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
-            elementoArray.balance = elementoArray.balance + parseInt(document.getElementById("operacion-deposito").value);
-            console.log(usuario.balance)
+            let amount = parseInt(document.getElementById("operacion-deposito").value)
+            elementoArray.balance = elementoArray.balance + amount;
+            alerta("Deposito realizado por S/. " + amount + " ", "success");
         }
     });
 }
@@ -155,26 +170,35 @@ function depositar() {
 function irAFuncionDeConsulta() {
     const usuario = obtenerUsuario();
     if (usuario) {
-        document.querySelector(".contenedor-retiro").style.display = "none";
-        document.querySelector(".contenedor-deposito").style.display = "none";
-        document.querySelector(".contenedor-consulta").style.display = "block";
-
+        contenedorEjecutarOperaciones.style.display = "initial"
+        document.querySelector("#contenedor-retiro").style.display = "none";
+        document.querySelector("#contenedor-deposito").style.display = "none";
+        document.querySelector("#contenedor-saldo").style.display = "block";
         document.querySelector("#resultado-consulta").innerHTML = usuario.balance + "  " + usuario.moneda;
     }
 }
 
 function resetear() {
-    let seleccionarBotonesReseteo = document.getElementsByClassName("resetear-evento");
+    // let seleccionarBotonesReseteo = document.getElementsByClassName("resetear-evento");
 
     document.getElementById("label-email-usuario").value = "";
     document.getElementById("label-password").value = "";
-    document.getElementById("label-monto-retiro").value = "";
+    document.getElementById("operacion-retiro").value = "";
     document.getElementById("operacion-deposito").value = "";
-    document.querySelector(".contenedor-retiro").style.display = "none";
-    document.querySelector(".contenedor-deposito").style.display = "none";
-    document.querySelector(".contenedor-consulta").style.display = "none";
-    document.querySelector("#contenedor-info-usuario").style.display = "block";
+    document.querySelector("#contenedor-retiro").style.display = "none";
+    document.querySelector("#contenedor-deposito").style.display = "none";
+    document.querySelector("#contenedor-saldo").style.display = "none";
+    contenedorEjecutarOperaciones.style.display = "initial"
 
-    contenedorDatosUsuario.style.display = "flex";
-    contenedorDatosUsuario.style.flexDirection = "column";
+    document.getElementById("login").style.display = "flex";
+    contenedorInfoUsuario.style.display = "none";
+
+    // document.querySelector("#contenedor-info-usuario").style.display = "block";
+    
+    // contenedorEjecutarOperaciones.style.display = "none"
+    // contenedorDatosUsuario.style.display = "flex";
+    // contenedorDatosUsuario.style.flexDirection = "column";
+
+    // contenedorInfoUsuario.style.display = "none";
+    // contenedorInfoUsuario.style.flexDirection = "column";
 }

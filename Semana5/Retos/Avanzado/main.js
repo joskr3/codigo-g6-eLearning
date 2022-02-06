@@ -14,7 +14,7 @@ let CC = (nro_cite) => ( matrix_price[nro_cite-1] ? matrix_price[nro_cite-1] : m
 // ? Costo del tratamiento
 let TOT  = (nro_cite) => {
     let sum = 0;
-    for(let i = 1; i <= nro_cite ; i++){ // ! El costo del tratamiento considera la cita actual
+    for(let i = 1; i < nro_cite ; i++){ // ! El costo del tratamiento considera la cita actual
         sum += CC(i);
     }
     return sum;

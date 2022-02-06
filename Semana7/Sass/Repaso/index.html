@@ -7,18 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" crossorigin="anonymous">
-
-
     <script defer src="script.js"></script>
     <title>Cajero</title>
 </head>
-
 <body>
 
-
-
+    <!-- Cebecera de la pagina -->
     <section class="cabecera">
         <div class="cebecera__cuerpo">
             <p class="cabecera__cuerpo__titulo">
@@ -27,8 +21,10 @@
         </div>
     </section>
 
+    <!-- altertas -->
+    <div class="alerta" id="alerta"></div>
 
-    <div id="alerta"></div>
+    <!-- login -->
     <section class="login" id="login">
         <div class="login__contenedor">
             <input class="login__contenedor__input" id="label-email-usuario" type="email" placeholder="Email">
@@ -42,66 +38,67 @@
     </section>
 
 
+
     <section id="contenedor-info-usuario" class="contenedor-info">
-        <div class="is-centered" class="contenedor-info__centrado">
-
-
+        <div class="contenedor-info__centrado">
             <div id="datos-usuario" class="contenedor-info__centrado__datos">
-                <h1 >Bienvenido, <span id="nombre-usuario"></span></h1>
-                <p >Nombre de usuario: <span  id="username-usuario"></span> </p>
-                <p >Email: <span  id="email-usuario"></span></p>
+                <h1>Bienvenido, <span id="nombre-usuario"></span>
+                </h1>
+                <p>Nombre de usuario: <span  id="username-usuario"></span> </p>
+                <p>Email: <span id="email-usuario"></span></p>
             </div>
 
 
             <!-- TODO: Tarea , terminar de refactorizar lo restante de la pagina   -->
 
-
-            <div class="my-2" id="contenedor-operaciones">
-                <h3 class="is-size-4 py-2">Operaciones</h3>
-                <div class="">
-                    <button id="boton-retirar" class="button is-primary is-outlined" onclick="irAFuncionDeRetiro()">
+            <div id="contenedor-operaciones" class="contenedor-info__centrado__operaciones">
+                <h3 class="contenedor-info__centrado__operaciones__title">Operaciones</h3>
+                <div class="contenedor-info__centrado__operaciones__options">
+                    <button id="boton-retirar" class="button contenedor-info__centrado__operaciones__options__primary" onclick="irAFuncionDeRetiro()">
                         Retirar
                     </button>
-                    <button id="boton-depositar" class="button is-info is-outlined" onclick="irAFuncionDeDeposito()">
+                    <button id="boton-depositar" class="button contenedor-info__centrado__operaciones__options__secundary" onclick="irAFuncionDeDeposito()">
                         Depositar
                     </button>
-                    <button id="boton-consultar" class="button is-link is-outlined" type="button"
+                    <button id="boton-consultar" class="button contenedor-info__centrado__operaciones__options__tertiary" type="button"
                         onclick="irAFuncionDeConsulta()">
                         Consultar saldo
                     </button>
                 </div>
-
             </div>
 
-            <div class="contenedor-ejecutar-operaciones">
-                <div class="contenedor-retiro mostrar">
-                    <h3 class="">Retiro</h3>
-                    <div class="">
-                        <label class="" for="operacion-retiro">Monto: </label>
-                        <input id="label-monto-retiro" class="" type="number" name="monto-retiro" placeholder="ej. 100">
+            <div id="contenedor-execute" class="contenedor-info__centrado__execute">
+                <div id="contenedor-retiro" class="contenedor-info__centrado__execute__content">
+                    <h3>Retiro</h3>
+                    <div class="contenedor-info__centrado__execute__content__input">
+                        <label for="operacion-retiro">Monto: </label>
+                        <input id="operacion-retiro" type="number" name="monto-retiro" placeholder="ej. 100">
                     </div>
 
-                    <br>
-                    <button class="" id="btn-retirar" type="button">Retirar</button>
+                    <button class="contenedor-info__centrado__execute__content__primary" id="btn-retirar" type="button" onclick="retirar()">Retirar</button>
 
-                    <button type="button" class="resetear-evento " onclick="resetear()">Volver al inicio</button>
+                    <button type="button" class="contenedor-info__centrado__execute__content__tertiary resetear-evento " onclick="resetear()">Volver al inicio</button>
                 </div>
-                <div id="elemento1" class=" contenedor-deposito       mostrar">
+
+                <div id="contenedor-deposito" class="contenedor-info__centrado__execute__content">
                     <h3>Deposito</h3>
-                    <label for="monto-deposito">Monto: </label>
-                    <input id="operacion-deposito" type="number" name="monto-deposito" placeholder="ej. 100">
-                    <br>
-                    <button id="btn-depositar" type="button" onclick="depositar()">Depositar</button>
-                    <button type="button" class="resetear" onclick="resetear()">Volver al inicio</button>
+                    <div class="contenedor-info__centrado__execute__content__input">
+                        <label for="monto-deposito">Monto: </label>
+                        <input id="operacion-deposito" type="number" name="monto-deposito" placeholder="ej. 100">
+                    </div>
+                    
+                    <button class="contenedor-info__centrado__execute__content__secundary" id="btn-depositar" type="button"  onclick="depositar()"" >Depositar</button>
+
+                    <button type="button" class="contenedor-info__centrado__execute__content__tertiary resetear-evento " onclick="resetear()">Volver al inicio</button>
                 </div>
-                <div class="contenedor-consulta mostrar">
+
+                <div id="contenedor-saldo" class="contenedor-info__centrado__execute__content">
                     <h3>Consulta</h3>
-                    <div class="contenedor-resultado-consulta mostrar">
+                    <div class="contenedor-info__centrado__execute__content__input">
                         <h3>Resultado de la consulta</h3>
                         <p>Saldo: <span id="resultado-consulta"></span></p>
-                        <button type="button" class="resetear" onclick="resetear()">Volver al inicio</button>
                     </div>
-
+                    <button type="button" class="contenedor-info__centrado__execute__content__tertiary resetear-evento " onclick="resetear()">Volver al inicio</button>
                 </div>
             </div>
 

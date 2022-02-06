@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400&display=swap");
 
 $letra: "PT Sans Narrow', sans-serif";
 $color-primario: #5fceb3;
+$color-secundary: #209cee;
+$color-tertiary: #ff8d0a;
+
+$node-content-border-radius: 10px;
+$node-element-border-radius: 4px;
 
 * {
     margin: 0;
@@ -9,9 +14,42 @@ $color-primario: #5fceb3;
     box-sizing: border-box;
 }
 
+@mixin flexColumnCenterAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexRowCenterAll {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin danger {
+    background-color: rgba(241, 70, 104, 0.6);
+    color: #fff;
+}
+
+@mixin success {
+    background-color: rgba(72, 199, 142, 0.6);
+    color: #fff;
+}
+
+@mixin buttonBasic {
+    background-color: #fff;
+    font-size: 0.9rem;
+    border-radius: $node-element-border-radius;
+    padding: 8px;
+    min-width: 100px;
+    height: 35px;
+}
+
 .cabecera {
     background-color: $color-primario;
-    height: 20vh;
+    height: 15vh;
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -28,15 +66,77 @@ $color-primario: #5fceb3;
     }
 }
 
+.alerta {
+    position: fixed;
+    width: 300px;
+    min-width: 300px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    &__notify {
+        min-height: 30px;
+        padding: 1.25rem 1.5rem;
+        margin-top: 5px;
+        border-radius: $node-element-border-radius;
+        border: 1px solid #fff;
+        position: relative;
+        &__delete {
+            border: none;
+            position: absolute;
+            right: 6px;
+            top: 6px;
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            max-width: 20px;
+            min-height: 20px;
+            max-height: 20px;
+            border-radius: 50%;
+            background-color: rgba(10, 10, 10, 0.2);
+            color: #fff;
+            font-size: 0.9rem;
+            text-align: center;
+
+            &::before,
+            &::after {
+                height: 2px;
+                width: 50%;
+                background-color: #fff;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateX(50%) translateY(-50%) rotate(45deg);
+                transform-origin: center center;
+            }
+            &::after {
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%) rotate(135deg);
+            }
+        }
+        & > span {
+            font-size: 0.9rem;
+            font-weight: 100;
+        }
+    }
+    &__danger {
+        @include danger;
+    }
+    &__success {
+        @include success;
+    }
+}
+
 .login {
     display: flex;
     flex-direction: column;
     max-width: 50%;
     margin: 0 auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 20px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: $node-content-border-radius;
     border: 1px solid $color-primario;
     &__contenedor {
         display: flex;
@@ -46,11 +146,12 @@ $color-primario: #5fceb3;
             width: 100%;
             height: 2rem;
             border: 1px solid $color-primario;
-            border-radius: 3px;
+            border-radius: $node-element-border-radius;
             caret-color: $color-primario;
+            padding-left: 15px;
             &:focus {
                 outline: none;
-                border: none;
+                border: 2px solid $color-secundary;
             }
         }
     }
@@ -59,7 +160,7 @@ $color-primario: #5fceb3;
         width: 25%;
         height: 2rem;
         border: 1px solid $color-primario;
-        border-radius: 3px;
+        border-radius: $node-element-border-radius;
         background-color: $color-primario;
         color: white;
         font-weight: bold;
@@ -68,35 +169,132 @@ $color-primario: #5fceb3;
             outline: none;
             border: none;
         }
+        &:hover {
+            transform: scale(1.1);
+            transition: 1s all ease;
+        }
     }
 }
 
 .contenedor-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
+    @include flexColumnCenterAll;
+    margin-top: 2rem;
+    display: none; /* display none para que no se dibuje al inicio */
     &__centrado {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flexColumnCenterAll;
+        align-items: flex-start;
+        width: 50%;
+        max-width: 500px;
+        min-width: 400px;
+        border-radius: $node-content-border-radius;
+        border: 1px solid $color-primario;
+        padding: 25px;
         &__datos {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            & > h1 ,p {
-                font-size: 2rem;
-                font-weight: bold;
+            @include flexColumnCenterAll;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            & * {
+                margin-bottom: 10px;
+            }
+            & > h1,
+            h1 > span {
+                font-size: 2.2rem;
+                font-weight: 600;
                 font-family: $letra;
                 color: black;
             }
+            & > p {
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
             & > p > span {
-                font-size: 1rem;
-                font-weight: bold;
+                font-size: 0.9rem;
                 font-family: $letra;
-                color: #ccc;
+            }
+        }
+        &__operaciones {
+            width: 100%;
+            &__title {
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin: 0 0 10px 0;
+            }
+            &__options {
+                @include flexRowCenterAll();
+                justify-content: space-around;
+                & button {
+                    @include buttonBasic;
+                }
+                &__primary {
+                    border: 1px solid $color-primario;
+                    color: $color-primario;
+                }
+                &__secundary {
+                    border: 1px solid $color-secundary;
+                    color: $color-secundary;
+                }
+                &__tertiary {
+                    border: 1px solid $color-tertiary;
+                    color: $color-tertiary;
+                }
+            }
+        }
+        &__execute {
+            @include flexColumnCenterAll;
+            /*display: none;*/
+            width: 100%;
+
+            &__content {
+                width: 90%;
+                min-width: 300px;
+                max-width: 300px;
+                // border: 1px solid $color-primario;
+                margin: 10px 0;
+                display: block;
+
+                & > h3 {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+                &__input{
+                    margin: 20px 0;
+                    & > h3{
+                        font-size: 1rem;
+                    }
+                    & > p{
+                        margin: 10px 0;
+                        color: #209cee;
+                        font-weight: bold;
+                    }
+                    & > input{
+                        font-size: 1.1rem;
+                        height: 2rem;
+                        border: 1px solid $color-primario;
+                        border-radius: $node-element-border-radius;
+                        caret-color: $color-primario;
+                        padding-left: 15px;
+                        &:focus {
+                            outline: none;
+                            border: 2px solid $color-secundary;
+                        }
+                    }
+                }
+                & > button {
+                    @include buttonBasic;
+                    margin-right: 10px;
+                }
+                &__primary {
+                    border: 1px solid $color-primario;
+                    color: $color-primario;
+                }
+                &__secundary {
+                    border: 1px solid $color-secundary;
+                    color: $color-secundary;
+                }
+                &__tertiary {
+                    border: 1px solid $color-tertiary;
+                    color: $color-tertiary;
+                }
             }
         }
     }

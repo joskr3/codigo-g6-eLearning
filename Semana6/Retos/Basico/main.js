@@ -1,5 +1,6 @@
-let arrayTask = [];
+let arrayTask = ["gato","perro"];
 //console.log(arrayTask);
+
 
 document.querySelector(".button-add").addEventListener('click', () =>{
     let taskInput = document.getElementById("new-task");

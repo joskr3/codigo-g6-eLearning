@@ -1,3 +1,4 @@
+"use-strict";
 
 const cleanDone = document.getElementById('clean-done');
 const cleanAll = document.getElementById('clean-all');
