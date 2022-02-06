@@ -7,9 +7,11 @@ function agregarTarea(){
     if (nuevaTarea===""){
         alert("Ingresar descripcion de la tarea");
     }else{        
-        let array = arrayTarea.push(nuevaTarea);        
-        console.log(array);
+        arrayTarea.push(nuevaTarea);               
+        console.log(arrayTarea)
         input.value="";
     }
 }
 document.querySelector(".button-add").addEventListener("click", agregarTarea);
+
+//console.log(arrayTarea[arrayTarea.length-1])

@@ -5,7 +5,7 @@ const unGalon = 3.785;// Un galon equivale a 3.785 litros
 //Función convierte litros a galones
 function litrosAGalones(litros){
     let enGalones = litros / unGalon;
-    return enGalones;
+    return enGalones.toFixed(2);
 }
 
 let galones = litrosAGalones (L);
@@ -13,8 +13,8 @@ let galones = litrosAGalones (L);
 
 //Funcion Ganancia por la venta de Leche
 function ventaLeche(litrosLeche){
-    let G = litrosAGalones(litrosLeche) * PG;
-    return G;    
+    let G = litrosAGalones(litrosLeche) * PG;    
+    return G.toFixed(2); 
 }
 let ganancia = ventaLeche (L);
 
