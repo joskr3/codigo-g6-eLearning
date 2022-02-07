@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito&family=Open+Sans&family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: lightblue;
+}
+
+.contenedor {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fafafa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  text-align: center;
+  width: 460px;
+  height: 600px;
+}
+
+h1 {
+  margin: 12px 0;
+}
+
+.agregar-elementos {
+  margin: 12px 0;
+}
+
+input {
+  padding: 6px 6px;
+  width: 70%;
+}
+
+button {
+  padding: 7px 14px;
+  background-color: #00b0ff;
+  border: none;
+  border-radius: 5px;
+  color: #fafafa;
+}
+
+.lista-elementos {
+  height: 450px;
+  overflow-y: auto;
+}
+
+ul {
+  padding: 15px;
+}
+
+li {
+  list-style: none;
+  padding: 5px 5px;
+  margin: 12px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #1565c0;
+  cursor: pointer;
+}
+
+li:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.checked{
+    text-decoration: line-through;
+    background-color: #e0e0e0;
+}
