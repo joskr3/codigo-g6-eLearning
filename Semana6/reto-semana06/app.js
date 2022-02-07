@@ -5,7 +5,7 @@ let btn = document.querySelector('#btn');
 
 let lista = document.querySelector('.lista');
 
-let elementos = document.getElementsByTagName('li')
+//let elementos = document.getElementsByTagName('li')
 
 
 //funcion para agregar elementos o tareas
@@ -19,7 +19,7 @@ btn.addEventListener('click',() => {
     if (texto === ""){
         // alert("Agregar una Tarea")
 
-        // li.innerHTML("Agregar una Tarea")
+       
         document.getElementById('mostrar-tarea').innerHTML = 'Agregar una Tarea';
         document.getElementById('mostrar-tarea').style.background = 'yellow'
         document.getElementById('mostrar-tarea').style.color = 'red';
