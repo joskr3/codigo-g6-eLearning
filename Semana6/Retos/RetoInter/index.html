@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./scritp.js"></script>
+    <title>RetoInter6</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>To-do list</h1>
+
+        <div class="contenedor">
+            <div class="entradas">
+                <input id="add" type="text" name="texto"  placeholder="Enter new task">
+                <button id="btn" class="btn-agregar" >Add </button> 
+            </div>
+            <div class="opciones">
+                <span> Clean:
+                    <a id="borrar-marcados" href="">Done</a> |
+                    <a id="borrar-todo" href="">All</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="element-list">
+            <ul id="list">
+                <li class="item-task">
+                    <label class="etiquetas" for="task1"> Task 1</label>
+                    <input type="checkbox" id="task1" class="checkbox" value="task1">
+                </li> 
+                <li class="item-task"> 
+                    <label class="etiquetas" for="task2"> Task 2</label>
+                    <input type="checkbox" id="task2" class="checkbox" value="task2">
+                </li>
+                <li class="item-task">
+                    <label class="etiquetas" for="task3"> Task 3</label>
+                    <input type="checkbox" id="task3" class="checkbox" value="task3">
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+

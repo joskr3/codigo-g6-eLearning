@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{   
+    margin-top: 3vh;
+    margin-left: 30px;
+    margin-bottom: 20px ;
+}
+
+.contenedor{
+    border: 1 solid lightgray;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    background-color: rgb(231, 227, 227);
+    margin-left: 30px;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-agregar{
+    background-color: green;
+    padding:2px;
+    color: aliceblue;
+}
+
+.element-list{
+    margin-left: 30px;
+    margin-top: 2vh;
+
+}
+li{
+    padding: 5px;
+    border: 1px solid lightgrey;
+    width: 300px;
+}
+
+.etiquetas{
+    padding-right: 200px;
+    
+}
