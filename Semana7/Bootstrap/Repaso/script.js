@@ -79,7 +79,7 @@ function iniciarSesion() {
         return datosUsuario
 
     } else {
-        
+
         alerta("Usuario o contraseña incorrectos/ alerta1", "danger")
         return null
     }
@@ -110,7 +110,7 @@ function irAFuncionDeRetiro() {
 }
 
 function retirar() {
-    let usuario = iniciarSesion();
+    let usuario = iniciarSesxion();
     arrayUsuarios.forEach(elementoArray => {
         if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
             elementoArray.balance = elementoArray.balance - parseInt(document.getElementById("label-monto-retiro").value);
