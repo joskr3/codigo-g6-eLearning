@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=Roboto:wght@300;400&display=swap");
-
-$letra: "PT Sans Narrow', sans-serif";
+$letra: 'Roboto', sans-serif;
 $color-primario: #5fceb3;
+$color-danger: #e5383b;
+$color-success: #5390d9;
+$color-option: #0077b6;
 
 * {
     margin: 0;
@@ -11,7 +12,7 @@ $color-primario: #5fceb3;
 
 .cabecera {
     background-color: $color-primario;
-    height: 20vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -31,7 +32,7 @@ $color-primario: #5fceb3;
 .login {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
+    max-width: 30%;
     margin: 0 auto;
     margin-top: 1rem;
     padding: 20px;
@@ -48,6 +49,7 @@ $color-primario: #5fceb3;
             border: 1px solid $color-primario;
             border-radius: 3px;
             caret-color: $color-primario;
+            padding: 0.5rem;
             &:focus {
                 outline: none;
                 border: none;
@@ -76,7 +78,7 @@ $color-primario: #5fceb3;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
     &__centrado {
         display: flex;
         flex-direction: column;
@@ -99,5 +101,191 @@ $color-primario: #5fceb3;
                 color: #ccc;
             }
         }
+    }
+}
+
+.notification{
+    display: flex;
+    justify-content: left;
+    padding: 1.3rem;
+    align-items: center;
+    height: 7vh;
+    &__is-danger{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        background-color: $color-danger;
+        color: white;
+        font-family: $letra;
+    }
+    &__is-success{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        background-color: $color-success;
+        color: white;
+        font-family: $letra;
+    }
+}
+
+.operaciones{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    font-family: $letra;
+    & > h3{
+        color: gray;
+        font-weight: 300;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+        &__button{
+            display:flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: row;
+        &__1{
+            color: $color-primario;
+            border: none;
+            background-color: white;
+            border:1px solid $color-primario;
+            border-radius: 0.2rem;
+            width: 4rem;
+            height: 2rem;
+            font-size: 0.8rem;
+            margin-right: 0.3rem;
+            cursor: pointer;
+            &:hover{
+                color: white;
+                background-color: $color-primario;
+            }
+        }   
+        &__2{
+            color: $color-success;
+            border: none;
+            background-color: white;
+            border:1px solid $color-success;
+            border-radius: 0.2rem;
+            width: 5rem;
+            height: 2rem;
+            font-size: 0.8rem;
+            margin-right: 0.3rem; 
+            cursor: pointer;
+            &:hover{
+                color: white;
+                background-color: $color-success;
+            }
+        }
+        &__3{
+            color: $color-option;
+            border: none;
+            background-color: white;
+            border:1px solid $color-option;
+            border-radius: 0.2rem;
+            width: 7rem;
+            height: 2rem;
+            font-size: 0.8rem; 
+            cursor: pointer;
+            &:hover{
+                color: white;
+                background-color: $color-option;
+            }
+        }
+    }
+}
+
+.contenedor-ejecutar{
+    font-family: $letra;
+    &__operaciones{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & > h3{
+            font-size: 2rem;
+        }
+        &__text{
+            font-size: 1.2rem;
+            &__input{
+                margin: 0.5rem;
+                width: 70%;
+                height: 1.8rem;
+                border: 1px solid $color-option;
+                border-radius: 3px;
+                caret-color: $color-option;
+                padding: 0.5rem;
+                &:focus {
+                    outline: none;
+                    border: none;
+                    width: 60%;
+                }
+            }
+        }
+        &__button{
+            &__retiro{
+                color: $color-primario;
+                border: none;
+                background-color: white;
+                border:1px solid $color-primario;
+                border-radius: 0.2rem;
+                width: 4rem;
+                height: 2rem;
+                font-size: 0.8rem;
+                margin-right: 0.3rem;
+                cursor: pointer;
+                &:hover{
+                    color: white;
+                    background-color: $color-primario;
+                }
+            }
+            &__deposito{
+                color: $color-success;
+                border: none;
+                background-color: white;
+                border:1px solid $color-success;
+                border-radius: 0.2rem;
+                width: 5rem;
+                height: 2rem;
+                font-size: 0.8rem;
+                margin-right: 0.3rem; 
+                cursor: pointer;
+                &:hover{
+                    color: white;
+                    background-color: $color-success;
+                }
+            }
+            &__reset{
+                color: $color-danger;
+                border: none;
+                background-color: white;
+                border:1px solid $color-danger;
+                border-radius: 0.2rem;
+                width: 7rem;
+                height: 2rem;
+                font-size: 0.8rem;
+                margin-right: 0.3rem;
+                cursor: pointer;
+                &:hover{
+                    color: white;
+                    background-color: $color-danger;
+                }
+            }
+        }
+    }
+}
+
+.button-cerrar-sesion{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 3rem;
+    & > button{
+        color: white;
+        background-color: $color-danger;
+        width: 8rem;
+        height: 2rem;
+        border: none;
+        cursor: pointer;
     }
 }

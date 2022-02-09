@@ -35,7 +35,7 @@ let arrayUsuarios = [
 
 let contenedorInfoUsuario = document.getElementById("contenedor-info-usuario");
 let contenedorOperaciones = document.getElementById("contenedor-operaciones")
-let contenedorEjecutarOperaciones = document.getElementsByClassName("contenedor-ejecutar-operaciones")[0];
+let contenedorEjecutarOperaciones = document.getElementsByClassName("contenedor-ejecutar")[0];
 let contenedorBienvenida = document.getElementById("contenedor-bienvenida");
 let placeholderDeLaAlerta = document.getElementById('liveAlertPlaceholder')
 let activadorDeAlerta = document.getElementById('boton-ingresar')
@@ -73,19 +73,18 @@ function iniciarSesion() {
     const usuario = obtenerUsuario();
 
     if (usuario) {
-        alerta("Bienvenido " + usuario.nombre, "success");
         contenedorInfoUsuario.style.display = "flex";
-        contenedorInfoUsuario.style.justifyContent = "center"
+        alerta("Bienvenido " + usuario.nombre, "success");
 
-        document.querySelector(".contenedor-retiro").style.display = "none";
-        document.querySelector(".contenedor-deposito").style.display = "none";
-        document.querySelector(".contenedor-consulta").style.display = "none";
+        document.querySelector(".retiro").style.display = "none";
+        document.querySelector(".deposito").style.display = "none";
+        document.querySelector(".consulta").style.display = "none";
         document.querySelector("#nombre-usuario").innerHTML = usuario.nombre || "undefined";
         document.querySelector("#username-usuario").innerHTML = usuario.usuario;
         document.querySelector("#email-usuario").innerHTML = usuario.email;
         document.getElementById("login").style.display = "none";
     } else {
-        alerta("Usuario o contraseña incorrectos", "danger");
+        alerta("Usuario o contraseña incorrectos");
     }
 }
 
@@ -95,30 +94,28 @@ function alerta(mensaje, tipo) {
     // estamos creando una etiqueta div
     const etiqueta_envoltorio = document.createElement('div')
     // en esta linea agregamos una clase al div
-    etiqueta_envoltorio.classList.add('notification', tipo === "success" ? "is-success" : "is-danger")
+    etiqueta_envoltorio.classList.add('notification', tipo === "success" ? "notification__is-success" : "notification__is-danger")
 
-    // creamos un nodo de boton(elemento/etiqueta button)
-    etiqueta_envoltorio.innerHTML = `<button class="delete" id="boton-cerrar" title="cerrar"> </button>${mensaje}`
+    // Agregamos el mensaje a nuestro Div
+    etiqueta_envoltorio.innerHTML = `${mensaje}`
 
     // agregamos el nodo(elemento/etiqueta) de boton al div
     const elementoAlerta = document.getElementById('alerta')
     elementoAlerta.append(etiqueta_envoltorio)
-
-    const botonCerrar = document.getElementById('boton-cerrar');
-
-    // agregamos un evento click al boton , para remover este elemento(notification) del arbol de elementos(DOM)
-    botonCerrar.addEventListener('click', function () {
-        etiqueta_envoltorio.remove();
-    });
+    setTimeout(function(){
+        etiqueta_envoltorio.classList.remove('notification')
+        etiqueta_envoltorio.innerHTML = ""
+    },3500)
 }
 
 function irAFuncionDeRetiro() {
     const usuario = obtenerUsuario();
     if (usuario) {
-        document.querySelector(".contenedor-ejecutar-operaciones").style.display = "block";
-        document.querySelector(".contenedor-retiro").style.display = "block";
-        document.querySelector(".contenedor-deposito").style.display = "none";
-        document.querySelector(".contenedor-consulta").style.display = "none";
+        document.querySelector(".contenedor-ejecutar").style.display = "flex";
+        document.querySelector(".retiro").style.display = "flex";
+        document.querySelector(".deposito").style.display = "none";
+        document.querySelector(".consulta").style.display = "none";
+        document.querySelector(".operaciones").style.display = "none";
         document.getElementById("datos-usuario").style.display = "none";
         document.getElementById("datos-usuario").style.display = "none";
     }
@@ -129,6 +126,7 @@ function retirar() {
     arrayUsuarios.forEach(elementoArray => {
         if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
             elementoArray.balance = elementoArray.balance - parseInt(document.getElementById("label-monto-retiro").value);
+            alerta("Retiro Completado", "success");
         }
     });
 }
@@ -136,9 +134,13 @@ function retirar() {
 function irAFuncionDeDeposito() {
     const usuario = obtenerUsuario();
     if (usuario) {
-        document.querySelector(".contenedor-retiro").style.display = "none";
-        document.querySelector(".contenedor-deposito").style.display = "block";
-        document.querySelector(".contenedor-consulta").style.display = "none";
+        document.querySelector(".contenedor-ejecutar").style.display = "flex";
+        document.querySelector(".retiro").style.display = "none";
+        document.querySelector(".deposito").style.display = "flex";
+        document.querySelector(".consulta").style.display = "none";
+        document.querySelector(".operaciones").style.display = "none";
+        document.getElementById("datos-usuario").style.display = "none";
+        document.getElementById("datos-usuario").style.display = "none";
     }
 }
 
@@ -148,6 +150,7 @@ function depositar() {
         if (elementoArray.nombre === usuario.nombre && elementoArray.balance >= 0) {
             elementoArray.balance = elementoArray.balance + parseInt(document.getElementById("operacion-deposito").value);
             console.log(usuario.balance)
+            alerta("Deposito Completado", "success");
         }
     });
 }
@@ -155,10 +158,13 @@ function depositar() {
 function irAFuncionDeConsulta() {
     const usuario = obtenerUsuario();
     if (usuario) {
-        document.querySelector(".contenedor-retiro").style.display = "none";
-        document.querySelector(".contenedor-deposito").style.display = "none";
-        document.querySelector(".contenedor-consulta").style.display = "block";
-
+        document.querySelector(".contenedor-ejecutar").style.display = "flex";
+        document.querySelector(".retiro").style.display = "none";
+        document.querySelector(".deposito").style.display = "none";
+        document.querySelector(".consulta").style.display = "flex";
+        document.querySelector(".operaciones").style.display = "none";
+        document.getElementById("datos-usuario").style.display = "none";
+        document.getElementById("datos-usuario").style.display = "none";
         document.querySelector("#resultado-consulta").innerHTML = usuario.balance + "  " + usuario.moneda;
     }
 }
@@ -166,15 +172,20 @@ function irAFuncionDeConsulta() {
 function resetear() {
     let seleccionarBotonesReseteo = document.getElementsByClassName("resetear-evento");
 
-    document.getElementById("label-email-usuario").value = "";
-    document.getElementById("label-password").value = "";
-    document.getElementById("label-monto-retiro").value = "";
-    document.getElementById("operacion-deposito").value = "";
-    document.querySelector(".contenedor-retiro").style.display = "none";
-    document.querySelector(".contenedor-deposito").style.display = "none";
-    document.querySelector(".contenedor-consulta").style.display = "none";
-    document.querySelector("#contenedor-info-usuario").style.display = "block";
+    // document.getElementById("label-email-usuario").value = "";
+    // document.getElementById("label-password").value = "";
+    // document.getElementById("label-monto-retiro").value = "";
+    // document.getElementById("operacion-deposito").value = "";
+    document.querySelector(".retiro").style.display = "none";
+    document.querySelector(".deposito").style.display = "none";
+    document.querySelector(".consulta").style.display = "none";
+    document.querySelector("#contenedor-info-usuario").style.display = "flex";
+    document.querySelector(".operaciones").style.display = "flex";
 
     contenedorDatosUsuario.style.display = "flex";
     contenedorDatosUsuario.style.flexDirection = "column";
+}
+
+function cerrarsesion() {
+    window.location.href = "index.html";
 }

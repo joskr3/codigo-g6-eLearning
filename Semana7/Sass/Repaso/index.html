@@ -8,7 +8,8 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" crossorigin="anonymous"> -->
+
 
 
     <script defer src="script.js"></script>
@@ -24,6 +25,11 @@
             <p class="cabecera__cuerpo__titulo">
                 Sistema de cajero
             </p>
+        </div>
+        <div class="cerrar-sesion button-cerrar-sesion">
+            <button onclick="cerrarsesion()">
+                Cerrar Sesion
+            </button>
         </div>
     </section>
 
@@ -56,50 +62,53 @@
             <!-- TODO: Tarea , terminar de refactorizar lo restante de la pagina   -->
 
 
-            <div class="my-2" id="contenedor-operaciones">
-                <h3 class="is-size-4 py-2">Operaciones</h3>
-                <div class="">
-                    <button id="boton-retirar" class="button is-primary is-outlined" onclick="irAFuncionDeRetiro()">
+            <div class="operaciones" id="contenedor-operaciones">
+                <h3 class="">Operaciones</h3>
+                <div class="operaciones__button">
+                    <button id="boton-retirar" class="operaciones__button__1" onclick="irAFuncionDeRetiro()">
                         Retirar
                     </button>
-                    <button id="boton-depositar" class="button is-info is-outlined" onclick="irAFuncionDeDeposito()">
+                    <button id="boton-depositar" class="operaciones__button__2" onclick="irAFuncionDeDeposito()">
                         Depositar
                     </button>
-                    <button id="boton-consultar" class="button is-link is-outlined" type="button"
-                        onclick="irAFuncionDeConsulta()">
+                    <button id="boton-consultar" class="operaciones__button__3" type="button" onclick="irAFuncionDeConsulta()">
                         Consultar saldo
                     </button>
                 </div>
 
             </div>
 
-            <div class="contenedor-ejecutar-operaciones">
-                <div class="contenedor-retiro mostrar">
+            <div class="contenedor-ejecutar">
+                <div class="contenedor-ejecutar__operaciones retiro mostrar">
                     <h3 class="">Retiro</h3>
-                    <div class="">
+                    <div class="contenedor-ejecutar__operaciones__text">
                         <label class="" for="operacion-retiro">Monto: </label>
-                        <input id="label-monto-retiro" class="" type="number" name="monto-retiro" placeholder="ej. 100">
+                        <input id="label-monto-retiro" class="contenedor-ejecutar__operaciones__text__input" type="number" name="monto-retiro" placeholder="ej. 100">
                     </div>
-
-                    <br>
-                    <button class="" id="btn-retirar" type="button">Retirar</button>
-
-                    <button type="button" class="resetear-evento " onclick="resetear()">Volver al inicio</button>
+                    <div class="contenedor-ejecutar__operaciones__button">
+                        <button class="contenedor-ejecutar__operaciones__button__retiro" id="btn-retirar" type="button" onclick="retirar()">Retirar</button>
+                        <button type="button" class="contenedor-ejecutar__operaciones__button__reset resetear-evento" onclick="resetear()">Volver al inicio</button>
+                    </div>
                 </div>
-                <div id="elemento1" class=" contenedor-deposito       mostrar">
-                    <h3>Deposito</h3>
-                    <label for="monto-deposito">Monto: </label>
-                    <input id="operacion-deposito" type="number" name="monto-deposito" placeholder="ej. 100">
-                    <br>
-                    <button id="btn-depositar" type="button" onclick="depositar()">Depositar</button>
-                    <button type="button" class="resetear" onclick="resetear()">Volver al inicio</button>
+                <div id="elemento1" class="contenedor-ejecutar__operaciones deposito mostrar">
+                    <h3 class="">Deposito</h3>
+                    <div class="contenedor-ejecutar__operaciones__text">
+                        <label for="monto-deposito">Monto: </label>
+                        <input id="operacion-deposito" class="contenedor-ejecutar__operaciones__text__input" type="number" name="monto-deposito" placeholder="ej. 100">
+                    </div>
+                    <div class="contenedor-ejecutar__operaciones__button">
+                        <button class="contenedor-ejecutar__operaciones__button__deposito" id="btn-depositar" type="button" onclick="depositar()">Depositar</button>
+                        <button type="button" class="contenedor-ejecutar__operaciones__button__reset resetear" onclick="resetear()">Volver al inicio</button>
+                    </div>
                 </div>
-                <div class="contenedor-consulta mostrar">
-                    <h3>Consulta</h3>
-                    <div class="contenedor-resultado-consulta mostrar">
+                <div class="contenedor-ejecutar__operaciones consulta mostrar">
+                    <h3 class="">Consulta</h3>
+                    <div class="contenedor-ejecutar__operaciones__text">
                         <h3>Resultado de la consulta</h3>
                         <p>Saldo: <span id="resultado-consulta"></span></p>
-                        <button type="button" class="resetear" onclick="resetear()">Volver al inicio</button>
+                        <div class="contenedor-ejecutar__operaciones__button">
+                            <button type="button" class="contenedor-ejecutar__operaciones__button__reset resetear" onclick="resetear()">Volver al inicio</button>
+                        </div>
                     </div>
 
                 </div>
