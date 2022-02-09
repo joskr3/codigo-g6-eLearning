@@ -40,10 +40,12 @@ let contenedorBienvenida = document.getElementById("contenedor-bienvenida");
 let placeholderDeLaAlerta = document.getElementById('liveAlertPlaceholder')
 let activadorDeAlerta = document.getElementById('boton-ingresar')
 let contenedorDatosUsuario = document.getElementById("datos-usuario");
+let contenedorCerrarSesion = document.getElementById("cerrar-sesion")
 
 window.onload = function () {
     contenedorEjecutarOperaciones.style.display = "none";
     contenedorInfoUsuario.style.display = "none";
+    contenedorCerrarSesion.style.display = "none";
 }
 
 
@@ -83,6 +85,7 @@ function iniciarSesion() {
         document.querySelector("#username-usuario").innerHTML = usuario.usuario;
         document.querySelector("#email-usuario").innerHTML = usuario.email;
         document.getElementById("login").style.display = "none";
+        contenedorCerrarSesion.style.display = "flex";
     } else {
         alerta("Usuario o contraseña incorrectos");
     }
