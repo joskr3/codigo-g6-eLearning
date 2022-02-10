@@ -56,7 +56,26 @@
             <!-- TODO: Tarea , terminar de refactorizar lo restante de la pagina   -->
 
 
-            <div class="my-2" id="contenedor-operaciones">
+            <div id="contenedor-operaciones" class="contenedor-operaciones">
+                <h3>Operaciones</h3>
+                <div class="contenedor-operaciones__boton">
+                    <button id="boton-retirar" onclick="irAFuncionDeRetiro()">
+                        Retirar
+                    </button>
+                    <button id="boton-depositar"onclick="irAFuncionDeDeposito()">
+                        Depositar
+                    </button>
+                    <button id="boton-consultar" type="button" onclick="irAFuncionDeConsulta()">
+                        Consultar saldo
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Avance la tarea hasta aqui -->
+
+
+            <!-- <div class="my-2" id="contenedor-operaciones">
                 <h3 class="is-size-4 py-2">Operaciones</h3>
                 <div class="">
                     <button id="boton-retirar" class="button is-primary is-outlined" onclick="irAFuncionDeRetiro()">
@@ -71,7 +90,11 @@
                     </button>
                 </div>
 
-            </div>
+            </div> -->
+            
+
+
+
 
             <div class="contenedor-ejecutar-operaciones">
                 <div class="contenedor-retiro mostrar">
