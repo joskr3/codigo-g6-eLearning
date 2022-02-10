@@ -8,7 +8,7 @@ btn.addEventListener('click',() => {
         alert('Debes introducir un valor')
     }else{
         console.log("todo bien")
-        let lista = []
+        let lista = [2]
         lista.push(txtInput)
         console.log(lista)
     }
