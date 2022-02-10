@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+.logo {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+    min-width: 100%;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+}
+
+header > div {
+    margin: 10px;
+}
+
+header > div > img {
+    height: 25px;
+    margin: 5px;
+}
+
+.botones-principales {
+    max-width: 100%;
+}
+
+#welcome-text {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    min-width: 100vw;
+}
+
+#text {
+    width: 70vw;
+    text-align: justify;
+}
+
+#text > h2 , p {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#text > h2 {
+    font-weight: 700;
+}
+
+#buttom-area {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttom {
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color .5s;
+}
+
+#buttom:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+#lienzo {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#grid {
+    display: grid;
+    grid-template: repeat(6 , 1fr) / repeat(3 , 1fr);
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+}
+
+#grid > div > img {
+    width: 100px;
+}
+
+#item-1 {
+    grid-area: 1 / 1 / 3 / 3 ;
+    border: 2px solid white;
+    background-color: #EDEDEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-2 {
+    grid-area: 1 / 3 / 2 / 4;
+    border: 2px solid white;
+    background-color: #EDEDEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-3 {
+    grid-area: 2 / 3 / 3 / 4;
+    border: 2px solid white;
+    background-color: #EDEDEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-4 {
+    grid-area: 3 / 1 / 4 / 2;
+    border: 2px solid white;
+    background-color: #EDEDEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-5 {
+    grid-area: 4 / 1 / 5 / 2;
+    border: 2px solid white;
+    background-color: #EDEDEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-6 {
+    grid-area: 3 / 2 / 5 / 4;
+    border: 2px solid white;
+    background-color: #EDEDEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-7 {
+    grid-area: 5 / 1 / 7 / 3;
+    border: 2px solid white;
+    background-color: #EDEDEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-8 {
+    grid-area: 5 / 3 / 6 / 4;
+    border: 2px solid white;
+    background-color: #EDEDEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-9 {
+    grid-area: 6 / 3 / 7 / 4;
+    border: 2px solid white;
+    background-color: #EDEDEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 840px) {
+    
+    body {
+        width: 100vw;
+    }
+
+    header {
+        width: 100vw;
+    }
+    
+    main {
+        width: 100vw;
+    }
+
+    #welcome-text {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    #text {
+        width: 100%;
+        padding: 0px;
+    }
+
+    #text > h2 , p {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    #text > p {
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    #buttom-area {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 899px) {
+    #buttom {
+        width: 230px;
+    }
+}
+
+
+@media only screen and (min-width: 550px) {
+    #lienzo {
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+}
