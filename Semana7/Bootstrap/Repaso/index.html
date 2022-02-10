@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" crossorigin="anonymous">
+    <script defer src="script.js"></script>
+    <title>Cajero</title>
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <p class="title">
+                Sistema de cajero
+            </p>
+        </div>
+    </section>
+    <div id="alerta"></div>
+    <section class="section is-medium section-padding is-primary is-outlined is-rounded" id="login">
+        <div class="field">
+            <p class="control has-icons-left has-icons-right">
+                <input class="input" id="label-email-usuario" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                </span>
+            </p>
+        </div>
+        <div class="field">
+            <p class="control has-icons-left">
+                <input id="label-password" class="input" type="password" placeholder="Password">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                </span>
+            </p>
+        </div>
+        <div class="field">
+            <p class="control">
+                <button class="button is-success" onclick="iniciarSesion()">
+                    Login
+                </button>
+            </p>
+        </div>
+    </section>
+
+    <section id="contenedor-info-usuario" class="section is-medium is-centered">
+
+        <div class="is-centered">
+
+            <div id="datos-usuario">
+                <h1 class="is-size-1">Bienvenido, <span class="is-size-1" id="nombre-usuario"></span></h1>
+
+                <p class="is-size-3">Nombre de usuario: <span class="is-size-5" id="username-usuario"></span> </p>
+                <p class="is-size-3">Email: <span class="is-size-5" id="email-usuario"></span></p>
+            </div>
+
+            <div class="my-2" id="contenedor-operaciones">
+                <h3 class="is-size-4 py-2">Operaciones</h3>
+                <div class="">
+                    <button id="boton-retirar" class="button is-primary is-outlined" onclick="irAFuncionDeRetiro()">
+                        Retirar
+                    </button>
+                    <button id="boton-depositar" class="button is-info is-outlined" onclick="irAFuncionDeDeposito()">
+                        Depositar
+                    </button>
+                    <button id="boton-consultar" class="button is-link is-outlined" type="button"
+                        onclick="irAFuncionDeConsulta()">
+                        Consultar saldo
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="contenedor-ejecutar-operaciones">
+                <div class="contenedor-retiro mostrar">
+                    <h3 class="">Retiro</h3>
+                    <div class="">
+                        <label class="" for="operacion-retiro">Monto: </label>
+                        <input id="label-monto-retiro" class="" type="number" name="monto-retiro" placeholder="ej. 100">
+                    </div>
+
+                    <br>
+                    <button class="" id="btn-retirar" type="button">Retirar</button>
+
+                    <button type="button" class="resetear-evento " onclick="resetear()">Volver al inicio</button>
+                </div>
+                <div id="elemento1" class=" contenedor-deposito       mostrar">
+                    <h3>Deposito</h3>
+                    <label for="monto-deposito">Monto: </label>
+                    <input id="operacion-deposito" type="number" name="monto-deposito" placeholder="ej. 100">
+                    <br>
+                    <button id="btn-depositar" type="button" onclick="depositar()">Depositar</button>
+                    <button type="button" class="resetear" onclick="resetear()">Volver al inicio</button>
+                </div>
+                <div class="contenedor-consulta mostrar">
+                    <h3>Consulta</h3>
+                    <div class="contenedor-resultado-consulta mostrar">
+                        <h3>Resultado de la consulta</h3>
+                        <p>Saldo: <span id="resultado-consulta"></span></p>
+                        <button type="button" class="resetear" onclick="resetear()">Volver al inicio</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</body>
+
+</html>
