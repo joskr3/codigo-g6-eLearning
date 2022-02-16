@@ -8,25 +8,68 @@ class Tarea{
 }
 
 class Interface{
+
     
+    // getPrioridad(task){
+    //     if(task.priority="minor"){
+    //         let divpriority = "red"
+    //     }else if(task.priority="medium"){
+            
+    //     }else if(task.priority="major"){
+            
+    //     }
+
+    // }
+
     addTask(task){
 
         let divpriority = ""
         let namepriority = ""
-        let tamanio = ""
+        let tamanioprio = ""
 
         if(task.priority=="minor"){
             divpriority = "bg-success"
             namepriority = "MENOR"
-            tamanio = "w-50"
+            tamanioprio = "w-50"
         }else if(task.priority=="medium"){
             divpriority = "bg-warning"
             namepriority = "MEDIO"
-            tamanio = "w-50"
+            tamanioprio = "w-50"
         }else if(task.priority=="major"){
             divpriority = "bg-danger"
             namepriority = "IMPORTANTE"
-            tamanio = "w-75"
+            tamanioprio = "w-75"
+        }
+
+        let nameurgency = ""
+        let colorurgency = ""
+
+        if(task.urgency=="hastime"){
+            nameurgency = "Tiene Tiempo"
+            colorurgency = "text-success"
+        }else if(task.urgency=="today"){
+            nameurgency = "Hoy dia"
+            colorurgency = "text-danger"
+        }else if(task.urgency=="tomorrow"){
+            nameurgency = "Mañana"
+            colorurgency = "text-warning"
+        }
+
+        let nametime = ""
+        let colortime= ""
+
+        if(task.time=="break"){
+            nametime = "break!"
+            colortime = "text-danger"
+        }else if(task.time=="10min"){
+            nametime = "10min"
+            colortime = "text-success"
+        }else if(task.time=="30min"){
+            nametime = "30min"
+            colortime = "text-success"
+        }else if(task.time=="1h"){
+            nametime = "1h"
+            colortime = "text-warning"
         }
 
         let tareaList = document.getElementById('tarea-list')
@@ -37,15 +80,15 @@ class Interface{
             <strong> ${task.name}</strong>
             </div>
             <div class="w-25 d-flex justify-content-center align-items-center">
-                <div class="${divpriority} ${tamanio} text-white p-1 fs-6 rounded-3 fw-bolder w-50 text-center">
+                <div class="${divpriority} ${tamanioprio} text-white p-1 fs-6 rounded-3 fw-bolder w-50 text-center">
                    ${namepriority}
                 </div>
             </div>
-            <div class="w-25 d-flex justify-content-center align-items-center">
-                <strong> ${task.urgency}</strong>
+            <div class="${colorurgency} w-25 d-flex justify-content-center align-items-center">
+                <strong> ${nameurgency}</strong>
             </div>
-            <div class="w-25 d-flex justify-content-center align-items-center">
-                <strong> ${task.time}</strong>
+            <div class="${colortime} w-25 d-flex justify-content-center align-items-center">
+                <strong> ${nametime}</strong>
             </div>
         </div>
         `;
