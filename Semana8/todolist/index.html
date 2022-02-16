@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light p-3">
+        <a href="/" class="navbar-brand">
+            TO-DO List
+        </a>
+    </nav>
+    <div class="container m-0 w-50">
+        <div id="App" class="row pt-2">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>
+                            Agrega una nueva Tarea
+                        </h4>
+                    </div>
+                    <form class="m-3" id="task-form">
+                        <div class="d-flex justify-content-center align-items-center mb-2">
+                            <select class="form-select me-2" id="priority">
+                                <option value="0">Prioridad</option>
+                                <option value="minor">Menor</option>
+                                <option value="medium">Medio</option>
+                                <option value="major">Importante</option>
+                            </select>
+                            <select class="form-select me-2" id="urgency">
+                                <option value="0">Urgencia</option>
+                                <option value="hastime">Tiene Tiempo</option>
+                                <option value="today">Hoy dia</option>
+                                <option value="tomorrow">Mañana</option>
+                            </select>
+                            <select class="form-select" id="length">
+                                <option value="0">Tiempo</option>
+                                <option value="break">Descanso!</option>
+                                <option value="10min">10min</option>
+                                <option value="30min">30min</option>
+                                <option value="1h">1h</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Escribe tu tarea Aqui" id="input">
+                            <button type="submit" class="btn btn-secondary btn-add">Agregar Tarea</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex w-50 m-3">
+        <div class="w-50 d-flex justify-content-start align-items-center"></div>
+        <div class="w-25 d-flex justify-content-center align-items-center"><h3 class="fs-6">Prioridad &nbsp;<i class="bi bi-caret-down-fill"></i></h3></div>
+        <div class="w-25 d-flex justify-content-center align-items-center"><h3 class="fs-6">Urgencia &nbsp;<i class="bi bi-caret-down-fill"></i></h3></div>
+        <div class="w-25 d-flex justify-content-center align-items-center"><h3 class="fs-6">Tiempo &nbsp;<i class="bi bi-caret-down-fill"></i></h3></div>
+    </div>
+    <div id="tarea-list">
+        
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
