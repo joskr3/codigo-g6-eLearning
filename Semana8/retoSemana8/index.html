@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">">
+    <title>Reto1</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="app" class="search row-pt-5">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Lista de Tareas</h1>
+                    </div>
+                    <form id="list-form" class="card-body">
+                        <div class="col-md-10 form-group">
+                            <input class="form-control input-lg" type="text" id="input" placeholder="Type your awesome task here...">
+                            </div>
+                        <div class="col-md-2 form-group">
+                            <button type="submit" class="btn btn-secondary btn-md" >Add task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div  class="li-container">
+                    <p class="text-end  titulo">PRIO▼   URGENCY▼   LENGHT▼</p>
+                    <ul id="task-list">
+        
+                    </ul>
+                </div>
+            
+        </div>
+        <div class="empty">
+            <p>No tienes tareas pendientes.</p>
+        </div>
+    </div>
+</body>
+
+</html>
