@@ -5,59 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" crossorigin="anonymous">
+
+
     <script defer src="script.js"></script>
     <title>Cajero</title>
 </head>
 
 <body>
-    <section class="hero is-primary">
-        <div class="hero-body">
-            <p class="title">
+
+
+
+    <section class="cabecera">
+        <div class="cebecera__cuerpo">
+            <p class="cabecera__cuerpo__titulo">
                 Sistema de cajero
             </p>
         </div>
     </section>
+
+
     <div id="alerta"></div>
-    <section class="section is-medium section-padding is-primary is-outlined is-rounded" id="login">
-        <div class="field">
-            <p class="control has-icons-left has-icons-right">
-                <input class="input" id="label-email-usuario" type="email" placeholder="Email">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
-                </span>
-            </p>
+    <section class="login" id="login">
+        <div class="login__contenedor">
+            <input class="login__contenedor__input" id="label-email-usuario" type="email" placeholder="Email">
         </div>
-        <div class="field">
-            <p class="control has-icons-left">
-                <input id="label-password" class="input" type="password" placeholder="Password">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-lock"></i>
-                </span>
-            </p>
+        <div class="login__contenedor">
+            <input id="label-password" class="login__contenedor__input" type="password" placeholder="Password">
         </div>
-        <div class="field">
-            <p class="control">
-                <button class="button is-success" onclick="iniciarSesion()">
-                    Login
-                </button>
-            </p>
-        </div>
+        <button class="login__button" onclick="iniciarSesion()">
+            Login
+        </button>
     </section>
 
-    <section id="contenedor-info-usuario" class="section is-medium is-centered">
 
-        <div class="is-centered">
+    <section id="contenedor-info-usuario" class="contenedor-info">
+        <div class="is-centered" class="contenedor-info__centrado">
 
-            <div id="datos-usuario">
-                <h1 class="is-size-1">Bienvenido, <span class="is-size-1" id="nombre-usuario"></span></h1>
 
-                <p class="is-size-3">Nombre de usuario: <span class="is-size-5" id="username-usuario"></span> </p>
-                <p class="is-size-3">Email: <span class="is-size-5" id="email-usuario"></span></p>
+            <div id="datos-usuario" class="contenedor-info__centrado__datos">
+                <h1 >Bienvenido, <span id="nombre-usuario"></span></h1>
+                <p >Nombre de usuario: <span  id="username-usuario"></span> </p>
+                <p >Email: <span  id="email-usuario"></span></p>
             </div>
+
+
+            <!-- TODO: Tarea , terminar de refactorizar lo restante de la pagina   -->
+
 
             <div class="my-2" id="contenedor-operaciones">
                 <h3 class="is-size-4 py-2">Operaciones</h3>
@@ -87,16 +84,6 @@
                     <br>
                     <button class="" id="btn-retirar" type="button">Retirar</button>
 
-<<<<<<< HEAD
-        <div class="contenedor-operaciones">
-            <h3>Operaciones</h3>
-            <button id="boton-retirar" type="button" onclick="irAFuncionDeRetiro()">Retirar</button>
-            <button id="boton-depositar" type="button" onclick="irAFuncionDeDeposito()">Depositar</button>
-            <button id="boton-consultar" type="button" onclick="irAFuncionDeConsulta()">Consultar</button>
-        </div>
-    </div>
-        <!-- Fin del contenido , que queremos centrar -->
-=======
                     <button type="button" class="resetear-evento " onclick="resetear()">Volver al inicio</button>
                 </div>
                 <div id="elemento1" class=" contenedor-deposito       mostrar">
@@ -114,7 +101,6 @@
                         <p>Saldo: <span id="resultado-consulta"></span></p>
                         <button type="button" class="resetear" onclick="resetear()">Volver al inicio</button>
                     </div>
->>>>>>> c03151305c2c9e738bf5a06374c9790e437e9e74
 
                 </div>
             </div>
