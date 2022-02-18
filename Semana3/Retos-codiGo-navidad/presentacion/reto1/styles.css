@@ -1,0 +1,100 @@
+@font-face{
+    font-family: 'Philosopher', sans-serif;
+    src: url("./font/Philosopher-Bold.ttf");
+}
+h1{
+    display: block;
+    font-family: 'Philosopher';
+    margin-bottom: 0;
+    font-size: 40px;
+}
+#sub-tit{
+    font-family: 'Moon Dance', cursive;
+    font-size: 24px;
+    padding: 0% 0% 15% 0%;
+
+}
+nav{
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+#container{
+    width: 90%;
+    max-width: 900px;
+    margin:0 auto;
+    display:inline-block;
+}
+.centrado{
+    margin:10px auto;
+    display:block;
+}
+lu{
+    padding: 0.5%;
+    font-size: small;
+    display:flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content:space-evenly;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+p{
+    display:inline;
+    font-family: "questrial";
+    font-size: 100%;
+}
+form {
+    border-color: #bcbcbc;
+    border-radius: 3px;
+}
+.su-box-title {
+    display: block;
+    padding: .5em 1em;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin: 0 0 1.5em;
+    border-width: 2px;
+    border-style: solid;
+    background-color:#efefef;
+    color:#000000;
+    border-top-left-radius:1px;
+    border-top-right-radius:1px";
+    
+}
+label {
+    margin-bottom: .25em;
+    float: none;
+    font-weight: 700;
+    display: block;
+}
+input{
+    box-sizing: border-box;
+    margin-bottom: 1.5em;
+    width: 100%;
+    padding: 14px 7px;
+}
+footer{
+    margin: 5%;
+}
+
+@media (max-width: 600px) {
+    .facet_sidebar {
+      display: none;
+    }
+    #sub-tit{
+        font-family: 'Moon Dance', cursive;
+        font-size: 16px;
+        padding: 0%;
+    }
+    lu{
+        font-size: xx-small;
+        display:flex;
+        flex-direction: row;
+        list-style-type: none;
+        justify-content:space-between;
+    }
+  }
