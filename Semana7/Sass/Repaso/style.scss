@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=Roboto:wght@300;400&display=swap");
+
+$letra: "PT Sans Narrow', sans-serif";
+$color-primario: #5fceb3;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabecera {
+    background-color: $color-primario;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    &__cuerpo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__titulo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: $letra;
+            color: white !important;
+        }
+    }
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid $color-primario;
+    &__contenedor {
+        display: flex;
+        justify-content: center;
+        &__input {
+            margin: 0.5rem;
+            width: 100%;
+            height: 2rem;
+            border: 1px solid $color-primario;
+            border-radius: 3px;
+            caret-color: $color-primario;
+            &:focus {
+                outline: none;
+                border: none;
+            }
+        }
+    }
+    &__button {
+        margin: 0.5rem;
+        width: 25%;
+        height: 2rem;
+        border: 1px solid $color-primario;
+        border-radius: 3px;
+        background-color: $color-primario;
+        color: white;
+        font-weight: bold;
+        font-family: $letra;
+        &:focus {
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+.contenedor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    &__centrado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__datos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            & > h1 ,p {
+                font-size: 2rem;
+                font-weight: bold;
+                font-family: $letra;
+                color: black;
+            }
+            & > p > span {
+                font-size: 1rem;
+                font-weight: bold;
+                font-family: $letra;
+                color: #ccc;
+            }
+        }
+    }
+}
