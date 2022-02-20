@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="jscript.js"></script>
     <title>Reto Option1</title>
-</head>
-<body>
-    <h1>Lista de Tareas</h1>
-    <div>
-        
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>Lista de Tareas</h1>
+      <div class="agregar-elementos">
+        <input
+          type="text"
+          id="input"
+          placeholder="Type your awesome task here..."
+        />
+        <button id="btn">Add task</button>
+      </div>
+      <div class="lista-elementos">
+        <ul id="lista">
+          <li>
+            <input type="checkbox" name="check" class="check" />
+            <label for="check">Build a todo list</label>
+          </li>
+          <li>
+            <input type="checkbox" name="check" class="check" />
+            <label for="check">Make todo list beautiful</label>
+          </li>
+        </ul>
+      </div>
     </div>
-</body>
+  </body>
 </html>
