@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reto semana 8 - Opcion 1</title>
+        <script defer src="./script.js"></script>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <main class="box">
+            <h1 class="box__title">To-do List</h1>
+            <hr />
+            <div class="box__content">
+                <div class="box__content__row">
+                    <div class="box__content__row__text">
+                        <input class="box__content__row__text__input" type="text" name="" id="new-task" placeholder="Type your awesome task here..." />
+                        <label class="box__content__row__text__label" for="new-task">Type your awesome task here...</label>
+                    </div>
+                    <button class="box__content__row__btn-add">Add Task</button>
+                </div>
+                <div class="box__content__row box__content__clean">
+                    <span>Clean:</span>
+                    <a id="clean-done" href="">Done</a>
+                    <span>|</span>
+                    <a id="clean-all" href="">All</a>
+                </div>
+            </div>
+            <div class="box__content box__no-border">
+                <ul class="box__content__list" id="contentTask">
+                    <li class="box__content__list__title">
+                        <a id="sortedPriority" href="">
+                            <span class="subtitle">Prio</span>
+                            <img class="icon" src="./icon-arrow.svg" alt="Orden" />
+                        </a>
+                        <a id="sortedUrgency" href="">
+                            <span class="subtitle">Urgency</span>
+                            <img class="icon" src="./icon-arrow.svg" alt="Orden" />
+                        </a>
+                        <a id="sortedLen" href="">
+                            <span class="subtitle">Len</span>
+                            <img class="icon" src="./icon-arrow.svg" alt="Orden" />
+                        </a>
+                    </li>
+                    <!-- <li class="box__content__list__task">
+                        <input class="box__content__list__task__check" type="checkbox" />
+                        <label class="box__content__list__task__name" for="">Build a todo list</label>
+                        <button class="box__content__list__task__priority success">Menor</button>
+                        <button class="box__content__list__task__urgency warning">tomorrow</button>
+                        <button class="box__content__list__task__len success">10min</button>
+                    </li>-->
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>
