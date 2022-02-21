@@ -23,7 +23,7 @@ function misAmigos(primerAmigo, segundoAmigo) {
 
 // }
 
-// misAmigos2("Juan", "Pedro");
+// misAmigos2("Juan", "Pedro");bgl
 // misAmigos2("Juan", "Pedro", "Maria", "Jorge");
 // misAmigos2("Juan", "Pedro", "Maria", "Jorge", "Jose");
 // misAmigos2("Juan", "Pedro", "Maria", "Jorge", "Jose", "Luis");

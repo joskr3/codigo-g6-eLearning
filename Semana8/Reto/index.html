@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto Semana 8</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Task App</a>
+    </nav>
+    
+    <div class="container">
+        <!-- APPLICATION -->
+        <div id="App" class="row pt-5">
+            <!-- FORM -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Add a Task</h4>
+                    </div>
+                    <form id="task-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="task" placeholder="Type your task here..." class="form-control" />
+                        </div>
+                        <input type="submit" value="Add task" class="btn btn-primary btn-block" />
+                    </form>
+                </div>
+            </div>
+    
+            <!-- PRODUCTS LIST -->
+            <div id="task-list" class="col-md-8"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
