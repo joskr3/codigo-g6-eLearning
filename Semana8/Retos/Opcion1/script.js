@@ -129,9 +129,6 @@ class UI {
             // console.log(task);
         }
     }
-    sortTask(option){
-        
-    }
     resetInput(){
         taskInput.value = "";
     }
@@ -246,7 +243,6 @@ class UI {
             }
         });
 
-
         // ! limpiando todos los elementos seleccionados
         taskDoneDelete.addEventListener('click', (e) => {
             e.preventDefault(); //evitar recargar pagina
@@ -262,6 +258,7 @@ class UI {
             this.readTask(tasks);
         });
         
+        //! Sorted priority
         sortedPriority.addEventListener('click', (e) => {
             e.preventDefault(); //evitar recargar pagina
             sortedPriority.toggleAttribute("sortOrderInverse");
@@ -274,6 +271,7 @@ class UI {
             }
         });
         
+        //! Sorted urgency
         sortedUrgency.addEventListener('click', (e) => {
             e.preventDefault(); //evitar recargar pagina
             sortedUrgency.toggleAttribute("sortOrderInverse");
@@ -285,7 +283,7 @@ class UI {
                 this.readTask(newTaskArray);
             }
         });
-        
+        //! Sorted len
         sortedLen.addEventListener('click', (e) => {
             e.preventDefault(); //evitar recargar pagina
             sortedLen.toggleAttribute("sortOrderInverse");
@@ -299,7 +297,6 @@ class UI {
         });
 
     }
-    
 
 }
 
@@ -309,10 +306,12 @@ class db{
 
     static key_storage
 
+    //! Constructir estableciendo variable para localStorage
     constructor() {
         this.key_storage = 'task_list'
     }
 
+    //! Agregando item al local storage
     addLocalStorage(new_item){
         let dbTask = this.getLocalStorage(this.key_storage);
         if (dbTask == "[]") {
@@ -321,9 +320,11 @@ class db{
         dbTask.push(new_item)
         this.setLocalStorage(dbTask);
     }
+    //! Agregando array completo al local storage
     setLocalStorage(array = '[]'){
         window.localStorage.setItem(this.key_storage, JSON.stringify(array));
     }
+    //! Obtener array de objetos json parseado 
     getLocalStorage(){
         let item = window.localStorage.getItem(this.key_storage);
         if(!item){
@@ -334,12 +335,13 @@ class db{
             return JSON.parse(item);
         }
     }
+    //! Obtener array de objetos de clase Task
     getItemObjectLocalStorage(index = 0){
         let dbTask = this.getLocalStorage(this.key_storage);
         let task = this.returnObjectTask(dbTask[index]);
         return task
     }
-    //Cambiar valor 
+    //! cambiar valor de un atrigbuto del array -> incrementa el valor en 1
     updateLocalDataStore(index,option="checked"){
         let dbTask = this.getLocalStorage(this.key_storage);
         if(option == "checked"){
@@ -362,7 +364,7 @@ class db{
         this.setLocalStorage(dbTask)
     }
 
-    // filtrar las tareas seleccionadas y borrarlas
+    // ! filtrar las tareas seleccionadas y borrarlas
     deleteSelectLocalStorage(){
         let arrayListTask = this.getLocalStorage(this.key_storage);
         arrayListTask = arrayListTask.filter((item) => item["checked"] === false);
@@ -378,6 +380,7 @@ class db{
         return task;
     }
     
+    //! Ordenar el array de objetos de clase Task, segun la opcion y orden normal o inverso
     sortTask(taskList, option = "priority", orderInverse = False){
         let newTaskArray = [];
         //! transformo el nombre de la propiedad para obtener el estado correcto
@@ -394,11 +397,11 @@ class db{
     
 }
 
-//inicializar
+//* inicializar
 const db_task = new db();
 const UI_task = new UI();
 
-// DOM elements
+//* DOM elements
 const buttonAddTask = document.querySelector(".box__content__row__btn-add");
 const taskInput = document.getElementById("new-task");
 const contentTask = document.getElementById('contentTask');
@@ -408,17 +411,15 @@ const sortedPriority = document.getElementById('sortedPriority');
 const sortedUrgency = document.getElementById('sortedUrgency');
 const sortedLen = document.getElementById('sortedLen');
 
-//Event Onload
+//*Event Onload
 window.onload = () =>{
     const tasks = db_task.getLocalStorage();
 
+    //!Añadir los eventos primarios a los elementos
     UI_task.AddEventsPrimaryOnClickEvents();
+    //! Recorrer por primera vez el localStorage
     UI_task.readTask(tasks);
 
-    //  //! Añadiendo los eventos a los task
-    // UI_task.AddcheckEvent();
-    // UI_task.AddTaskOnClickEvent();
-    // AddAllTaskOnClickEvent= (cTask) 
 }
 
 
