@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <title>Sem 5 - Reto 1</title>
+</head>
+<body>
+    <main>
+        <section>
+            <form id="calculadora">
+                <h1>Calculadora de Ganancia</h1>
+                <h2>- Venta de galones de leche -</h2>
+                <div class="paralelo">
+                    <p class="text">Cantidad de Litros producidos en el día:</p>
+                    <div class="input-container">
+                        <input type="number" name="L" id="litros" class="input" placeholder="# Litros" min="0" required>
+                    </div>    
+                </div>
+                <div class="paralelo">
+                    <p class="text">Precio del galón de leche ($):</p>
+                    <div class="input-container">
+                        <input type="number" name="PG" id="precio-galon" class="input"
+                        placeholder="Precio" min="0" required>
+                    </div>
+                </div>
+                <input type="button" value="Calcular" name="calcular" id="buttom" onclick="calcular_ganancia()">
+            </form>
+            <div class="paralelo">
+                <p class="text">La ganancia de hoy será ($): </p>
+                <div class="input-container">
+                    <div id="resultado"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

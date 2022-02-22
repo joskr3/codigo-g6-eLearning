@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <title>Sem 5 - Reto 3</title>
+</head>
+<body>
+    <main>
+        <section>
+            <form id="calculadora">
+                <h1>Calculadora de Pago</h1>
+                <h2>- Costo de Cita y Tratamiento -</h2>
+                <div class="paralelo">
+                    <p class="text">Número de Cita:</p>
+                    <div class="input-container">
+                        <input type="number" class="input" id="num-cita" placeholder="# Cita" min="1" max="100" required>
+                    </div>    
+                </div>
+                <input type="button" value="Calcular" name="calcular" id="buttom" onclick="calcular_montos()">
+            </form>
+            <div class="paralelo">
+                <p class="text">El costo de esta cita es ($): </p>
+                <div class="input-container">
+                    <div id="resultado1"></div>
+                </div>
+            </div>
+            <div class="paralelo">
+                <div class="text">
+                    <p class="text" id="aclaracion">El monto invertido a la fecha es ($):*</p>
+                    <small>(*)Monto no incluye esta última cita</small>
+                </div>    
+                <div class="input-container">
+                    <div id="resultado2"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

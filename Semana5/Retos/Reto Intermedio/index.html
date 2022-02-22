@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <title>Sem 5 - Reto 2</title>
+</head>
+<body>
+    <main>
+        <section>
+            <form id="calculadora">
+                <h1>Calculadora de Pago</h1>
+                <h2>- Cálculo para la compra de Hamburguesas -</h2>
+                <div class="paralelo">
+                    <p class="text">Tipo de hamburguesa:</p>
+                    <div class="input-container">
+                        <select id="tipo-hamburguesa" class="input" required>
+                            <option value="default" selected disabled >Elije una opción</option>
+                            <option value="sencilla">Sencilla</option>
+                            <option value="doble">Doble</option>
+                            <option value="triple">Triple</option>
+                        </select>
+                    </div>    
+                </div>
+                <div class="paralelo">
+                    <p class="text">Cantidad de hamburguesas:</p>
+                    <div class="input-container">
+                        <input type="number" id="cantidad-hamburguesas" class="input"
+                        placeholder="Cantidad" min="0" required>
+                    </div>
+                </div>
+                <div class="paralelo">
+                    <p class="text">Tipo de Pago:</p>
+                    <div class="input-container">
+                        <select id="tipo-pago" class="input" required>
+                            <option value="default" selected disabled >Elije una opción</option>
+                            <option value="efectivo">Efectivo</option>
+                            <option value="tcredito">Tarjeta de Crédito</option>
+                        </select>
+                    </div>    
+                </div>
+                <input type="button" value="Calcular" name="calcular" id="buttom" onclick="calcular_pago()">
+            </form>
+            <div class="paralelo">
+                <p class="text">El pago total es de ($):</p>
+                <div class="input-container">
+                    <div id="resultado"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
