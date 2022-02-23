@@ -1,0 +1,10 @@
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-family: 'Courier New', Courier, monospace;
+    width: 60%;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+}
