@@ -1,0 +1,168 @@
+.cabecera {
+  background: #512da8;
+  color: #d1c4e9;
+  text-align: center;
+  padding: 5px 5px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #d1c4e9;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  color: darkslategrey;
+}
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 30px;
+}
+
+.search {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+form {
+  display: flex;
+}
+
+input {
+  padding: 15px 10px;
+  outline: none;
+  width: 400px;
+}
+
+.li-container {
+  background-color: white;
+  width: 100%;
+  color: darkslategray;
+  margin-top: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: flex;
+}
+
+li p {
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+}
+
+.btn-delete {
+  margin-left: auto;
+  border: none;
+  background-color: #e31746;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  outline: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 20%;
+  font-size: 1.2em;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+  background-color: lightseagreen;
+}
+
+.btn-add {
+  padding: 5px 15px;
+  border: none;
+  color: white;
+  font-family: fantasy;
+  background-color: teal;
+  font-size: 1.4rem;
+  outline: none;
+}
+
+.btn-add:hover {
+  cursor: pointer;
+  background-color: darkcyan;
+}
+
+.empty {
+  color: darkslategrey;
+}
+
+.btn-prioridad {
+  margin-left: auto;
+  border: none;
+  background-color: #c57588;
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 5px;
+  width: 20%;
+  font-size: 1.2em;
+  margin-right: 3px;
+}
+
+.txt-texto {
+  margin-left: auto;
+  border: none;
+  /* background-color: #e31746; */
+  color: black;
+  font-weight: bold;
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 5px;
+  width: 20%;
+  font-size: 1.2em;
+  margin-right: 3px;
+}
+
+/* variables para el boton prioridad */
+.menor {
+  width: 96px;
+  background-color: #a8d150;
+  padding: 4px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+.medio {
+  width: 96px;
+  background-color: #fdb315;
+  padding: 4px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mayor {
+  width: 96px;
+  background-color: #d2232a;
+  padding: 4px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
