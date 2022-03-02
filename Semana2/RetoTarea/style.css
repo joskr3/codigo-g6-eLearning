@@ -1,0 +1,12 @@
+.primer-imag {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    
+  }
+
+.dos-imag{
+display: flex;
+flex-direction:row;
+justify-content:space-around;
+}
