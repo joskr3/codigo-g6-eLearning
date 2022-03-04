@@ -32,10 +32,15 @@ let liTask = document.querySelector("li");
 
 unList.addEventListener("click", e =>{
     if(e.target.tagName == "UL", "LI", "INPUT"){
-        e.target.classList.toggle("checked");
+        e.target.classList.add("checked");
     }
 })
 
+// unList.addEventListener("click", e =>{
+//     if(e.target.classList == "checked"){
+//         e.target.classList.add("checked");
+//     }
+// })
 
 
 console.log("input %O", input)
